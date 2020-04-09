@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Charts Embedded SDK - Authenticated Embedded Chart Demo</title>
+    <meta charset="UTF-8" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Heebo&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" href="assets/styles.css" />
+  </head>
+
+  <body>
+    <main>
+      
+      <div class="form-container">
+        <div id="login-page" class="login-page">
+          <h1 id="lock"></h1>
+          <div class="form">
+            <div class="login-form">
+              <h1>Realm Authentication</h1>
+              <input id="username" type="text" placeholder="email" />
+              <input type="password" id="password" placeholder="hint: it's password" />
+              <button id="loginButton">Log In</button>
+              <p class="message">Username: admin Password: password</p>
+            </div>
+            
+          </div>
+        </div>
+        <div id="login-page" class="login-page">
+          <h1 id="info">📄</h1>
+          <div class="form realm-form">
+            <div class="login-form">
+              <h1 class="realm-title">Realm User Rules</h1>
+              <p class="text">Authenticating with your MongoDB Realm app brings your pre-configured roles to life when embedding with the Charts SDK.
+                <br><br>
+                <a href="https://docs.mongodb.com/stitch/mongodb/define-roles-and-permissions/">See more on configuring Rules here</a>
+                <br><br>
+                Try logging in with the following accounts to witness automatic filtering based on user roles
+                <br><br>
+                🇦🇺
+              </p>
+              <input type="text" value="australianEmployee@mongodb.com" disabled/>
+              <input type="text" value="password" disabled/>
+              <p class="text">🇨🇦</p>
+              <input type="text" value="canadianEmployee@mongodb.com" disabled/>
+              <input type="text" value="password" disabled/>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="chart-container">
+        <div id="chart"></div>
+      </div>
+    </main>
+    <script src="src/index.js"></script>
+  </body>
+</html>
+
