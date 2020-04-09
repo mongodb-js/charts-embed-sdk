@@ -54,11 +54,13 @@ body.logged-in #chart {
 .form {
   position: relative;
   z-index: 1;
-  background: #ffffff;
+  /*background: #FFFFFF;*/
+  background: linear-gradient(90deg, #FFFFFF 50%, #34495e 50%);
   margin: 0 auto 100px;
   padding: 20px;
   text-align: center;
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+  
 }
 .form input {
   font-family: "Heebo", sans-serif;
@@ -109,8 +111,14 @@ body.logged-in #chart {
 }
 
 .realm-form {
-  width :500px;
-  max-width: none;
+  display:block;
+  width: 400px;
+  margin-left: 100px;
+}
+
+.login-form {
+  display: flex;
+  padding: 45px;
 }
 
 .realm-title {
