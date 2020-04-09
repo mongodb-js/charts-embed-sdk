@@ -1,56 +1,111 @@
-# MongoDB Charts Embedding Example - Authenticated Embedded Chart
+# MongoDB Charts Embedding Example - Realm Authentication
 
 ## Background
 
 📄 _[See the MongoDB Charts Embedding Docs for more details](https://docs.mongodb.com/charts/saas/embedding-charts/)_
 
-🎮 _[Play with a live demo of this sample here](https://codesandbox.io/s/github/mongodb/charts-embedding-examples/tree/feature/CHARTS-3248-embedded-charts-jwt-demo/embedding-sdk/authenticated/jwt)_
 
 MongoDB Charts allows you to create visualizations of your MongoDB data using a simple web interface. You can view the visualizations within the Charts UI, or you can use the Embedding feature to render the charts in an external web application.
 
 Charts can be embedded either using a simple IFRAME snippet, or by using the Charts Embedding SDK from your JavaScript code. When using the SDK, embedded charts can be either unauthenticated (meaning anyone who has the embed code can view the chart), or authenticated (whereby the user can only view the chart if they have an active authentication session linked to a Charts authentication provider).
 
-This sample shows how to use the JavaScript Embedding SDK to render **authenticated** embedded charts, specifically via a custom jwt authentication. The sample app has its own authentication and token issuing logic. You may want to follow a similar approach if you are not integrating with an external authentication mechanism or your authentication is not based on JWTs. Alternatively, if you are using an existing authentication mechanism that issues JWTs, you can use those tokens to authenticate your chart rendering requests after configuring a Charts authentication provider that can validate the JWT.
+This sample shows how to use the JavaScript Embedding SDK to render **authenticated** embedded charts, specifically via configuring **MongoDB Realm** as an authentication provider. The sample app is already set up to authenticate with a Realm Application hosted by the Charts Development team. 
+
+This sample also demonstrates data filtering by role, thanks to Realm's extensive rules system. See more details [here](https://docs.mongodb.com/stitch/mongodb/define-roles-and-permissions/). Simply login with either australianEmployee@mongodb.com or canadianEmployee@mongodb.com, and take note of the different results!
 
 #### The features included in this demo are as follows:
 
 - 📈 Render an embedded chart on a web page
 - 🔒 Only render charts to valid users
-- 🔑 Custom JWT authentication via `jsonwebtoken`
+- 🔑 Realm authentication
+- 🇦🇺 Data filtering by Realm User Role.
 
 ## Preparing your Chart for Embedding
 
 This sample is preconfigured to render a specific chart. You can run the sample as-is, or you can modify it to render your own chart by completing the following steps:
 
+### Prepare MongoDB Realm
+
+1. Log onto MongoDB Realm
+
+   - Create a Project if you haven't already 
+
+2. Click on Users on the left panel
+   
+3. Click on Providers
+   
+4. Set up a provider, or utilise and existing one. One of the easiest providers to setup is Email/Password
+   1. Click on Edit for the Email/Password Provider
+   2. Enable the Provider
+   3. Set User Confirmation to Run a Confirmation Function
+   4. Click New Function
+   5. Write a simple verification function. *Please do not use this in production*
+   ```
+      exports = ({ token, tokenId, username }) => {
+         if username === "yourEmail@BadSecurity" {
+         // will confirm the user
+         return { status: 'success' };
+         } else {
+         return { status: 'fail' };
+         }
+      };
+   ```
+   6. Set Password Reset to 'Run a password reset function', and leave it as the default.
+   7. Save these settings.
+   8. Deploy these changes
+
+*Note, these settings are to get your demo running as quickly as possible and do not represent production security measures* 
+
+5. Click the Users tab
+6. Click Add New User
+7. Fill out the new User details
+   - Ensure your email address is set to the hard coded email you set in your confirmation function.
+
+### Optionally, Prepare your Dataset
+If you would like to duplicate the Data filtering our sample does via Realm's Rules, follow these steps
+
+1. Click on the Users tab
+2. Copy the ID of the User you created
+3. ... Setup Realm Rules (Not showing up for me rn ?)
+4. Connect to your dataset via MongoDB shell
+5. Append the field and user ID to the data you wish to associate with this user 
+`{ "stitch_owner" : "id" }` to your database. 
+
+
+### Prepare MongoDB Charts
+
 1. Log onto MongoDB Charts
 
 2. If you haven't done so already, create a chart on any dashboard that you would like to embed.
 
-3. Go to the Data Sources tab, find the data source that you are using on the chart, and choose External Sharing Options from the ... menu. Make sure that embedding is enabled for this data source and select '**Verified Signature Only**'
+3. Go to the Data Sources tab on the left navigation column. Find the data source that you are using on the chart, and choose External Sharing Options from the ... menu. Make sure that embedding is enabled for this data source and select '**Authenticated Embedding Only**'
 
-4. Find the chart you want to embed, click the **...** menu and select **Embed Chart**
+4. Go to the Admin Settings tab on the left navigation column. Under 'Embedding Authentication Providers', click 'Add New Provider'. 
 
-5. Ensure the Unauthenticated tab is selected and turn on '**Enable authenticated access**'
+   - Select the Realm Provider.
+   - Select the Realm Project that contains the Realm Application you configured in the previous steps
+   - Select the Realm Application you configured in the previous steps
+  
+      **Optional** 
+   - Turn on Fetch data using the Realm App.
+   - Enter the Realm Service name that retrieves your data. By default, this will be `mongodb-atlas`
 
-6. Note the Chart ID and the Chart Base URL, as you will need them for running the demo.
+![](https://i.imgur.com/e5DDM4B.png)
 
-7. Close the menu and click on the Admin Settings button.
+5. Go to the Dashboards tab on the left navigation column, and select the dashboard that contains the chart you wish to embed. 
 
-8. Under Embedding Authentication Providers, press the **Add New Provider** button
-9. Fill in the details like so:
+6. Find the chart you want to embed, click the **...** menu and select **Embed Chart**
 
-![](https://i.imgur.com/8cS1iSJ.png)
+7.  Ensure the Unauthenticated tab is selected and turn on '**Enable Authenticated access**'
 
-- Name: `Custom JWT` _Note, this is only for your convenience and can be named anything_
-- Provider: `Custom JSON Web Token`
-- Signing Algorithm: `HS256` _Note, this is the default signing algorithm for the `jsonwebtoken` library and many others_
-- Signing Key: `topsecret` _Note, this key must correlate with the key found in `config.js`_
+8.  Note the Chart ID and the Chart Base URL, as you will need them for running the demo.
+
 
 ## Running this Sample
 
 _The following steps presume the use of npm, though yarn works as well._
 
-1. Ensure you have Node installed. You can confirm with `node --version`. On some operating systems, Node available as the `nodejs` binary instead.
+1. Ensure you have Node installed. You can confirm with `node --version`. On some operating systems, Node is available as the `nodejs` binary instead.
 
 2. Clone the Git repository or download the code to your computer.
 
@@ -59,24 +114,32 @@ _The following steps presume the use of npm, though yarn works as well._
    - Open the _index.js_ file (`src/index.js`)
    - Replace the `baseUrl` string on with the base URL you copied from the MongoDB Charts Embedded Chart menu (look for "\~REPLACE\~" in the comments)
    - Replace the `chartId` string on with the chart ID you copied from the MongoDB Charts Embedded Chart menu (look for "\~REPLACE\~" in the comments)
-   - Replace the second `chartId`string with the same ID. (look for "\~REPLACE\~" in the comments)
+   - Replace the Stitch App ID in the Stitch Constructor, and remove the base URL. `Stitch.initializeAppClient('<your-app-id>')` 
 4. Run `npm install` to install the package dependencies.
+   
 5. Run `npm install -g parcel-bundler` to install Parcel. You may need to run `sudo npm install -g parcel-bundler` if you lack permissions.
    - Optional Parcel.js documentation https://parceljs.org/ for more information on what this is
-6. Run `npm start` to start the application.
+  
+6. Run `parcel index.html` to start the application.
 
-This should create a local server running the Charts demo. Open a web browser and navigate to `http://localhost:1234` in the url bar to see the sample. Along with this, a local jwt authentication server will be spun up on `http://localhost:8000`.
+This should create a local server running the Charts demo. Open a web browser and navigate to `http://localhost:1234` in the url bar to see the sample.
 
-The hard coded credentials used in this demo are:
-username : `admin`
-password: `password`
-
+The two hard coded credentials used in this demo are:
+```
+username: australianEmployee@mongodb.com
+password: password
+```
+```
+username: canadianEmployee@mongodb.com
+password: password
+```
+And they will display localised data thanks to the configured Realm User Roles.
 ## Next Steps
 
 Once you gain an understanding of the API, consider the following
 
 - Take on the optional steps to prepare and manipulate your own data source rather than the sample.
-- Change the login logic to adapt to your project's security workflow.
+- Play with Realms Rules system, and change how different accounts see your Chart.
 - Think whether an authenticated chart is the feature you're after. If you're simply looking for a way to show off your data, unauthenticated embedding simplifies the workflow even further.
 
 Happy Charting! 🚀📈
