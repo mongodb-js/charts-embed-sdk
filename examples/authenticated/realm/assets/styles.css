@@ -47,23 +47,28 @@ body.logged-in #chart {
 }
 
 .login-page {
-  margin-left: 10%;
-  margin-right: 0%;
-  margin-bottom: auto;
+  width: 360px;
+  margin: auto;
 }
+
+.form-title {
+  margin-top:0;
+  padding-top:0;
+  margin-bottom: 50px;
+}
+
 .form {
   position: relative;
   z-index: 1;
-  /*background: #FFFFFF;*/
-  background: linear-gradient(90deg, #FFFFFF 50%, #34495e 50%);
+  background: #ffffff;
+  max-width: 360px;
   margin: 0 auto 100px;
-  padding: 20px;
+  padding: 45px;
   text-align: center;
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
-  
 }
 .form input {
-  font-family: "Heebo", sans-serif;
+  font-family: "Helvetica", sans-serif;
   outline: 0;
   background: #f2f2f2;
   width: 100%;
@@ -74,7 +79,7 @@ body.logged-in #chart {
   font-size: 14px;
 }
 .form button {
-  font-family: "Heebo", sans-serif;
+  font-family: "Helvetica", sans-serif;
   text-transform: uppercase;
   outline: 0;
   background: #13aa52;
@@ -102,49 +107,21 @@ body.logged-in #chart {
   text-decoration: none;
 }
 
-.form .text {
-  font-size: 16px;
-}
-
-.form-container {
-  display:inline-flex;
-}
-
-.realm-form {
-  display:block;
-  width: 400px;
-  margin-left: 100px;
-}
-
-.login-form {
-  display: flex;
-  padding: 45px;
-}
-
-.realm-title {
-  margin-top: 20px;
-  padding-top: 0;
-  text-align: center;
+.input-title {
+  font-size: 14px;
+  text-align: left;
+  margin-bottom: 5px;
+  margin-top:10px;
 }
 
 body {
-  background: #e7eeec; /* fallback for old browsers */
-  font-family: "Heebo", sans-serif;
+  background: #e7eeec;
+  font-family: "Helvetica", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
 }
 
-.fakeLoginDetails {
-  text-align:left;
-}
-
-.login-details {
-  max-width: 360px;
-  margin-left:auto;
-  margin-right:auto;
-}
-
 h1 {
-  padding: 0 0 0;
+  padding: 8% 0 0;
 }

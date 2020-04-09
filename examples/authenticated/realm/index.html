@@ -17,38 +17,18 @@
 
   <body>
     <main>
-      
-      <div class="form-container">
-        <div id="login-page" class="login-page">
-          <h1 id="lock"></h1>
-          <div class="form">
-            <div class="login-form">
-              <div class="login-details">
-                <h1>Realm Authentication</h1>
-                <input id="username" type="text" placeholder="email" />
-                <input type="password" id="password" placeholder="hint: it's password" />
-                <button id="loginButton">Log In</button>
-              </div>
-              <div class="realm-form">
-                <h1 class="realm-title">Realm User Rules</h1>
-                <p class="text">Authenticating with your MongoDB Realm app brings your pre-configured roles to life when embedding with the Charts SDK.
-                  <br><br>
-                  <a href="https://docs.mongodb.com/stitch/mongodb/define-roles-and-permissions/">See more on configuring Rules here</a>
-                  <br><br>
-                  Try logging in with the following accounts to witness automatic filtering based on user roles
-                  <br><br>
-                </p>
-                <div class="login-details">
-                  <p class="text">🇦🇺</p>
-                  <input type="text" value="australianEmployee@mongodb.com" disabled/>
-                  <input type="text" value="password" disabled/>
-                  <p class="text">🇨🇦</p>
-                  <input type="text" value="canadianEmployee@mongodb.com" disabled/>
-                  <input type="text" value="password" disabled/>
-                </div>
-              </div>
-            </div>
-            
+      <h1 id="lock"></h1>
+      <div id="login-page" class="login-page">
+        <div class="form">
+          <div class="login-form">
+            <h1 class="form-title">Secure Chart Viewer</h1>
+            <h4 class="input-title">Email Address</h4>
+            <input id="username" type="text" placeholder="Enter your email address" />
+            <h4 class="input-title">Password</h4>
+            <input type="password" id="password" placeholder="Hint: it's password" />
+            <button id="loginButton">Log In</button>
+            <p class="message">🇦🇺 <br>See Australian data via logging in with australianEmployee@mongodb.com</p>
+            <p class="message">🇨🇦 <br>See Canadian data via logging in with canadianEmployee@mongodb.com</p>
           </div>
         </div>
       </div>
@@ -59,4 +39,3 @@
     <script src="src/index.js"></script>
   </body>
 </html>
-
