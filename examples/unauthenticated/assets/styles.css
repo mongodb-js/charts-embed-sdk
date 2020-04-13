@@ -1,0 +1,88 @@
+html,
+body {
+  height: 100%;
+  font-family: "Heebo";
+  transition: background-color 0.5s ease;
+}
+
+.chart-title {
+  text-align: center;
+  color: #89989b;
+}
+
+.body-content {
+  display: flex;
+}
+
+th {
+  font-weight: bold;
+  color: #89989b;
+  text-align: right;
+}
+
+.chartInfo {
+  font-size: 20px;
+  width: 520px;
+}
+
+td {
+  padding-left: 20px;
+}
+
+.chartsContainer {
+  display: flex;
+}
+
+main {
+  box-sizing: border-box;
+  padding: 1rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+#nav {
+  flex-shrink: 0;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+  color: #89989b;
+}
+
+#nav button,
+#nav select {
+  font-size: 1.1rem;
+  border-radius: 3px;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+}
+
+#chart {
+  border-top: none;
+  flex-grow: 1;
+  height: 100%;
+  width: 80%;
+}
+
+.theme-label {
+  line-height: 35px;
+  padding-left: 10px;
+}
+
+span {
+  white-space: pre;
+}
+
+.dark-mode {
+  background-color: #061621;
+  color: #ffffff;
+}
+
+body span.theme-label::before {
+  content: "☀️";
+}
+
+body.dark-mode span.theme-label::before {
+  content: "🌙";
+}

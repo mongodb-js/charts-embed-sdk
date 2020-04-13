@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Charts Embedded SDK Demo</title>
+    <meta charset="UTF-8" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Heebo&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" href="assets/styles.css" />
+    <link rel="stylesheet" type="text/css" href="assets/toggle.css" />
+  </head>
+
+  <body>
+    <main>
+      <div id="nav">
+        <label
+          ><span>REFRESH CHART </span>
+          <button id="refresh">⟳</button>
+        </label>
+        <label
+          ><span>REFRESH INTERVAL </span>
+          <select id="refresh-interval">
+            <option value="0">None</option>
+            <option value="10">10 Seconds</option>
+            <option value="60"><span>1 Minute</span></option>
+            <option value="1000">10 Minutes</option>
+            <option value="6000"><span>1 Hour</span></option>
+          </select>
+        </label>
+        <label
+          ><span>FILTER BY COUNTRY </span>
+          <select id="country-filter">
+            <option value="">--All--</option>
+            <option value="Australia">Australia</option>
+            <option value="Brazil">Brazil</option>
+            <option value="Canada">Canada</option>
+            <option value="China">China</option>
+            <option value="Hong Kong">Hong Kong</option>
+            <option value="Portugal">Portugal</option>
+            <option value="United States">United States</option>
+          </select>
+        </label>
+        <label class="theme-label"
+          ><span>THEME </span>
+          <label class="switch">
+            <input id="themeSwitch" type="checkbox" />
+            <span class="slider round"></span>
+          </label>
+          <span id="themeEmoji" class="theme-label"></span>
+        </label>
+      </div>
+      <div class="body-content">
+        <div id="chart"></div>
+        <div class="chartInfo">
+          <h3 class="chart-title">CHART DATA</h3>
+          <table>
+            <tr>
+              <th>Current Refresh Interval</th>
+              <td id="currentRefreshInterval">None</td>
+            </tr>
+            <tr>
+              <th>Current Theme</th>
+              <td id="currentTheme">light</td>
+            </tr>
+            <tr>
+              <th>Current Filter</th>
+              <td id="currentFilter">None</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </main>
+    <script src="src/index.js"></script>
+  </body>
+</html>
