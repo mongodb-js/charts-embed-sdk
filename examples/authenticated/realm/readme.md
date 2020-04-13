@@ -18,7 +18,7 @@ This sample also demonstrates data filtering by role, thanks to Realm's extensiv
 - 📈 Render an embedded chart on a web page
 - 🔒 Only render charts to valid users
 - 🔑 Realm authentication
-- 🇦🇺 Data filtering by Realm User Role.
+- 🙋‍♂️ Data filtering by Realm User Role.
 
 ## Preparing your Chart for Embedding
 
@@ -28,9 +28,9 @@ This sample is preconfigured to render a specific chart. You can run the sample 
 
 1. Log onto MongoDB Realm
 
-   - Create a Project if you haven't already 
+   - Create a Project if you haven't already
 
-2. Click on Users on the left panel
+2. Click on Users on the left navigation column
    
 3. Click on Providers
    
@@ -40,7 +40,7 @@ This sample is preconfigured to render a specific chart. You can run the sample 
    3. Set User Confirmation to Run a Confirmation Function
    4. Click New Function
    5. Write a simple verification function. *Please do not use this in production*
-   ```
+   ```javascript
       exports = ({ token, tokenId, username }) => {
          if username === "yourEmail@BadSecurity" {
          // will confirm the user
@@ -50,9 +50,9 @@ This sample is preconfigured to render a specific chart. You can run the sample 
          }
       };
    ```
-   6. Set Password Reset to 'Run a password reset function', and leave it as the default.
-   7. Save these settings.
-   8. Deploy these changes
+   1. Set Password Reset to 'Run a password reset function', and leave it as the default.
+   2. Save these settings.
+   3. Deploy these changes
 
 *Note, these settings are to get your demo running as quickly as possible and do not represent production security measures* 
 
@@ -66,10 +66,19 @@ If you would like to duplicate the Data filtering our sample does via Realm's Ru
 
 1. Click on the Users tab
 2. Copy the ID of the User you created
-3. ... Setup Realm Rules (Not showing up for me rn ?)
-4. Connect to your dataset via MongoDB shell
-5. Append the field and user ID to the data you wish to associate with this user 
-`{ "stitch_owner" : "id" }` to your database. 
+3. Setup Realms Rules
+   1. Navigate to the Rules settings on the left navigation column
+   2. Click on the database and collection you wish to apply your rules to and embed your chart with
+   3. Select 'Users can only read and write their own data' from the template dropdown
+   4. Add `stitch_owner` as the field name for the User ID.
+   5. Finish by clicking **Configure Collection**
+4. Update your MongoDB Collection to contain the stitch_owner field
+   1. Connect to your database via MongoDB Shell, or however you wish to update your database. Details on connecting to a MongoDB Atlas cluster are [here](https://intercom.help/mongodb-atlas/en/articles/3212463-connecting-to-an-atlas-cluster)
+   2. Switch the database context to the database your collection exists in
+      - For example, `use <database name> `
+   3. Run the following command on your collection
+      - `db.<YOUR-COLLECTION-NAME-HERE>.updateMany({<OPTIONAL-FILTER>}, {$set: {"stitch_owner" : "<YOUR-STITCH-USER-ID>"}})`
+      - Filtering this command can be useful if you plan to partition your collection by various users. Our example collection was created via filtering on `address.country` to localise users to their colloquial dataset.
 
 
 ### Prepare MongoDB Charts
