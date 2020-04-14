@@ -23,14 +23,16 @@ This sample also demonstrates data filtering by role, thanks to Realm's extensiv
 ## Quickstart
 _The following steps presume the use of npm, though yarn works as well._
 
-1. Clone or download the repository
+1. Ensure you have Node installed. You can confirm with `node --version`. On some operating systems, Node is available as the `nodejs` binary instead.
+
+2. Clone the Git repository or download the code to your computer.
 
 3. Run `npm install` to install the package dependencies.
    
 4. Run `npm install -g parcel-bundler` to install Parcel. You may need to run `sudo npm install -g parcel-bundler` if you lack permissions.
    - Optional Parcel.js documentation https://parceljs.org/ for more information on what this is
   
-4. Run `parcel index.html` to start the application.
+5. Run `parcel index.html` to start the application.
 
 This should create a local server running the Charts demo. Open a web browser and navigate to `http://localhost:1234` in the url bar to see the sample.
 
@@ -47,13 +49,14 @@ And they will display localised data thanks to the configured Realm User Roles.
 
 ## Authenticate with your Realm App
 
-This sample is preconfigured to render a specific chart. You can run the sample as-is, or you can modify it to render your own chart by completing the following steps:
+This sample is preconfigured to render, and more specifically, **authenticate** users who are verified to view a specific chart. You can run the sample as-is, or you can modify it to render your own chart by completing the following steps:
 
 ### Prepare MongoDB Realm
+Choose or create a Realm Cloud app which will be used to authenticate users who wish to view your chart.
 
 1. Log onto MongoDB Realm
 
-   - Create a Project if you haven't already
+   - Create Realm App if you haven't already
 
 2. Click on Users on the left navigation column
    
@@ -62,48 +65,17 @@ This sample is preconfigured to render a specific chart. You can run the sample 
 4. Set up a provider, or utilise and existing one. One of the easiest providers to setup is Email/Password
    1. Click on Edit for the Email/Password Provider
    2. Enable the Provider
-   3. Set User Confirmation to Run a Confirmation Function
-   4. Click New Function
-   5. Write a simple verification function. *Please do not use this in production*
-   ```javascript
-      exports = ({ token, tokenId, username }) => {
-         if username === "yourEmail@BadSecurity" {
-         // will confirm the user
-         return { status: 'success' };
-         } else {
-         return { status: 'fail' };
-         }
-      };
-   ```
+   3. Set User Confirmation to automatically confirm users
    1. Set Password Reset to 'Run a password reset function', and leave it as the default.
    2. Save these settings.
    3. Deploy these changes
 
-*Note, these settings are to get your demo running as quickly as possible and do not represent production security measures* 
-
 5. Click the Users tab
 6. Click Add New User
 7. Fill out the new User details
-   - Ensure your email address is set to the hard coded email you set in your confirmation function.
 
 ### Optionally, Prepare your Dataset
-If you would like to duplicate the Data filtering our sample does via Realm's Rules, follow these steps
-
-1. Click on the Users tab
-2. Copy the ID of the User you created
-3. Setup Realms Rules
-   1. Navigate to the Rules settings on the left navigation column
-   2. Click on the database and collection you wish to apply your rules to and embed your chart with
-   3. Select 'Users can only read and write their own data' from the template dropdown
-   4. Add `stitch_owner` as the field name for the User ID.
-   5. Finish by clicking **Configure Collection**
-4. Update your MongoDB Collection to contain the stitch_owner field
-   1. Connect to your database via MongoDB Shell, or however you wish to update your database. Details on connecting to a MongoDB Atlas cluster are [here](https://intercom.help/mongodb-atlas/en/articles/3212463-connecting-to-an-atlas-cluster)
-   2. Switch the database context to the database your collection exists in
-      - For example, `use <database name> `
-   3. Run the following command on your collection
-      - `db.<YOUR-COLLECTION-NAME-HERE>.updateMany({<OPTIONAL-FILTER>}, {$set: {"stitch_owner" : "<YOUR-STITCH-USER-ID>"}})`
-      - Filtering this command can be useful if you plan to partition your collection by various users. Our example collection was created via filtering on `address.country` to localise users to their colloquial dataset.
+If you want the data to be filtered for each user, (Like we have done in our sample) set up an [Atlas service](https://www.mongodb.com/cloud/atlas) and corresponding [Rules](https://docs.mongodb.com/stitch/mongodb/define-roles-and-permissions/) that filter the data as desired.
 
 
 ### Prepare MongoDB Charts
@@ -122,6 +94,8 @@ If you would like to duplicate the Data filtering our sample does via Realm's Ru
   
       **Optional** 
    - Turn on Fetch data using the Realm App.
+     - This option should be turned on when you wish to delegate data fetching logic to your Realm App. Specifically, if you have configured Realm Rules that apply to the users that are being authenticated, and you wish to have these rules enforced before the chart is rendered, turn this setting on.
+     - This setting should be left off if you only require Realm to authenticate valid users, and you have no desire to filter data by their role in your Realm App. i.e, all valid users see the same chart, invalid users cannot see the chart. 
    - Enter the Realm Service name that retrieves your data. By default, this will be `mongodb-atlas`
 
 ![](https://i.imgur.com/e5DDM4B.png)
@@ -137,14 +111,7 @@ If you would like to duplicate the Data filtering our sample does via Realm's Ru
 
 ## Running this Sample with your data
 
-_The following steps presume the use of npm, though yarn works as well._
-
-1. Ensure you have Node installed. You can confirm with `node --version`. On some operating systems, Node is available as the `nodejs` binary instead.
-
-2. Clone the Git repository or download the code to your computer.
-
-3. **Optional**
-   If you do not wish to use our sample data and have completed the above steps to prepare your own chart for embedding,
+If you do not wish to use our sample data and have completed the above steps to prepare your own chart for embedding,
    - Open the _index.js_ file (`src/index.js`)
    - Replace the `baseUrl` string on with the base URL you copied from the MongoDB Charts Embedded Chart menu (look for "\~REPLACE\~" in the comments)
    - Replace the `chartId` string on with the chart ID you copied from the MongoDB Charts Embedded Chart menu (look for "\~REPLACE\~" in the comments)
