@@ -49,7 +49,7 @@ And they will display localised data thanks to the configured Realm User Roles.
 
 ## Authenticate with your Realm App
 
-This sample is preconfigured to render, and more specifically, **authenticate** users who are verified to view a specific chart. You can run the sample as-is, or you can modify it to render your own chart by completing the following steps:
+This sample is preconfigured to render, and more specifically, **authenticate** users who are verified to view a specific chart. You can run the sample as-is, or you can modify it to render and authenticate your own chart by completing the following steps:
 
 ### Prepare MongoDB Realm
 Choose or create a Realm Cloud app which will be used to authenticate users who wish to view your chart.
@@ -66,7 +66,9 @@ Choose or create a Realm Cloud app which will be used to authenticate users who 
    1. Click on Edit for the Email/Password Provider
    2. Enable the Provider
    3. Set User Confirmation to automatically confirm users
-   1. Set Password Reset to 'Run a password reset function', and leave it as the default.
+   1. Set Password Reset to send a reset email
+      1. Set the reset URL to `http://localhost`
+      2. You can also do this for confirming users if you prefer
    2. Save these settings.
    3. Deploy these changes
 
@@ -96,7 +98,12 @@ If you want the data to be filtered for each user, (Like we have done in our sam
    - Turn on Fetch data using the Realm App.
      - This option should be turned on when you wish to delegate data fetching logic to your Realm App. Specifically, if you have configured Realm Rules that apply to the users that are being authenticated, and you wish to have these rules enforced before the chart is rendered, turn this setting on.
      - This setting should be left off if you only require Realm to authenticate valid users, and you have no desire to filter data by their role in your Realm App. i.e, all valid users see the same chart, invalid users cannot see the chart. 
-   - Enter the Realm Service name that retrieves your data. By default, this will be `mongodb-atlas`
+   - Enter the Realm Service name that retrieves your data. To find the name of this,
+     - Navigate to Clusters on the left hand navigation panel.
+     - Look for the Stitch Service Name associated with your Atlas cluster.
+     ![Screen Shot 2020-04-14 at 4 51 30 pm](https://user-images.githubusercontent.com/19422770/79194609-3478f280-7e70-11ea-9267-a1c7d35aad09.png)
+
+Your provider config, (ignoring the completed optional settings) should look something like this. 
 
 ![](https://i.imgur.com/e5DDM4B.png)
 
