@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Charts Embedded SDK - Authenticated Embedded Chart Demo</title>
+    <meta charset="UTF-8" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Heebo&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" href="assets/styles.css" />
+  </head>
+
+  <body>
+    <main>
+      <h1 id="lock"></h1>
+      <div id="login-page" class="login-page">
+        <div class="form">
+          <div class="login-form">
+            <h1>Secure Chart Viewer</h1>
+            <input id="username" type="text" placeholder="name" />
+            <input type="password" id="password" placeholder="password" />
+            <button id="loginButton">Log In</button>
+            <p class="message">Username: admin Password: password</p>
+          </div>
+        </div>
+      </div>
+      <div class="chart-container">
+        <div id="chart"></div>
+      </div>
+    </main>
+    <script src="src/index.js"></script>
+  </body>
+</html>
