@@ -12,9 +12,17 @@ function getPass() {
   return document.getElementById("password").value;
 }
 
+function logOut() {
+  document.body.classList.toggle("logged-in", false);
+}
+
 document
   .getElementById("loginButton")
   .addEventListener("click", async () => await tryLogin());
+
+document
+  .getElementById("logoutButton")
+  .addEventListener("click", async () => await logOut());
 
 async function tryLogin() {
   const credential = new UserPasswordCredential(getUser(), getPass())
@@ -33,6 +41,6 @@ async function tryLogin() {
     document.body.classList.toggle("logged-in", true);
 
   }).catch(err => {
-    console.error(err)
+    console.error("Authentication failed. If you are using the pre-built sample, please use one of the listed email addresses and use 'password' as the password.")
   });
 }

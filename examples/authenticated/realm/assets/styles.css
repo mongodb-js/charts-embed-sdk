@@ -8,8 +8,8 @@
 }
 
 .chart-container {
-  height: 30vw;
-  width: 80vh;
+  height: 50vh;
+  width: 80vw;
   margin: auto;
   text-align: center;
 }
@@ -78,7 +78,13 @@ body.logged-in #chart {
   box-sizing: border-box;
   font-size: 14px;
 }
-.form button {
+
+#logoutButton {
+  margin-top: 50px;
+  width: 200px;
+}
+
+button {
   font-family: "Helvetica", sans-serif;
   text-transform: uppercase;
   outline: 0;
