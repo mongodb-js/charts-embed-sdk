@@ -20,7 +20,32 @@ This sample also demonstrates data filtering by role, thanks to Realm's extensiv
 - 🔑 Realm authentication
 - 🙋‍♂️ Data filtering by Realm User Role.
 
-## Preparing your Chart for Embedding
+## Quickstart
+_The following steps presume the use of npm, though yarn works as well._
+
+1. Clone or download the repository
+
+3. Run `npm install` to install the package dependencies.
+   
+4. Run `npm install -g parcel-bundler` to install Parcel. You may need to run `sudo npm install -g parcel-bundler` if you lack permissions.
+   - Optional Parcel.js documentation https://parceljs.org/ for more information on what this is
+  
+4. Run `parcel index.html` to start the application.
+
+This should create a local server running the Charts demo. Open a web browser and navigate to `http://localhost:1234` in the url bar to see the sample.
+
+The two hard coded credentials used in this demo are:
+```
+username: australianEmployee@mongodb.com
+password: password
+```
+```
+username: canadianEmployee@mongodb.com
+password: password
+```
+And they will display localised data thanks to the configured Realm User Roles.
+
+## Authenticate with your Realm App
 
 This sample is preconfigured to render a specific chart. You can run the sample as-is, or you can modify it to render your own chart by completing the following steps:
 
@@ -110,7 +135,7 @@ If you would like to duplicate the Data filtering our sample does via Realm's Ru
 8.  Note the Chart ID and the Chart Base URL, as you will need them for running the demo.
 
 
-## Running this Sample
+## Running this Sample with your data
 
 _The following steps presume the use of npm, though yarn works as well._
 
@@ -124,25 +149,7 @@ _The following steps presume the use of npm, though yarn works as well._
    - Replace the `baseUrl` string on with the base URL you copied from the MongoDB Charts Embedded Chart menu (look for "\~REPLACE\~" in the comments)
    - Replace the `chartId` string on with the chart ID you copied from the MongoDB Charts Embedded Chart menu (look for "\~REPLACE\~" in the comments)
    - Replace the Stitch App ID in the Stitch Constructor, and remove the base URL. `Stitch.initializeAppClient('<your-app-id>')` 
-4. Run `npm install` to install the package dependencies.
-   
-5. Run `npm install -g parcel-bundler` to install Parcel. You may need to run `sudo npm install -g parcel-bundler` if you lack permissions.
-   - Optional Parcel.js documentation https://parceljs.org/ for more information on what this is
-  
-6. Run `parcel index.html` to start the application.
 
-This should create a local server running the Charts demo. Open a web browser and navigate to `http://localhost:1234` in the url bar to see the sample.
-
-The two hard coded credentials used in this demo are:
-```
-username: australianEmployee@mongodb.com
-password: password
-```
-```
-username: canadianEmployee@mongodb.com
-password: password
-```
-And they will display localised data thanks to the configured Realm User Roles.
 ## Next Steps
 
 Once you gain an understanding of the API, consider the following
