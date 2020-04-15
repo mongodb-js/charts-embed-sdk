@@ -131,3 +131,20 @@ body {
 h1 {
   padding: 8% 0 0;
 }
+
+body.error input {
+  outline: 2px solid red;
+}
+
+body.error #errorMessage {
+  visibility: visible;
+  color: red;
+  font-size: 12px;
+
+  height: auto;
+}
+
+#errorMessage {
+  visibility: hidden;
+  height: 0px;
+}

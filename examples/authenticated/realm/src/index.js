@@ -22,6 +22,10 @@ function logOut() {
 }
 
 document
+  .getElementById("login-page")
+  .addEventListener("input", () => document.body.classList.toggle("error", false));
+
+document
   .getElementById("loginButton")
   .addEventListener("click", async () => await tryLogin());
 
@@ -47,5 +51,6 @@ async function tryLogin() {
 
   }).catch(err => {
     console.error("Authentication failed. If you are using the pre-built sample, please use one of the listed email addresses and use 'password' as the password.")
+    document.body.classList.toggle("error", true);
   });
 }
