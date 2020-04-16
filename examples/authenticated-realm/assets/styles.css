@@ -1,0 +1,150 @@
+#chart {
+  border-top: none;
+  background-color: #f9fbfa;
+  flex-grow: 1;
+  height: 100%;
+  box-shadow: grey 0px 0px 10px 1px;
+  visibility: hidden;
+}
+
+.chart-container {
+  height: 50vh;
+  width: 80vw;
+  margin: auto;
+  text-align: center;
+}
+
+body.logged-in #login-page {
+  visibility: hidden;
+  height: 0;
+  width: 0;
+}
+
+body.logged-in #lock::before {
+  content: "🔐";
+}
+
+body #lock::before {
+  content: "🔒";
+}
+
+body.logged-in #chart {
+  visibility: visible;
+}
+
+.hideLogin {
+  visibility: hidden;
+  height: 0;
+  width: 0;
+}
+
+.main {
+  box-sizing: border-box;
+  padding: 1rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.login-page {
+  width: 360px;
+  margin: auto;
+}
+
+.form-title {
+  margin-top:0;
+  padding-top:0;
+  margin-bottom: 50px;
+}
+
+.form {
+  position: relative;
+  z-index: 1;
+  background: #ffffff;
+  max-width: 360px;
+  margin: 0 auto 100px;
+  padding: 45px;
+  text-align: center;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+.form input {
+  font-family: "Helvetica", sans-serif;
+  outline: 0;
+  background: #f2f2f2;
+  width: 100%;
+  border: 0;
+  margin: 0 0 15px;
+  padding: 15px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+
+#logoutButton {
+  margin-top: 50px;
+  width: 200px;
+}
+
+button {
+  font-family: "Helvetica", sans-serif;
+  text-transform: uppercase;
+  outline: 0;
+  background: #13aa52;
+  width: 100%;
+  border: 0;
+  padding: 15px;
+  color: #ffffff;
+  font-size: 14px;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+}
+.form button:hover,
+.form button:active,
+.form button:focus {
+  background: #109246;
+}
+.form .message {
+  margin: 15px 0 0;
+  color: #b3b3b3;
+  font-size: 12px;
+}
+.form .message a {
+  color: #13aa52;
+  text-decoration: none;
+}
+
+.input-title {
+  font-size: 14px;
+  text-align: left;
+  margin-bottom: 5px;
+  margin-top:10px;
+}
+
+body {
+  background: #e7eeec;
+  font-family: "Helvetica", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+}
+
+h1 {
+  padding: 8% 0 0;
+}
+
+body.error input {
+  outline: 2px solid red;
+}
+
+body.error #errorMessage {
+  visibility: visible;
+  color: red;
+  font-size: 12px;
+
+  height: auto;
+}
+
+#errorMessage {
+  visibility: hidden;
+  height: 0px;
+}
