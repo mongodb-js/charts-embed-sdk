@@ -27,15 +27,15 @@ document
 
 document
   .getElementById("loginButton")
-  .addEventListener("click", async () => await tryLogin());
+  .addEventListener("click", () => tryLogin());
 
 document
   .getElementById("logoutButton")
-  .addEventListener("click", async () => await logOut());
+  .addEventListener("click", () => logOut());
 
 async function tryLogin() {
   const credential = new UserPasswordCredential(getUser(), getPass())
-  client.auth.loginWithCredential(credential).then(user =>
+  client.auth.loginWithCredential(credential).then(() =>
   {
     const sdk = new ChartsEmbedSDK({
       baseUrl: "https://charts-dev.mongodb.com/charts-test2-pebbp", // Optional: ~REPLACE~ with your Charts URL

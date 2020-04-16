@@ -11,6 +11,7 @@
     "@mongodb-js/charts-embed-dom": "0.0.0-dev.12",
     "jsonwebtoken": "^8.3.0",
     "mongodb-stitch-browser-sdk": "^4.8.0",
+    "parcel": "^1.12.4",
     "regenerator-runtime": "^0.13.3",
     "request": "^2.88.2"
   },

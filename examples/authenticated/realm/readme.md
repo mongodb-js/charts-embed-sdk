@@ -28,11 +28,9 @@ _The following steps presume the use of npm, though yarn works as well._
 2. Clone the Git repository or download the code to your computer.
 
 3. Run `npm install` to install the package dependencies.
-   
-4. Run `npm install -g parcel-bundler` to install Parcel. You may need to run `sudo npm install -g parcel-bundler` if you lack permissions.
+
+4. Run `parcel index.html` to start the application.
    - Optional Parcel.js documentation https://parceljs.org/ for more information on what this is
-  
-5. Run `parcel index.html` to start the application.
 
 This should create a local server running the Charts demo. Open a web browser and navigate to `http://localhost:1234` in the url bar to see the sample.
 
@@ -84,7 +82,7 @@ If you want the data to be filtered for each user, (Like we have done in our sam
 
 1. Log onto MongoDB Charts
 
-2. If you haven't done so already, create a chart on any dashboard that you would like to embed.
+2. If you haven't done so already, create a chart you would like to embed on any dashboard.
 
 3. Go to the Data Sources tab on the left navigation column. Find the data source that you are using on the chart, and choose External Sharing Options from the ... menu. Make sure that embedding is enabled for this data source and select '**Authenticated Embedding Only**'
 
@@ -120,8 +118,9 @@ Your provider config, (ignoring the completed optional settings) should look som
 
 If you do not wish to use our sample data and have completed the above steps to prepare your own chart for embedding,
    - Open the _index.js_ file (`src/index.js`)
-   - Replace the `baseUrl` string on with the base URL you copied from the MongoDB Charts Embedded Chart menu (look for "\~REPLACE\~" in the comments)
-   - Replace the `chartId` string on with the chart ID you copied from the MongoDB Charts Embedded Chart menu (look for "\~REPLACE\~" in the comments)
+   - Replace the Realm `baseUrl` string with the base URL for your Realm app
+   - Replace the Charts `baseUrl` string with the base URL you copied from the MongoDB Charts Embedded Chart menu (look for "\~REPLACE\~" in the comments)
+   - Replace the `chartId` string with the chart ID you copied from the MongoDB Charts Embedded Chart menu (look for "\~REPLACE\~" in the comments)
    - Replace the Stitch App ID in the Stitch Constructor, and remove the base URL. `Stitch.initializeAppClient('<your-app-id>')` 
 
 ## Next Steps
