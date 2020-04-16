@@ -75,7 +75,7 @@ Choose or create a Realm Cloud app which will be used to authenticate users who 
 7. Fill out the new User details
 
 ### Optionally, Prepare your Dataset
-If you want the data to be filtered for each user, (Like we have done in our sample) set up an [Atlas service](https://www.mongodb.com/cloud/atlas) and corresponding [Rules](https://docs.mongodb.com/stitch/mongodb/define-roles-and-permissions/) that filter the data as desired.
+If you want to use your Realm app to filter data for each user, (Like we have done in our sample) set up an [Atlas service](https://www.mongodb.com/cloud/atlas) and corresponding [Rules](https://docs.mongodb.com/stitch/mongodb/define-roles-and-permissions/) that filter the data as desired. Injected Filters and [Dashboard filtering](https://www.mongodb.com/blog/post/filter-your-dashboards-with-mongodb-charts) are other Charts features one can use to attain similar functionality.
 
 
 ### Prepare MongoDB Charts
