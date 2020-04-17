@@ -1,25 +1,39 @@
 import ChartsEmbedSDK from "@mongodb-js/charts-embed-dom";
 import "regenerator-runtime/runtime";
 
-var id_token;
+async function tryLogin() {
+  const url = 'http://localhost:1234/api/getGoogleId';
 
-function logOut() {
-  document.body.classList.toggle("logged-in", false);
+  fetch(url)
+  .then((response) => response.text())
+  .then((response) => {
+    var id_token = response;
+    console.log("IDTOKEN == " + (id_token))
+
+    const sdk = new ChartsEmbedSDK({
+      baseUrl: "https://charts-dev.mongodb.com/charts-test2-pebbp", // Optional: ~REPLACE~ with your Charts URL
+      getUserToken: () => { return id_token },
+    });
+  
+    const chart = sdk.createChart({
+      chartId: "0d984f0c-5f1b-4711-9e5d-f78aa1ea8fcb", // Optional: ~REPLACE~ with your Chart ID
+    });
+  
+    chart.render(document.getElementById("chart"));
+  })
+  .then((data) => {
+    console.log(data);
+  });
 }
 
-window.fn1 = function tryLogin(googleToken) {
-  console.log("TRY LOGIN")
-  const sdk = new ChartsEmbedSDK({
-    baseUrl: "https://charts-dev.mongodb.com/charts-test2-pebbp", // Optional: ~REPLACE~ with your Charts URL
-    getUserToken: () => { return googleToken },
-  });
+// Observe the body to move onto the login state.
+const domBody = document.getElementsByTagName("body")[0];
+const config = { attributes: true };
 
-  const chart = sdk.createChart({
-    chartId: "a2e775e6-f267-4c2c-a65d-fbf3fad4a4f2", // Optional: ~REPLACE~ with your Chart ID
-  });
+// Create an observer instance linked to the callback function
+const observer = new MutationObserver(tryLogin);
 
-  chart.render(document.getElementById("chart"));
-  document.body.classList.toggle("logged-in", true);
-}
+// Start observing the target node for configured mutations
+observer.observe(domBody, config);
 
 
