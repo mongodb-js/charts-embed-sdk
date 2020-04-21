@@ -1,4 +1,4 @@
-# MongoDB Charts Embedding Example - Realm Authentication
+# MongoDB Charts Embedding Example - Google Authentication
 
 ## Background
 
@@ -36,7 +36,9 @@ Logging in with any valid Google account will allow you to render the chart.
 
 ## Getting a Google Client ID
 
-Steps on how to confrigure a Project with google and attain a Google Client ID can be found [here](https://developers.google.com/identity/sign-in/web/sign-in)
+This sample is pre-configured with a MongoDB-owned test Client ID. To use Google Sign-In in your own apps, you must create your own Client ID.
+
+Steps on how to confrigure a Project with Google and attain a Google Client ID can be found [here](https://developers.google.com/identity/sign-in/web/sign-in). You'll need to set the Origin and Redirect URIs to whatever you use in your application. In our sample, that is http://localhost:3000.
 
 ### Preparing your Chart for Embedding
 This sample is preconfigured to render a specific chart. You can run the sample as-is, or you can modify it to render your own chart by completing the following steps:
@@ -76,6 +78,19 @@ Once you gain an understanding of the API, consider the following
 
 - Take on the optional steps to prepare and manipulate your own data source rather than the sample.
 - Use Incognito Mode to see a pure login experience
+- Consider how you want to secure your data with the Google Embedding Provider. Anybody can create a Google account. Consider using Charts Injected Filters to make your application more secure.
+  - For example, consider the following injected filter
+  - 
+  ```javascript
+      // Reject tokens that aren't from example.com domain
+      if (context.token.hd != 'yourCompany.com') {
+         return false;
+      }
+      return true
+   ```
+   - ![Screen Shot 2020-04-21 at 1 47 54 pm](https://user-images.githubusercontent.com/19422770/79823279-b9b35880-83d6-11ea-8370-774bcde80252.png)
+   - This will only allow users from your company domain to view the chart data 🔒
+
 - Think whether an authenticated chart is the feature you're after. If you're simply looking for a way to show off your data, unauthenticated embedding simplifies the workflow even further.
 
 Happy Charting! 🚀📈
