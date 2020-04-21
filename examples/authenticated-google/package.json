@@ -8,13 +8,6 @@
     "build": "parcel build index.html"
   },
   "dependencies": {
-    "@mongodb-js/charts-embed-dom": "^1.0.0-beta.2",
-    "body-parser": "^1.19.0",
-    "cors": "^2.8.5",
-    "express": "^4.17.1",
-    "google-auth-library": "^5.10.1",
-    "jsonwebtoken": "^8.3.0",
-    "open": "^7.0.3",
     "parcel": "^1.12.4",
     "regenerator-runtime": "^0.13.5"
   },

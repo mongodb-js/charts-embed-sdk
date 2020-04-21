@@ -38,7 +38,7 @@ Logging in with any valid Google account will allow you to render the chart.
 
 This sample is pre-configured with a MongoDB-owned test Client ID. To use Google Sign-In in your own apps, you must create your own Client ID.
 
-Steps on how to confrigure a Project with Google and attain a Google Client ID can be found [here](https://developers.google.com/identity/sign-in/web/sign-in). You'll need to set the Origin and Redirect URIs to whatever you use in your application. In our sample, that is http://localhost:3000.
+Steps on how to configure a Project with Google and attain a Google Client ID can be found [here](https://developers.google.com/identity/sign-in/web/sign-in). You'll need to set the Origin and Redirect URIs to whatever you use in your application. In our sample, that is http://localhost:3000.
 
 ### Preparing your Chart for Embedding
 This sample is preconfigured to render a specific chart. You can run the sample as-is, or you can modify it to render your own chart by completing the following steps:
@@ -68,9 +68,11 @@ This sample is preconfigured to render a specific chart. You can run the sample 
 ## Running this Sample with your data
 
 If you do not wish to use our sample data and have completed the above steps to prepare your own chart for embedding,
-   - Open the _index.js_ file (`src/index.js`)
+   - Open the `index.html` file
    - Replace the Charts `baseUrl` string with the base URL you copied from the MongoDB Charts Embedded Chart menu (look for "\~REPLACE\~" in the comments)
    - Replace the `chartId` string with the chart ID you copied from the MongoDB Charts Embedded Chart menu (look for "\~REPLACE\~" in the comments)
+   - **Optional**
+     - Replace the `<meta content="YourClientIDHere">` with your own Google Client ID. (look for "\~REPLACE\~" in the comments)
 
 ## Next Steps
 

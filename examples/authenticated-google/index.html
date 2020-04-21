@@ -12,6 +12,7 @@
     <script src="https://apis.google.com/js/platform.js" async defer></script>
     <script src="https://unpkg.com/@mongodb-js/charts-embed-dom@beta"></script>
 
+    <!-- Optional: ~REPLACE~ content with your Google Client ID -->
     <meta
       name="google-signin-client_id"
       content="569596223089-pf55ivsj1mg4ncks7p8abg0ejpmu5qr0.apps.googleusercontent.com"
@@ -20,8 +21,8 @@
 
   <body>
     <script> 
-      async function onSignIn(googleUser) {
-        var id_token = googleUser.getAuthResponse().id_token;
+      function onSignIn(googleUser) {
+        const id_token = googleUser.getAuthResponse().id_token;
         const ChartsEmbedSDK = window.ChartsEmbedSDK;
 
         console.log("ID TOKEN == " + id_token);
