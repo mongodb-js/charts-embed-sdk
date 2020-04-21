@@ -10,7 +10,8 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
     />
     <script src="https://apis.google.com/js/platform.js" async defer></script>
-    
+    <script src="https://unpkg.com/@mongodb-js/charts-embed-dom@beta"></script>
+
     <meta
       name="google-signin-client_id"
       content="569596223089-pf55ivsj1mg4ncks7p8abg0ejpmu5qr0.apps.googleusercontent.com"
@@ -21,23 +22,24 @@
     <script> 
       async function onSignIn(googleUser) {
         var id_token = googleUser.getAuthResponse().id_token;
-        const url = 'http://localhost:1234/api/sendGoogleId'; // site that doesn’t send Access-Control-*
-        var response = fetch(url, {
-          method: 'POST',
-          headers: {
-            Accept: 'application/json',
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({
-            token: id_token,
-          })
-        })
+        const ChartsEmbedSDK = window.ChartsEmbedSDK;
 
-        response.then(() => document.body.classList.toggle("logged-in", true));
+        console.log("ID TOKEN == " + id_token);
+        const sdk = new ChartsEmbedSDK({
+          baseUrl: "https://charts-dev.mongodb.com/charts-test2-pebbp", // Optional: ~REPLACE~ with your Charts URL
+          getUserToken: () => { return id_token },
+        });
+      
+        const chart = sdk.createChart({
+          chartId: "0d984f0c-5f1b-4711-9e5d-f78aa1ea8fcb", // Optional: ~REPLACE~ with your Chart ID
+        });
+        
+        document.body.classList.toggle("logged-in", true)
+        chart.render(document.getElementById("chart"));
 
       }
     </script>
-     <script type="text/javascript" src="src/index.js"></script>
+    <script type="text/javascript" src="src/index.js"></script>
     <main>
       <h1 id="lock"></h1>
       <div id="login-page" class="login-page">
