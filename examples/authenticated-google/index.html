@@ -27,7 +27,7 @@
         console.log("ID TOKEN == " + id_token);
         const sdk = new ChartsEmbedSDK({
           baseUrl: "https://charts-dev.mongodb.com/charts-test2-pebbp", // Optional: ~REPLACE~ with your Charts URL
-          getUserToken: () => { return id_token },
+          getUserToken: () => id_token
         });
       
         const chart = sdk.createChart({
