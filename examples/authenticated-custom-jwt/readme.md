@@ -18,6 +18,18 @@ This sample shows how to use the JavaScript Embedding SDK to render **authentica
 - 🔒 Only render charts to valid users
 - 🔑 Custom JWT authentication via `jsonwebtoken`
 
+## Quickstart
+_The following steps presume the use of npm, though yarn works as well._
+
+1. Ensure you have Node installed. You can confirm with `node --version`. On some operating systems, Node available as the `nodejs` binary instead.
+
+2. Clone the Git repository or download the code to your computer.
+
+3. Run `npm install` to install the package dependencies.
+
+4. Run `npm start` to start the application. This will utilise parcel.js
+   - Optional Parcel.js documentation https://parceljs.org/ for more information on what this is
+
 ## Preparing your Chart for Embedding
 
 This sample is preconfigured to render a specific chart. You can run the sample as-is, or you can modify it to render your own chart by completing the following steps:
@@ -46,24 +58,15 @@ This sample is preconfigured to render a specific chart. You can run the sample 
 - Signing Algorithm: `HS256` _Note, this is the default signing algorithm for the `jsonwebtoken` library and many others_
 - Signing Key: `topsecret` _Note, this key must correlate with the key found in `config.js`_
 
-## Running this Sample
+## Running this Sample with your data
 
-_The following steps presume the use of npm, though yarn works as well._
-
-1. Ensure you have Node installed. You can confirm with `node --version`. On some operating systems, Node available as the `nodejs` binary instead.
-
-2. Clone the Git repository or download the code to your computer.
-
-3. **Optional**
+1. 
    If you do not wish to use our sample data and have completed the above steps to prepare your own chart for embedding,
    - Open the _index.js_ file (`src/index.js`)
-   - Replace the `baseUrl` string on with the base URL you copied from the MongoDB Charts Embedded Chart menu (look for "\~REPLACE\~" in the comments)
-   - Replace the `chartId` string on with the chart ID you copied from the MongoDB Charts Embedded Chart menu (look for "\~REPLACE\~" in the comments)
-   - Replace the second `chartId`string with the same ID. (look for "\~REPLACE\~" in the comments)
-4. Run `npm install` to install the package dependencies.
-5. Run `npm install -g parcel-bundler` to install Parcel. You may need to run `sudo npm install -g parcel-bundler` if you lack permissions.
-   - Optional Parcel.js documentation https://parceljs.org/ for more information on what this is
-6. Run `npm start` to start the application.
+   - Replace the `baseUrl` string with the base URL you copied from the MongoDB Charts Embedded Chart menu (look for "\~REPLACE\~" in the comments)
+   - Replace the `chartId` string with the chart ID you copied from the MongoDB Charts Embedded Chart menu. (look for "\~REPLACE\~" in the comments)
+2. Run `npm install` to install the package dependencies.
+3. Run `npm start` to start the application.
 
 This should create a local server running the Charts demo. Open a web browser and navigate to `http://localhost:1234` in the url bar to see the sample. Along with this, a local jwt authentication server will be spun up on `http://localhost:8000`.
 
@@ -77,6 +80,6 @@ Once you gain an understanding of the API, consider the following
 
 - Take on the optional steps to prepare and manipulate your own data source rather than the sample.
 - Change the login logic to adapt to your project's security workflow.
-- Think whether an authenticated chart is the feature you're after. If you're simply looking for a way to show off your data, unauthenticated embedding simplifies the workflow even further.
+- Think whether an authenticated chart is the feature you're after. If you're simply looking for a way to show off your data, [unauthenticated embedding](https://github.com/mongodb-js/charts-embed-sdk/tree/master/examples/unauthenticated) simplifies the workflow even further.
 
 Happy Charting! 🚀📈

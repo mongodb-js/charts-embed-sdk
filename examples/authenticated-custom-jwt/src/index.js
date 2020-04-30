@@ -51,13 +51,12 @@ async function login(username, password) {
 async function renderChart() {
   const sdk = new ChartsEmbedSDK({
     baseUrl: "https://charts-dev.mongodb.com/charts-test2-pebbp", // Optional: ~REPLACE~ with the Base URL from your Embed Chart dialog
-    chartId: "a2e775e6-f267-4c2c-a65d-fbf3fad4a4f2", // Optional: ~REPLACE~ with the Chart ID from your Embed Chart dialog
     getUserToken: async function() {
       return await login(getUser(), getPass());
     }
   });
 
-  const chart = sdk.createChart({ id: "a2e775e6-f267-4c2c-a65d-fbf3fad4a4f2" }); // Optional: ~REPLACE~ with the Chart ID from your Embed Chart dialog
+  const chart = sdk.createChart({ chartId: "a2e775e6-f267-4c2c-a65d-fbf3fad4a4f2" }); // Optional: ~REPLACE~ with the Chart ID from your Embed Chart dialog
 
   // render the chart into a container
   chart.render(document.getElementById("chart"));

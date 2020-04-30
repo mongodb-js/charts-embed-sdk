@@ -93,6 +93,6 @@ Once you gain an understanding of the API, consider the following
    - ![Screen Shot 2020-04-21 at 1 47 54 pm](https://user-images.githubusercontent.com/19422770/79823279-b9b35880-83d6-11ea-8370-774bcde80252.png)
    - This will only allow users from your company domain to view the chart data 🔒
 
-- Think whether an authenticated chart is the feature you're after. If you're simply looking for a way to show off your data, unauthenticated embedding simplifies the workflow even further.
+- Think whether an authenticated chart is the feature you're after. If you're simply looking for a way to show off your data, [unauthenticated embedding](https://github.com/mongodb-js/charts-embed-sdk/tree/master/examples/unauthenticated) simplifies the workflow even further.
 
 Happy Charting! 🚀📈

@@ -26,6 +26,21 @@ This sample shows how to use the JavaScript Embedding SDK to render unauthentica
   - Note, filtering on a chart requires setting up white listed fields in MongoDB Charts. We have done this for our sample data.
 - Get the current filter on a chart
 
+## Quickstart
+
+_The following steps presume the use of npm, though yarn works as well._
+
+1. Ensure you have Node installed. You can confirm with `node --version`. On some operating systems, Node is available as the `nodejs` binary instead.
+
+2. Clone the Git repository or download the code to your computer.
+
+3. Run `npm install` to install the package dependencies.
+
+4. Run `npm start` to start the application. This will utilise parcel.js
+   - Optional Parcel.js documentation https://parceljs.org/ for more information on what this is
+
+This should create a local server running the Charts demo. Open a web browser and navigate to `http://localhost:1234` in the url bar to see the sample.
+
 ## Preparing your Chart for Embedding
 
 This sample is preconfigured to render a specific chart. You can run the sample as-is, or you can modify it to render your own chart by completing the following steps:
@@ -50,24 +65,15 @@ This sample is preconfigured to render a specific chart. You can run the sample 
    - Update the query **field** in `src/index.js`
    - Update the query **values** in `index.html`
 
-## Running this Sample
+## Running this Sample with your data
 
-_The following steps presume the use of npm, though yarn works as well._
-
-1. Ensure you have Node installed. You can confirm with `node --version`. On some operating systems, Node available as the `nodejs` binary instead.
-
-2. Clone the Git repository or download the code to your computer.
-
-3. **Optional**
-   If you do not wish to use our sample data and have completed the above steps to prepare your own chart for embedding,
+1. If you do not wish to use our sample data and have completed the above steps to prepare your own chart for embedding,
    - Open the _index.js_ file (`src/index.js`)
    - Replace the `baseUrl` string on with the base URL you copied from the MongoDB Charts Embedded Chart menu (look for "\~REPLACE\~" in the comments)
    - Replace the `chartId` string on with the chart ID you copied from the MongoDB Charts Embedded Chart menu (look for "\~REPLACE\~" in the comments)
    - Replace `address.country` in the `setFilter` code with your whitelisted field (look for "\~REPLACE\~" in the comments)
-4. Run `npm install` to install the package dependencies.
-5. Run `npm install -g parcel-bundler` to install Parcel. You may need to run `sudo npm install -g parcel-bundler` if you lack permissions.
-   - Optional Parcel.js documentation https://parceljs.org/ for more information on what this is
-6. Run `parcel index.html` to launch the sample application
+2. Run `npm install` to install the package dependencies.
+3. Run `npm start` to launch the sample application
 
 This should create a local server running the Charts demo. Open a web browser and navigate to `http://localhost:1234` in the url bar to see the sample.
 
@@ -76,7 +82,7 @@ This should create a local server running the Charts demo. Open a web browser an
 Once you gain an understanding of the API, consider the following
 
 - Take on the optional steps to prepare and manipulate your own data source rather than the sample.
-- Think whether an unauthenticated chart is the feature you're after. Embedding iframes from Charts is a great way to showcase your data if you don't need the user to interact with the chart.
+- Think whether an unauthenticated chart is the feature you're after. [Embedding iframes](https://docs.mongodb.com/charts/master/embedded-chart-options/) from Charts is a great way to showcase your data if you don't need the user to interact with the chart.
 - Consider the data you're making available, and the queries you're allowing. If the data is sensitive and you need to ensure the charts can only be accessed by authorized people, you should look at using authenticated embedding.
 
 Happy Charting! 🚀📈
