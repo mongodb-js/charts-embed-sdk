@@ -9,7 +9,8 @@
   },
   "dependencies": {
     "@mongodb-js/charts-embed-dom": "^1.0.0",
-    "regenerator-runtime": "^0.13.3"
+    "regenerator-runtime": "^0.13.3",
+    "parcel": "^1.12.4"
   },
   "devDependencies": {
     "@babel/core": "^7.8.4",
