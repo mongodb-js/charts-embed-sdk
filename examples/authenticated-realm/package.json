@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.html",
   "scripts": {
-    "start": "node app.js & parcel index.html --open",
+    "start": "parcel index.html --open",
     "build": "parcel build index.html"
   },
   "dependencies": {
