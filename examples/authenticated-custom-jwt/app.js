@@ -24,7 +24,7 @@ app.post("/login", (req, res) => {
     loginDetails.password === mockedPassword
   ) {
     let token = jwt.sign({ username: loginDetails.username }, config.secret, {
-      expiresIn: "24h" // expires in 24 hours
+      expiresIn: "12h" // expires in 12 hours
     });
     res.json({ bearerToken: token });
   } else {
