@@ -29,5 +29,7 @@ yarn add @mongodb-js/charts-embed-dom
 - [Installation](https://docs.mongodb.com/charts/master/embedding-charts-sdk/)
 - [Examples](https://github.com/mongodb-js/charts-embed-sdk/blob/master/examples)
 - Guides 🤠
+  -  [Getting started with the MongoDB Charts SDK](https://github.com/mongodb-js/charts-embed-sdk/tree/master/examples/unauthenticated)
   - [Getting started with custom JWT authentication](https://github.com/mongodb-js/charts-embed-sdk/tree/master/examples/authenticated-custom-jwt)
   - [Getting started with Realm authentication](https://github.com/mongodb-js/charts-embed-sdk/tree/master/examples/authenticated-realm)
+  - [Getting started with Google authentication](https://github.com/mongodb-js/charts-embed-sdk/tree/master/examples/authenticated-google)
