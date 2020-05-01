@@ -3,10 +3,7 @@ import { Stitch, UserPasswordCredential } from 'mongodb-stitch-browser-sdk'
 import "regenerator-runtime/runtime";
 
 const client = Stitch.initializeAppClient(
-  'realm-authentication-sample-eibkj', // Optional: ~REPLACE~ with your Realm App ID
-  { 
-    baseUrl: 'https://stitch-dev.mongodb.com' // Optional: ~REPLACE~ with your Realm URL
-  }
+  'charts-embedding-sdk-nsuat', // Optional: ~REPLACE~ with your Realm App ID
 ); 
 
 function getUser() {
@@ -38,12 +35,12 @@ async function tryLogin() {
   client.auth.loginWithCredential(credential).then(() =>
   {
     const sdk = new ChartsEmbedSDK({
-      baseUrl: "https://charts-dev.mongodb.com/charts-test2-pebbp", // Optional: ~REPLACE~ with your Charts URL
+      baseUrl: "https://charts.mongodb.com/charts-embedding-examples-wgffp", // Optional: ~REPLACE~ with your Charts URL
       getUserToken: () => getRealmUserToken(client),
     });
 
     const chart = sdk.createChart({
-      chartId: "a2e775e6-f267-4c2c-a65d-fbf3fad4a4f2", // Optional: ~REPLACE~ with your Chart ID
+      chartId: "e966910a-563d-40af-a0e6-57f9d7824c12", // Optional: ~REPLACE~ with your Chart ID
     });
 
     chart.render(document.getElementById("chart"));

@@ -25,14 +25,13 @@
         const id_token = googleUser.getAuthResponse().id_token;
         const ChartsEmbedSDK = window.ChartsEmbedSDK;
 
-        console.log("ID TOKEN == " + id_token);
         const sdk = new ChartsEmbedSDK({
-          baseUrl: "https://charts-dev.mongodb.com/charts-test2-pebbp", // Optional: ~REPLACE~ with your Charts URL
+          baseUrl: "https://charts.mongodb.com/charts-embedding-examples-wgffp", // Optional: ~REPLACE~ with your Charts URL
           getUserToken: () => id_token,
         });
 
         const chart = sdk.createChart({
-          chartId: "0d984f0c-5f1b-4711-9e5d-f78aa1ea8fcb", // Optional: ~REPLACE~ with your Chart ID
+          chartId: "8d4dff93-e7ca-4ccd-a622-e20e8a100197", // Optional: ~REPLACE~ with your Chart ID
         });
 
         document.body.classList.toggle("logged-in", true);

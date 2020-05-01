@@ -126,7 +126,7 @@ Your provider config, (ignoring the completed optional settings) should look som
 If you do not wish to use our sample data and have completed the above steps to prepare your own chart for embedding,
 
 - Open the _index.js_ file (`src/index.js`)
-- Replace the Realm `baseUrl` string with the base URL for your Realm app
+- Replace the Realm `AppClientID` string with the base URL for your Realm app (look for "\~REPLACE\~" in the comments)
 - Replace the Charts `baseUrl` string with the base URL you copied from the MongoDB Charts Embedded Chart menu (look for "\~REPLACE\~" in the comments)
 - Replace the `chartId` string with the chart ID you copied from the MongoDB Charts Embedded Chart menu (look for "\~REPLACE\~" in the comments)
 - Replace the Stitch App ID in the Stitch Constructor, and remove the base URL. `Stitch.initializeAppClient('<your-app-id>')`
