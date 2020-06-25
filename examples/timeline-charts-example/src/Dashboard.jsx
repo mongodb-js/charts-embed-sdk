@@ -107,12 +107,12 @@ export default function Dashboard() {
 
   const handleChangeCommitted = (_event, newValue) => {
     setYear(newValue);
-    getAllMedalsUntil(newValue);
+    getDataFromAllPreviousYears(newValue);
   };
 
   // This function is creating the filter that will be executed on the data.
   // If you wish to run this example on your data, change it to accomodate your idea or make sure you have a "Year" field in your data source
-  const getAllMedalsUntil = (endYear) => {
+  const getDataFromAllPreviousYears = (endYear) => {
     let filter = {
       $and: [
         { Year: { $gte: firstOlympicsYear } },
@@ -139,7 +139,7 @@ export default function Dashboard() {
         return;
       }
     }
-    getAllMedalsUntil(currentYear);
+    getDataFromAllPreviousYears(currentYear);
     setYear(currentYear);
   };
 
