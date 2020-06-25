@@ -8,9 +8,6 @@ const firstOlympicsYear = 1896;
 const lastOlympicsYear = 2016;
 const timelineInterval = 2000; //ms
 
-let timerId;
-let replay = false;
-
 const sdk = new ChartsEmbedSDK({
   baseUrl: "https://charts.mongodb.com/charts-data-science-project-aygif", // Optional: ~REPLACE~ with the Base URL from your Embed Chart dialog
 });
@@ -31,6 +28,9 @@ export default function Dashboard() {
 
   const yearRef = React.useRef(year);
   yearRef.current = year;
+
+  const timerIdRef = React.useRef();
+  const replayRef = React.useRef(false);
 
   const renderColumnChart = useCallback(async (ref) => {
     try {
@@ -99,11 +99,11 @@ export default function Dashboard() {
     let currentYear = yearRef.current + 4;
 
     if (currentYear > lastOlympicsYear) {
-      if (replay) {
+      if (replayRef.current) {
         currentYear = firstOlympicsYear;
-        replay = false;
+        replayRef.current = false;
       } else {
-        clearInterval(timerId);
+        clearInterval(timerIdRef.current);
         setPlaying(false);
         return;
       }
@@ -117,15 +117,15 @@ export default function Dashboard() {
       // we do this because the first play with setInterval is after the time specified
       // and the first filter should be instantaneous
       play();
-      timerId = setInterval(play, timelineInterval);
+      timerIdRef.current = setInterval(play, timelineInterval);
     } else {
-      clearInterval(timerId);
+      clearInterval(timerIdRef.current);
     }
   };
 
   const actionTimeline = () => {
     if (yearRef.current === lastOlympicsYear) {
-      replay = true;
+      replayRef.current = true;
     }
 
     setPlaying(!playing);
