@@ -1,7 +1,6 @@
 import React, { useRef, useCallback, useState } from "react";
 
-import { withStyles } from "@material-ui/core/styles";
-import Slider from "@material-ui/core/Slider";
+import PrettySlider from "./PrettySlider";
 import ChartsEmbedSDK from "@mongodb-js/charts-embed-dom";
 import { useEffect } from "react";
 
@@ -23,36 +22,6 @@ const columnChart = sdk.createChart({
 const geoChart = sdk.createChart({
   chartId: "b1983061-ee44-40ad-9c45-4bb1d4e74884", // Optional: ~REPLACE~ with the Chart ID from your Embed Chart dialog
 });
-
-const PrettoSlider = withStyles({
-  root: {
-    color: "#52af77",
-    height: 8,
-  },
-  thumb: {
-    height: 24,
-    width: 24,
-    backgroundColor: "#fff",
-    border: "2px solid currentColor",
-    marginTop: -8,
-    marginLeft: -12,
-    "&:focus, &:hover, &$active": {
-      boxShadow: "inherit",
-    },
-  },
-  active: {},
-  valueLabel: {
-    left: "calc(-50% + 4px)",
-  },
-  track: {
-    height: 8,
-    borderRadius: 4,
-  },
-  rail: {
-    height: 8,
-    borderRadius: 4,
-  },
-})(Slider);
 
 export default function Dashboard() {
   const refColumnChart = useRef(null);
@@ -179,7 +148,7 @@ export default function Dashboard() {
 
       <div className="actions">
         <div className="slider">
-          <PrettoSlider
+          <PrettySlider
             valueLabelDisplay="on"
             aria-label="pretto slider"
             min={firstOlympicsYear}
