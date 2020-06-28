@@ -8,7 +8,7 @@ The example code in this directory is building a small react app, implementing a
 
 What the application is doing is showing the distribution of Olympic medals through the years.
 
-We are changing the filter on the data every few seconds so that it can look like a timeline video.
+We are using a [filter](https://docs.mongodb.com/charts/saas/filter-embedded-charts/#filter-data-on-charts-embedded-with-the-sdk) on the Olympic year, changing the filter every few seconds to turn it into a timelapse.
 
 The idea is this - for every Olympic year we are filtering all data from the beginning of the Olympic games to the current year.
 
@@ -37,19 +37,19 @@ _The following steps presume the use of npm, though yarn works as well._
 
 ## Preparing your Chart for Embedding
 
-This sample is preconfigured to render a specific chart. You can run the sample as-is, or you can modify it to render your own chart by completing the following steps:
+This sample is preconfigured to render specific charts. You can run the sample as-is, or you can modify it to render your own charts by completing the following steps:
 
 1. Log onto MongoDB Charts
 
 2. If you haven't done so already, create a chart on any dashboard that you would like to embed.
 
-3. Go to the Data Sources tab, find the data source that you are using on the chart, and choose External Sharing Options from the ... menu. Make sure that embedding is enabled for this data source and select '**Unauthenticated or Verified Signature**'
+3. Go to the Data Sources tab, find the data source that you are using on the chart, and choose External Sharing Options from the (...) menu. Make sure that embedding is enabled for this data source and select '**Unauthenticated or Verified Signature**'
 
-4. Find the chart you want to embed, click the **...** menu and select **Embed Chart**
+4. Find the chart you want to embed, click the **(...)** menu and select **Embed Chart**
 
 5. Ensure the Unauthenticated tab is selected and turn on '**Enable unauthenticated access**'
 
-6. Ensure that you whitelist all fields that you want to use filters for. In the case of the example, this is only "Year".
+6. Ensure that you whitelist all fields that you want to use filters for.
 
 7. Select the **Javascript SDK** option
 
@@ -61,4 +61,4 @@ This sample is preconfigured to render a specific chart. You can run the sample 
    - Open the _Dashboard.jsx_ file (`src/Dashboard.jsx`)
    - Replace the `baseUrl` string on with the base URL you copied from the MongoDB Charts Embedded Chart menu (look for "\~REPLACE\~" in the comments)
    - Replace the `chartId` string on with the chart ID you copied from the MongoDB Charts Embedded Chart menu. The example code shows 2 charts. (look for "\~REPLACE\~" in the comments)
-   - Change the filter to whatever makes sense for your project. Currently the filter gets the data between two years.
+   - Change the filter to whatever makes sense for your project. Currently the filter gets the data between two years and is using the "Year" field for filtering.
