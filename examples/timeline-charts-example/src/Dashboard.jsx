@@ -12,7 +12,7 @@ const sdk = new ChartsEmbedSDK({
   baseUrl: "https://charts.mongodb.com/charts-data-science-project-aygif", // Optional: ~REPLACE~ with the Base URL from your Embed Chart dialog
 });
 
-const columnChart = sdk.createChart({
+const barChart = sdk.createChart({
   chartId: "ff518bbb-923c-4c2c-91f5-4a2b3137f312", // Optional: ~REPLACE~ with the Chart ID from your Embed Chart dialog
 });
 
@@ -21,7 +21,7 @@ const geoChart = sdk.createChart({
 });
 
 export default function Dashboard() {
-  const refColumnChart = useRef(null);
+  const refBarChart = useRef(null);
   const refGeoChart = useRef(null);
   const [year, setYear] = useState(lastOlympicsYear);
   const [playing, setPlaying] = useState(false);
@@ -32,9 +32,9 @@ export default function Dashboard() {
   const timerIdRef = React.useRef();
   const replayRef = React.useRef(false);
 
-  const renderColumnChart = useCallback(async (ref) => {
+  const renderBarChart = useCallback(async (ref) => {
     try {
-      await columnChart.render(ref);
+      await barChart.render(ref);
     } catch (e) {
       console.error(e);
     }
@@ -48,15 +48,15 @@ export default function Dashboard() {
     }
   }, []);
 
-  const setRefColumnChart = useCallback(
+  const setRefBarChart = useCallback(
     (ref) => {
       if (ref) {
-        renderColumnChart(ref);
+        renderBarChart(ref);
       }
       // Save a reference to the node
-      refColumnChart.current = ref;
+      refBarChart.current = ref;
     },
-    [renderColumnChart]
+    [renderBarChart]
   );
 
   const setRefGeoChart = useCallback(
@@ -91,7 +91,7 @@ export default function Dashboard() {
 
     return Promise.all([
       geoChart.setFilter(filter),
-      columnChart.setFilter(filter),
+      barChart.setFilter(filter),
     ]);
   };
 
@@ -163,7 +163,7 @@ export default function Dashboard() {
       </div>
 
       <div className="charts">
-        <div id="columnChart" ref={setRefColumnChart}></div>
+        <div id="barChart" ref={setRefBarChart}></div>
         <div id="geoChart" ref={setRefGeoChart}></div>
       </div>
     </>

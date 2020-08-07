@@ -8,6 +8,8 @@ The example code in this directory is building a small react app, implementing a
 
 What the application is doing is showing the distribution of Olympic medals through the years.
 
+![timeline-retina-960x438-500ms](https://user-images.githubusercontent.com/51065986/89610627-5df5d800-d8be-11ea-954b-6d92086d9f58.gif)
+
 We are using a [filter](https://docs.mongodb.com/charts/saas/filter-embedded-charts/#filter-data-on-charts-embedded-with-the-sdk) on the Olympic year, changing the filter every few seconds to turn it into a timelapse.
 
 The idea is this - for every Olympic year we are filtering all data from the beginning of the Olympic games to the current year.
