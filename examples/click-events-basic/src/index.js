@@ -2,11 +2,11 @@ import "regenerator-runtime/runtime";
 import ChartsEmbedSDK from "@mongodb-js/charts-embed-dom";
 
 const sdk = new ChartsEmbedSDK({
-  baseUrl: "https://charts-qa.mongodb.com/charts-tom-2020-09-09-yammr" // Optional: ~REPLACE~ with the Base URL from your Embed Chart dialog
+  baseUrl: "https://charts.mongodb.com/charts-embedding-examples-wgffp" // Optional: ~REPLACE~ with the Base URL from your Embed Chart dialog
 });
 
 const chart = sdk.createChart({
-  chartId: "c0774a27-3432-4207-b795-afeb56243652", // Optional: ~REPLACE~ with the Chart ID from your Embed Chart dialog
+  chartId: "90a8fe84-dd27-4d53-a3fc-0e40392685dd", // Optional: ~REPLACE~ with the Chart ID from your Embed Chart dialog
   height: "700px"
 });
 
