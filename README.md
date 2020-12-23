@@ -33,3 +33,5 @@ yarn add @mongodb-js/charts-embed-dom
   - [Getting started with custom JWT authentication](https://github.com/mongodb-js/charts-embed-sdk/tree/master/examples/authenticated-custom-jwt)
   - [Getting started with Realm authentication](https://github.com/mongodb-js/charts-embed-sdk/tree/master/examples/authenticated-realm)
   - [Getting started with Google authentication](https://github.com/mongodb-js/charts-embed-sdk/tree/master/examples/authenticated-google)
+  - [Getting started with click events (BETA)](https://github.com/mongodb-js/charts-embed-sdk/tree/master/examples/click-events-basic)
+  - [Interactive filtering using click events (BETA)](https://github.com/mongodb-js/charts-embed-sdk/tree/master/examples/click-events-filtering)

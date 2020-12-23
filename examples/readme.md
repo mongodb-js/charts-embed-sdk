@@ -19,6 +19,10 @@ Our **authenticated** examples are great references if you need help getting sta
 - [MongoDB Realm](https://github.com/mongodb-js/charts-embed-sdk/blob/master/examples/authenticated-realm)
 - [Google](https://github.com/mongodb-js/charts-embed-sdk/blob/master/examples/authenticated-google)
 
+If you'd like to build **interactive** charts, we have two examples showing this capability:
+  - [Getting started with click events (BETA)](https://github.com/mongodb-js/charts-embed-sdk/tree/master/examples/click-events-basic)
+  - [Interactive filtering using click events (BETA)](https://github.com/mongodb-js/charts-embed-sdk/tree/master/examples/click-events-filtering)
+
 There is also an [example](https://github.com/mongodb-js/charts-embed-sdk/tree/master/examples/timeline-charts-example) of how to build an animated timeline chart.
 
 We hope these resources help, and as always,

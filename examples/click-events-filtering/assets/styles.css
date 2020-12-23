@@ -1,0 +1,18 @@
+html,
+body {
+  font-family: "Heebo";
+  transition: background-color 0.5s ease;
+}
+
+.body-content {
+  display: flex;
+}
+.chart {
+  flex: 1;
+  width: 50%;
+  height: 100%;
+}
+
+h1, h2, h3, h4 {
+  text-align: center;
+}

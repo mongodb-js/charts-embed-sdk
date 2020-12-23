@@ -1,0 +1,21 @@
+{
+  "name": "charts-sdk-example-click-events-basic",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "start": "parcel index.html --open",
+    "build": "parcel build index.html"
+  },
+  "dependencies": {
+    "@mongodb-js/charts-embed-dom": "^1.2.0-beta.1",
+    "regenerator-runtime": "^0.13.3",
+    "parcel": "^1.12.4"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.8.4",
+    "@babel/preset-env": "^7.8.4",
+    "parcel-bundler": "^1.6.1"
+  },
+  "keywords": []
+}
