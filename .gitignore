@@ -1,0 +1,14 @@
+.DS_Store
+npm-debug.log
+yarn-error.log
+node_modules/
+lib
+build
+dist
+.nyc_output
+.tmp
+.lock-wscript
+.idea/
+*.iml
+.nvmrc
+.cache

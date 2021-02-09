@@ -8,7 +8,7 @@
     "build": "parcel build index.html"
   },
   "dependencies": {
-    "@mongodb-js/charts-embed-dom": "^1.0.0",
+    "@mongodb-js/charts-embed-dom": "^2.0.1",
     "regenerator-runtime": "^0.13.3",
     "parcel": "^1.12.4"
   },
