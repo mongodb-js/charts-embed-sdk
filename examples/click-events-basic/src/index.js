@@ -1,4 +1,3 @@
-import "regenerator-runtime/runtime";
 import ChartsEmbedSDK from "@mongodb-js/charts-embed-dom";
 
 const sdk = new ChartsEmbedSDK({

@@ -13,13 +13,14 @@ When you embed charts using the Embedding SDK, you are able to subscribe to even
 #### The features included in this demo are as follows:
 
 - Adding a click event handler to a chart, using code similar to:
+
 ```
-chart.addEventListener("click", callback);
+chart.addEventListener("click", callback, options);
 ```
-- Parsing the payload returned by the click event to determine if the event's `target` is of type `mark`
+
+- Adding an option to make just certain parts of the chart clickable (in this case only the bars)
 - Generating an MQL filter document based on the data returned in the payload
 - Filtering a second chart using the `setFilter` method
-
 
 ## Quickstart
 
@@ -60,6 +61,7 @@ This sample is preconfigured to render a specific chart. You can run the sample 
 ## Running this Sample with your data
 
 1. If you do not wish to use our sample data and have completed the above steps to prepare your own chart for embedding,
+
    - Open the _index.js_ file (`src/index.js`)
    - Replace the `baseUrl` string on with the base URL you copied from the MongoDB Charts Embedded Chart menu (look for "\~REPLACE\~" in the comments)
    - Replace the `chartId` string on with the chart ID you copied from the MongoDB Charts Embedded Chart menu (look for "\~REPLACE\~" in the comments)
