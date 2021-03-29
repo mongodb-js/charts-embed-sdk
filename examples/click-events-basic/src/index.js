@@ -2,16 +2,17 @@ import "regenerator-runtime/runtime";
 import ChartsEmbedSDK from "@mongodb-js/charts-embed-dom";
 
 const sdk = new ChartsEmbedSDK({
-  baseUrl: "https://charts.mongodb.com/charts-embedding-examples-wgffp" // Optional: ~REPLACE~ with the Base URL from your Embed Chart dialog
+  baseUrl: "https://charts.mongodb.com/charts-embedding-examples-wgffp", // Optional: ~REPLACE~ with the Base URL from your Embed Chart dialog
 });
 
 const chart = sdk.createChart({
   chartId: "90a8fe84-dd27-4d53-a3fc-0e40392685dd", // Optional: ~REPLACE~ with the Chart ID from your Embed Chart dialog
-  height: "700px"
+  height: "700px",
 });
 
-chart.addEventListener("click", (payload) => {
-  document.getElementById("payload").innerHTML = '<pre>' + JSON.stringify(payload, null, 2) + '</pre>'; 
+const clickHandler = (payload) => {
+  document.getElementById("payload").innerHTML =
+    "<pre>" + JSON.stringify(payload, null, 2) + "</pre>";
 
   let infoText = "";
   if (payload.target.role) {
@@ -36,10 +37,11 @@ chart.addEventListener("click", (payload) => {
   }
 
   document.getElementById("info").innerHTML = "<ul>" + infoText + "</ul>";
-});
+};
 
 async function renderCharts() {
   await chart.render(document.getElementById("chart"));
+  await chart.addEventListener("click", clickHandler);
 }
 
 renderCharts().catch((e) => window.alert(e.message));
