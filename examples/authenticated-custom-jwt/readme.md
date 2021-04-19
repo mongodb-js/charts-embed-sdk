@@ -4,8 +4,6 @@
 
 📄 _[See the MongoDB Charts Embedding Docs for more details](https://docs.mongodb.com/charts/saas/embedding-charts/)_
 
-🎮 _[Play with a live demo of this sample here](https://codesandbox.io/s/github/mongodb-js/charts-embed-sdk/tree/master/examples/authenticated-custom-jwt)_
-
 MongoDB Charts allows you to create visualizations of your MongoDB data using a simple web interface. You can view the visualizations within the Charts UI, or you can use the Embedding feature to render the charts in an external web application.
 
 Charts can be embedded either using a simple IFRAME snippet, or by using the Charts Embedding SDK from your JavaScript code. When using the SDK, embedded charts can be either unauthenticated (meaning anyone who has the embed code can view the chart), or authenticated (whereby the user can only view the chart if they have an active authentication session linked to a Charts authentication provider).
@@ -19,6 +17,7 @@ This sample shows how to use the JavaScript Embedding SDK to render **authentica
 - 🔑 Custom JWT authentication via `jsonwebtoken`
 
 ## Quickstart
+
 _The following steps presume the use of npm, though yarn works as well._
 
 1. Ensure you have Node installed. You can confirm with `node --version`. On some operating systems, Node available as the `nodejs` binary instead.
@@ -60,13 +59,12 @@ This sample is preconfigured to render a specific chart. You can run the sample 
 
 ## Running this Sample with your data
 
-1. 
-   If you do not wish to use our sample data and have completed the above steps to prepare your own chart for embedding,
-   - Open the _index.js_ file (`src/index.js`)
-   - Replace the `baseUrl` string with the base URL you copied from the MongoDB Charts Embedded Chart menu (look for "\~REPLACE\~" in the comments)
-   - Replace the `chartId` string with the chart ID you copied from the MongoDB Charts Embedded Chart menu. (look for "\~REPLACE\~" in the comments)
-2. Run `npm install` to install the package dependencies.
-3. Run `npm start` to start the application.
+1.  If you do not wish to use our sample data and have completed the above steps to prepare your own chart for embedding,
+    - Open the _index.js_ file (`src/index.js`)
+    - Replace the `baseUrl` string with the base URL you copied from the MongoDB Charts Embedded Chart menu (look for "\~REPLACE\~" in the comments)
+    - Replace the `chartId` string with the chart ID you copied from the MongoDB Charts Embedded Chart menu. (look for "\~REPLACE\~" in the comments)
+2.  Run `npm install` to install the package dependencies.
+3.  Run `npm start` to start the application.
 
 This should create a local server running the Charts demo. Open a web browser and navigate to `http://localhost:1234` in the url bar to see the sample. Along with this, a local jwt authentication server will be spun up on `http://localhost:8000`.
 
