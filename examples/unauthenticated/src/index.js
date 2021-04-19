@@ -1,13 +1,12 @@
-import "regenerator-runtime/runtime";
 import ChartsEmbedSDK from "@mongodb-js/charts-embed-dom";
 
 const sdk = new ChartsEmbedSDK({
-  baseUrl: "https://charts.mongodb.com/charts-embedding-examples-wgffp" // Optional: ~REPLACE~ with the Base URL from your Embed Chart dialog
+  baseUrl: "https://charts.mongodb.com/charts-embedding-examples-wgffp", // Optional: ~REPLACE~ with the Base URL from your Embed Chart dialog
 });
 
 const chart = sdk.createChart({
   chartId: "735cfa75-15b8-483a-bc2e-7c6659511c7c", // Optional: ~REPLACE~ with the Chart ID from your Embed Chart dialog
-  height: "700px"
+  height: "700px",
 });
 
 async function renderChart() {
@@ -33,7 +32,7 @@ async function renderChart() {
    */
   document
     .getElementById("refresh-interval")
-    .addEventListener("change", async e => {
+    .addEventListener("change", async (e) => {
       var refreshInterval = e.target.value;
       refreshInterval
         ? chart.setRefreshInterval(Number(refreshInterval))
@@ -58,7 +57,7 @@ async function renderChart() {
    */
   document
     .getElementById("country-filter")
-    .addEventListener("change", async e => {
+    .addEventListener("change", async (e) => {
       const country = e.target.value;
       const currentFilterDOM = document.getElementById("currentFilter");
       if (country) {
@@ -84,7 +83,7 @@ async function renderChart() {
    */
   document
     .getElementById("themeSwitch")
-    .addEventListener("change", async function() {
+    .addEventListener("change", async function () {
       if (this.checked) {
         await chart.setTheme("dark");
         document.body.classList.toggle("dark-mode", true);
@@ -98,4 +97,4 @@ async function renderChart() {
     });
 }
 
-renderChart().catch(e => window.alert(e.message));
+renderChart().catch((e) => window.alert(e.message));

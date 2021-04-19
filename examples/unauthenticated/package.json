@@ -9,7 +9,6 @@
   },
   "dependencies": {
     "@mongodb-js/charts-embed-dom": "^2.0.1",
-    "regenerator-runtime": "^0.13.3",
     "parcel": "^1.12.4"
   },
   "devDependencies": {
@@ -17,5 +16,8 @@
     "@babel/preset-env": "^7.8.4",
     "parcel-bundler": "^1.6.1"
   },
-  "keywords": []
+  "keywords": [],
+  "browserslist": [
+    "since 2020"
+  ]
 }

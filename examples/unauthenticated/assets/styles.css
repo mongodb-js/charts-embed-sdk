@@ -75,7 +75,7 @@ span {
 }
 
 .dark-mode {
-  background-color: #061621;
+  background-color: #21313c; /* to match the chart's background */
   color: #ffffff;
 }
 
