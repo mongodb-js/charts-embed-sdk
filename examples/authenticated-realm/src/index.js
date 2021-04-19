@@ -1,6 +1,5 @@
 import ChartsEmbedSDK, { getRealmUserToken }from "@mongodb-js/charts-embed-dom";
 import { Stitch, UserPasswordCredential } from 'mongodb-stitch-browser-sdk'
-import "regenerator-runtime/runtime";
 
 const client = Stitch.initializeAppClient(
   'charts-embedding-sdk-nsuat', // Optional: ~REPLACE~ with your Realm App ID
