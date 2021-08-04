@@ -2,8 +2,6 @@
 
 ## Background
 
-⚠ _This example uses Beta functionality which is subject to change before the release. You must use the `@beta` tagged version of `@mongodb-js/charts-embed-dom` to use this functionality._
-
 🎮 _[Play with a live demo of this sample here](https://codesandbox.io/s/github/mongodb-js/charts-embed-sdk/tree/master/examples/click-events-filtering)_
 
 MongoDB Charts allows you to create visualizations of your MongoDB data using a simple web interface. You can view the visualizations within the Charts UI, or you can use the Embedding feature to render the charts in an external web application.
@@ -19,7 +17,8 @@ chart.addEventListener("click", callback, options);
 ```
 
 - Adding an option to make just certain parts of the chart clickable (in this case only the bars)
-- Generating an MQL filter document based on the data returned in the payload
+- Obtaining an MQL filter document based on the data returned in the payload using `selectionFilter`
+- Highlighting the clicked element on the first chart using `setHighlight`
 - Filtering a second chart using the `setFilter` method
 
 ## Quickstart

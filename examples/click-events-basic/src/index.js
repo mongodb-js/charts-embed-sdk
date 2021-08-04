@@ -10,6 +10,10 @@ const chart = sdk.createChart({
 });
 
 const clickHandler = (payload) => {
+  // Highlight the clicked element on the chart
+  chart.setHighlight(payload.selectionFilter);
+
+  // Display information about the clicked element
   document.getElementById("payload").innerHTML =
     "<pre>" + JSON.stringify(payload, null, 2) + "</pre>";
 

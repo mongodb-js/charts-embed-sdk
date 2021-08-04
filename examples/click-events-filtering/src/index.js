@@ -15,7 +15,7 @@ const chart2 = sdk.createChart({
 });
 
 const clickHandler = (payload) => {
-  // Optional: ~REPLACE~ this with a suitable filter if you're using your own chart
+  chart1.setHighlight(payload.selectionFilter);
   chart2.setFilter(payload.selectionFilter);
   document.getElementById(
     "filterMessage"

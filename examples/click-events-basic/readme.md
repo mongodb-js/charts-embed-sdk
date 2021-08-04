@@ -2,8 +2,6 @@
 
 ## Background
 
-⚠ _This example uses Beta functionality which is subject to change before the release. You must use the `@beta` tagged version of `@mongodb-js/charts-embed-dom` to use this functionality._
-
 🎮 _[Play with a live demo of this sample here](https://codesandbox.io/s/github/mongodb-js/charts-embed-sdk/tree/master/examples/click-events-basic)_
 
 MongoDB Charts allows you to create visualizations of your MongoDB data using a simple web interface. You can view the visualizations within the Charts UI, or you can use the Embedding feature to render the charts in an external web application.
@@ -15,6 +13,11 @@ When you embed charts using the Embedding SDK, you are able to subscribe to even
 - Adding a click event handler to a chart, using code similar to:
 ```
 chart.addEventListener("click", callback);
+```
+
+- Highlighting the element clicked on the chart, using the following code:
+```
+chart.setHighlight(payload.selectionFilter)
 ```
 
 - Parsing the payload returned to the callback event. A typical click event's payload will look something like this:
