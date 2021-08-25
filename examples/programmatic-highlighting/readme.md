@@ -51,9 +51,6 @@ This sample is preconfigured to render a specific chart. You can run the sample 
 
 7. Note the Chart ID and the Chart Base URL, as you will need them for running the demo.
 
-8. In the same menu, note the **User Specified Filters** option. If you wish to try out filtering on your own dataset, you will need to whitelist a field by which to filter on. For example, our sample Movies dataset filters on `year` and `genres`.
-   Furthermore, the filter related code in `src/index.js` will need to be updated to conform to the filter query you wish to apply.
-
 ## Running this Sample with your data
 
 1. If you do not wish to use our sample data and have completed the above steps to prepare your own chart for embedding,
@@ -61,7 +58,6 @@ This sample is preconfigured to render a specific chart. You can run the sample 
    - Open the _index.js_ file (`src/index.js`)
    - Replace the `baseUrl` string on with the base URL you copied from the MongoDB Charts Embedded Chart menu (look for "\~REPLACE\~" in the comments)
    - Replace the `chartId` string on with the chart ID you copied from the MongoDB Charts Embedded Chart menu (look for "\~REPLACE\~" in the comments)
-   - Replace the filter in the `addEventListener` callback with a suitable filter document for your chart
 
 2. Run `npm install` to install the package dependencies.
 3. Run `npm start` to launch the sample application
