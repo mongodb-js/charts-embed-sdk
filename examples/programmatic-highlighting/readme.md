@@ -1,12 +1,12 @@
-# MongoDB Charts Embedding Example - Interactive Filtering
+# MongoDB Charts Embedding Example - Programmatic Highlighting
 
 ## Background
 
-🎮 _[Play with a live demo of this sample here](https://codesandbox.io/s/github/mongodb-js/charts-embed-sdk/tree/master/examples/click-events-filtering)_
+🎮 _[Play with a live demo of this sample here](https://codesandbox.io/s/github/mongodb-js/charts-embed-sdk/tree/master/examples/programmatic-highlighting)_
 
 MongoDB Charts allows you to create visualizations of your MongoDB data using a simple web interface. You can view the visualizations within the Charts UI, or you can use the Embedding feature to render the charts in an external web application.
 
-When you embed charts using the Embedding SDK, you are able to subscribe to events that show when a user clicked on a chart, and the details of the element on which they clicked. This feature can be used to build interactive charts. This sample shows how to implement interactive filtering, whereby clicks on one chart are used to generate filters which are applied to a second chart. To learn the basics of chart click events, see the [click events](https://github.com/mongodb-js/charts-embed-sdk/tree/master/examples/click-events-basic) sample.
+When you embed charts using the Embedding SDK, you ae able to customise the embedded charts by setting attributes. One of these is `setHighlight()`, which lets you emphasise part of your charts to attract attention. This feature adds a layer of richness to interactive charts, and can be used to show relationships between charts. To learn the basics of interactive charts, see the [click events](https://github.com/mongodb-js/charts-embed-sdk/tree/master/examples/click-events-basic) sample. To learn about other properties you can use to customise your charts, please refer to the [API documentation](https://www.npmjs.com/package/@mongodb-js/charts-embed-dom).
 
 #### The features included in this demo are as follows:
 
@@ -14,7 +14,7 @@ When you embed charts using the Embedding SDK, you are able to subscribe to even
 ```
 chart.setHighlight({ field: { $expr }});
 ```
-- Filtering two charts (one bar, one table) at the same time with the same filter expression
+- Highlighting two charts (one bar, one table) at the same time with the same filter expression
 - Showing more complicated MQL filters with the drop down
 - Allow custom filtering expressions by editing the textarea
 

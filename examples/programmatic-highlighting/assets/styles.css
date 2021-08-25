@@ -12,9 +12,24 @@ body {
   width: 50%;
   height: 70%;
 }
+
+.options-container {
+  margin-top: 2rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+label {
+  font-weight: 700;
+}
+
 .options {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  min-width: 30rem;
+  width: 60%;
 }
 
 .select {

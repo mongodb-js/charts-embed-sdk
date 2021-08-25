@@ -17,15 +17,19 @@
       <div class="chart" id="chart1"></div>
       <div class="chart" id="chart2"></div>
     </div>
-    <div class="options">
-      <select id="query-select">
-        <option value="simple">Exact match</option>
-        <option value="range">Using comparisons</option>
-        <option value="complex">Using $and</option>
-        <option value="empty">Applying {}</option>
-        <option value="custom">Custom query</option>
-      </select>
-      <textarea id="query-text" rows="10" cols="33"></input>
+    <div class="options-container">
+      <label for="options">Choose a predefined filter document to highlight the chart data, or enter your own MQL
+        filter.</label>
+      <div id="options" class="options">
+        <select id="query-select">
+          <option value="simple">Exact match</option>
+          <option value="range">Using comparisons</option>
+          <option value="complex">Using $and</option>
+          <option value="empty">Applying {}</option>
+          <option value="custom">Custom query</option>
+        </select>
+        <textarea id="query-text" rows="10" cols="33"></input>
+        </div>
     </div>
   </main>
   <script src="src/index.js"></script>
