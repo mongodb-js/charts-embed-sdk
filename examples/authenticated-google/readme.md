@@ -58,13 +58,13 @@ This sample is preconfigured to render a specific chart. You can run the sample 
    - Enter your Google Client ID
      - This should be the entire string `<encodedData>.apps.googleusercontent.com`
 
-5) Go to the Dashboards tab on the left navigation column, and select the dashboard that contains the chart you wish to embed.
+5. Go to the Dashboards tab on the left navigation column, and select the dashboard that contains the chart you wish to embed.
 
-6) Find the chart you want to embed, click the **...** menu and select **Embed Chart**
+6. Find the chart you want to embed, click the **...** menu and select **Embed Chart**
 
-7) Ensure the Unauthenticated tab is selected and turn on '**Enable Authenticated access**'
+7. Ensure the Unauthenticated tab is selected and turn on '**Enable Authenticated access**'
 
-8) Note the Chart ID and the Chart Base URL, as you will need them for running the demo.
+8. Note the Chart ID and the Chart Base URL, as you will need them for running the demo.
 
 ## Running this Sample with your data
 
