@@ -8,6 +8,8 @@ MongoDB Charts allows you to create visualizations of your MongoDB data using a 
 
 When you embed charts using the Embedding SDK, you are able to subscribe to events that show when a user clicked on a chart, and the details of the element on which they clicked. This feature can be used to build interactive charts. This sample shows how to implement interactive filtering, whereby clicks on one chart are used to generate filters which are applied to a second chart. To learn the basics of chart click events, see the [click events](https://github.com/mongodb-js/charts-embed-sdk/tree/master/examples/click-events-basic) sample.
 
+More information regarding how to handle click events can be found in the [Charts documentation](https://docs.mongodb.com/charts/saas/handle-click-events/).
+
 #### The features included in this demo are as follows:
 
 - Adding a click event handler to a chart, using code similar to:
@@ -71,4 +73,4 @@ This sample is preconfigured to render a specific chart. You can run the sample 
 
 This should create a local server running the Charts demo. Open a web browser and navigate to `http://localhost:1234` in the url bar to see the sample.
 
-Happy Charting! 🚀📈
+Happy Charting! 🚀 📈

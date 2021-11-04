@@ -1,4 +1,4 @@
-# MongoDB Charts Embedding Example - Click Events 
+# MongoDB Charts Embedding Example - Click Events
 
 ## Background
 
@@ -11,16 +11,19 @@ When you embed charts using the Embedding SDK, you are able to subscribe to even
 #### The features included in this demo are as follows:
 
 - Adding a click event handler to a chart, using code similar to:
+
 ```
 chart.addEventListener("click", callback);
 ```
 
 - Highlighting the element clicked on the chart, using the following code:
+
 ```
 chart.setHighlight(payload.selectionFilter)
 ```
 
 - Parsing the payload returned to the callback event. A typical click event's payload will look something like this:
+
 ```
 {
   "chartId": "c0774a27-3432-4207-b795-afeb56243652",
@@ -63,6 +66,8 @@ chart.setHighlight(payload.selectionFilter)
   "apiVersion": 1
 }
 ```
+
+More information regarding how to handle click events can be found in the [Charts documentation](https://docs.mongodb.com/charts/saas/handle-click-events/).
 
 ## Quickstart
 
@@ -113,6 +118,6 @@ This should create a local server running the Charts demo. Open a web browser an
 Once you gain an understanding of the API, consider the following
 
 - Embed multiple charts, and use the click events to filter one chart based on the click events detected on the other. This is demonstrated in our
-[interactive filtering](https://github.com/mongodb-js/charts-embed-sdk/tree/master/examples/click-events-filtering) example.
+  [interactive filtering](https://github.com/mongodb-js/charts-embed-sdk/tree/master/examples/click-events-filtering) example.
 
-Happy Charting! 🚀📈
+Happy Charting! 🚀 📈

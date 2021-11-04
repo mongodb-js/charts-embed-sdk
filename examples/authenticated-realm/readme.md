@@ -139,4 +139,4 @@ Once you gain an understanding of the API, consider the following
 - Play with Realms Rules system, and change how different accounts see your Chart.
 - Think whether an authenticated chart is the feature you're after. If you're simply looking for a way to show off your data, [unauthenticated embedding](https://github.com/mongodb-js/charts-embed-sdk/tree/master/examples/unauthenticated) simplifies the workflow even further.
 
-Happy Charting! 🚀📈
+Happy Charting! 🚀 📈
