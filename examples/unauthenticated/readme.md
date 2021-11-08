@@ -85,4 +85,4 @@ Once you gain an understanding of the API, consider the following
 - Think whether an unauthenticated chart is the feature you're after. [Embedding iframes](https://docs.mongodb.com/charts/master/embedded-chart-options/) from Charts is a great way to showcase your data if you don't need the user to interact with the chart.
 - Consider the data you're making available, and the queries you're allowing. If the data is sensitive and you need to ensure the charts can only be accessed by authorized people, you should look at using authenticated embedding.
 
-Happy Charting! 🚀📈
+Happy Charting! 🚀 📈

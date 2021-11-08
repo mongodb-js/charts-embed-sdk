@@ -8,12 +8,16 @@ MongoDB Charts allows you to create visualizations of your MongoDB data using a 
 
 When you embed charts using the Embedding SDK, you ae able to customise the embedded charts by setting attributes. One of these is `setHighlight()`, which lets you emphasise part of your charts to attract attention. This feature adds a layer of richness to interactive charts, and can be used to show relationships between charts. To learn the basics of interactive charts, see the [click events](https://github.com/mongodb-js/charts-embed-sdk/tree/master/examples/click-events-basic) sample. To learn about other properties you can use to customise your charts, please refer to the [API documentation](https://www.npmjs.com/package/@mongodb-js/charts-embed-dom).
 
+More information regarding charts highlighting can be found in the [Charts documentation](https://docs.mongodb.com/charts/saas/handle-click-events/).
+
 #### The features included in this demo are as follows:
 
 - Adding chart highlighting:
+
 ```
 chart.setHighlight({ field: { $expr }});
 ```
+
 - Highlighting two charts (one bar, one table) at the same time with the same filter expression
 - Showing more complicated MQL filters with the drop down
 - Allow custom filtering expressions by editing the textarea
@@ -64,4 +68,4 @@ This sample is preconfigured to render a specific chart. You can run the sample 
 
 This should create a local server running the Charts demo. Open a web browser and navigate to `http://localhost:1234` in the url bar to see the sample.
 
-Happy Charting! 🚀📈
+Happy Charting! 🚀 📈

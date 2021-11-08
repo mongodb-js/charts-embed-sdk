@@ -64,3 +64,5 @@ This sample is preconfigured to render specific charts. You can run the sample a
    - Replace the `baseUrl` string on with the base URL you copied from the MongoDB Charts Embedded Chart menu (look for "\~REPLACE\~" in the comments)
    - Replace the `chartId` string on with the chart ID you copied from the MongoDB Charts Embedded Chart menu. The example code shows 2 charts. (look for "\~REPLACE\~" in the comments)
    - Change the filter to whatever makes sense for your project. Currently the filter gets the data between two years and is using the "Year" field for filtering.
+
+Happy Charting! 🚀 📈
