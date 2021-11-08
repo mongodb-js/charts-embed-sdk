@@ -21,8 +21,8 @@ Our **authenticated** examples are great references if you need help getting sta
 
 If you'd like to build **interactive** charts, we have two examples showing this capability:
 
-- [Getting started with click events (BETA)](https://github.com/mongodb-js/charts-embed-sdk/tree/master/examples/click-events-basic)
-- [Interactive filtering using click events (BETA)](https://github.com/mongodb-js/charts-embed-sdk/tree/master/examples/click-events-filtering)
+- [Getting started with click events](https://github.com/mongodb-js/charts-embed-sdk/tree/master/examples/click-events-basic)
+- [Interactive filtering using click events](https://github.com/mongodb-js/charts-embed-sdk/tree/master/examples/click-events-filtering)
 
 There is also an [example](https://github.com/mongodb-js/charts-embed-sdk/tree/master/examples/timeline-charts-example) of how to build an animated timeline chart.
 
