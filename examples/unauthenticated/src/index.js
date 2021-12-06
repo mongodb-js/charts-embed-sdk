@@ -21,12 +21,11 @@ async function renderChart() {
   });
 
   /*
-    chart.setRefreshInterval(interval: number)
-    The default rate is to never refresh after rendering.
+    chart.setMaxDataAge(interval: number)
+    The default rate is to auto refresh every 1 hour.
     The minimum rate is every 10 seconds.
-    Setting to 0 returns the chart to the default setting.
 
-    chart.getRefreshInterval()
+    chart.getMaxDataAge()
     Returns a number pertaining to the charts current
     refresh interval.
    */
@@ -35,13 +34,12 @@ async function renderChart() {
     .addEventListener("change", async (e) => {
       var refreshInterval = e.target.value;
       refreshInterval
-        ? chart.setRefreshInterval(Number(refreshInterval))
-        : chart.setRefreshInterval(0);
+        ? chart.setMaxDataAge(Number(refreshInterval))
+        : chart.setMaxDataAge(3600);
 
-      var currentRefreshInterval = await chart.getRefreshInterval();
-      document.getElementById(
-        "currentRefreshInterval"
-      ).innerText = currentRefreshInterval;
+      var currentRefreshInterval = await chart.getMaxDataAge();
+      document.getElementById("currentRefreshInterval").innerText =
+        currentRefreshInterval;
     });
 
   /*
