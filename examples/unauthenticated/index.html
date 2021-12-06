@@ -26,11 +26,11 @@
         <label
           ><span>REFRESH INTERVAL </span>
           <select id="refresh-interval">
-            <option value="0">None</option>
+            <option value="-1">None</option>
             <option value="10">10 Seconds</option>
             <option value="60"><span>1 Minute</span></option>
-            <option value="1000">10 Minutes</option>
-            <option value="6000"><span>1 Hour</span></option>
+            <option value="600">10 Minutes</option>
+            <option selected value="3600"><span>1 Hour</span></option>
           </select>
         </label>
         <label
@@ -61,8 +61,8 @@
           <h3 class="chart-title">CHART DATA</h3>
           <table>
             <tr>
-              <th>Current Refresh Interval</th>
-              <td id="currentRefreshInterval">None</td>
+              <th>Current Refresh Interval (in secs)</th>
+              <td id="currentRefreshInterval">3600</td>
             </tr>
             <tr>
               <th>Current Theme</th>
