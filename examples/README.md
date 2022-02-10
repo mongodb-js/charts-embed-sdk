@@ -11,6 +11,8 @@ This directory contains example applications making use of both unauthenticated 
 
 in the example directory of your choosing.
 
+---
+
 The [Unauthenticated](https://github.com/mongodb-js/charts-embed-sdk/tree/master/examples/charts/unauthenticated) example is the best place to see all the current SDK features being used. Since it doesn't require authentication, it's the easiest example to set up and follow along with.
 
 Our **authenticated** examples are great references if you need help getting started creating Authenticated Embedded Charts. We have three examples, each tailored for the three Authentication Providers now available in MongoDB Charts. The three examples are:
