@@ -7,7 +7,7 @@ Programmatically **embed** and **control** MongoDB Charts in your application.
 [![npm](https://img.shields.io/npm/v/@mongodb-js/charts-embed-dom.svg)](https://www.npmjs.com/package/@mongodb-js/charts-embed-dom/)
 [![npm](https://img.shields.io/npm/l/@mongodb-js/charts-embed-dom.svg)](https://www.npmjs.com/package/@mongodb-js/charts-embed-dom/)
 
-<img align="center" src="https://user-images.githubusercontent.com/19422770/79284750-efe86800-7efe-11ea-9ed0-9813e1a0b6d6.gif"  />
+<img align="center" src="https://user-images.githubusercontent.com/18709969/153343796-c0856ea2-fcce-4b87-b360-5f067917ad4e.gif"  />
 
 [Explore this example yourself!](https://codesandbox.io/s/github/mongodb-js/charts-embed-sdk/tree/master/examples/charts/unauthenticated)
 
