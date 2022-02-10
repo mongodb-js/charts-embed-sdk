@@ -9,7 +9,7 @@ Programmatically **embed** and **control** MongoDB Charts in your application.
 
 <img align="center" src="https://user-images.githubusercontent.com/19422770/79284750-efe86800-7efe-11ea-9ed0-9813e1a0b6d6.gif"  />
 
-[Explore this example yourself!](https://codesandbox.io/s/github/mongodb-js/charts-embed-sdk/tree/master/examples/unauthenticated)
+[Explore this example yourself!](https://codesandbox.io/s/github/mongodb-js/charts-embed-sdk/tree/master/examples/charts/unauthenticated)
 
 </div>
 
@@ -31,10 +31,10 @@ yarn add @mongodb-js/charts-embed-dom
 
 ### Embedded Chart Guides
 
-- [Getting started with the MongoDB Charts SDK](https://github.com/mongodb-js/charts-embed-sdk/tree/master/examples/unauthenticated)
-- [Getting started with custom JWT authentication](https://github.com/mongodb-js/charts-embed-sdk/tree/master/examples/authenticated-custom-jwt)
-- [Getting started with Realm authentication](https://github.com/mongodb-js/charts-embed-sdk/tree/master/examples/authenticated-realm)
-- [Getting started with Google authentication](https://github.com/mongodb-js/charts-embed-sdk/tree/master/examples/authenticated-google)
-- [Getting started with click events](https://github.com/mongodb-js/charts-embed-sdk/tree/master/examples/click-events-basic)
-- [Interactive filtering using click events](https://github.com/mongodb-js/charts-embed-sdk/tree/master/examples/click-events-filtering)
-- [Programmatic highlighting](https://github.com/mongodb-js/charts-embed-sdk/tree/master/examples/programmatic-highlighting)
+- [Getting started with the MongoDB Charts SDK](https://github.com/mongodb-js/charts-embed-sdk/tree/master/examples/charts/unauthenticated)
+- [Getting started with custom JWT authentication](https://github.com/mongodb-js/charts-embed-sdk/tree/master/examples/charts/authenticated-custom-jwt)
+- [Getting started with Realm authentication](https://github.com/mongodb-js/charts-embed-sdk/tree/master/examples/charts/authenticated-realm)
+- [Getting started with Google authentication](https://github.com/mongodb-js/charts-embed-sdk/tree/master/examples/charts/authenticated-google)
+- [Getting started with click events](https://github.com/mongodb-js/charts-embed-sdk/tree/master/examples/charts/click-events-basic)
+- [Interactive filtering using click events](https://github.com/mongodb-js/charts-embed-sdk/tree/master/examples/charts/click-events-filtering)
+- [Programmatic highlighting](https://github.com/mongodb-js/charts-embed-sdk/tree/master/examples/charts/programmatic-highlighting)

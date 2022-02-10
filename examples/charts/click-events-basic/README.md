@@ -2,11 +2,11 @@
 
 ## Background
 
-🎮 _[Play with a live demo of this sample here](https://codesandbox.io/s/github/mongodb-js/charts-embed-sdk/tree/master/examples/click-events-basic)_
+🎮 _[Play with a live demo of this sample here](https://codesandbox.io/s/github/mongodb-js/charts-embed-sdk/tree/master/examples/charts/click-events-basic)_
 
 MongoDB Charts allows you to create visualizations of your MongoDB data using a simple web interface. You can view the visualizations within the Charts UI, or you can use the Embedding feature to render the charts in an external web application.
 
-When you embed charts using the Embedding SDK, you are able to subscribe to events that show when a user clicked on a chart, and the details of the element on which they clicked. This feature can be used to build interactive charts. This sample shows the basics of how to subscribe to and handle click events, including extracting relevant details about the chart elmement that was clicked. You can also see a more advanced demo that demonstrates [interactive filtering](https://github.com/mongodb-js/charts-embed-sdk/tree/master/examples/click-events-filtering).
+When you embed charts using the Embedding SDK, you are able to subscribe to events that show when a user clicked on a chart, and the details of the element on which they clicked. This feature can be used to build interactive charts. This sample shows the basics of how to subscribe to and handle click events, including extracting relevant details about the chart elmement that was clicked. You can also see a more advanced demo that demonstrates [interactive filtering](https://github.com/mongodb-js/charts-embed-sdk/tree/master/examples/charts/click-events-filtering).
 
 #### The features included in this demo are as follows:
 
@@ -118,6 +118,6 @@ This should create a local server running the Charts demo. Open a web browser an
 Once you gain an understanding of the API, consider the following
 
 - Embed multiple charts, and use the click events to filter one chart based on the click events detected on the other. This is demonstrated in our
-  [interactive filtering](https://github.com/mongodb-js/charts-embed-sdk/tree/master/examples/click-events-filtering) example.
+  [interactive filtering](https://github.com/mongodb-js/charts-embed-sdk/tree/master/examples/charts/click-events-filtering) example.
 
 Happy Charting! 🚀 📈

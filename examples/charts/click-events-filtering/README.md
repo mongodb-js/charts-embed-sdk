@@ -2,11 +2,11 @@
 
 ## Background
 
-🎮 _[Play with a live demo of this sample here](https://codesandbox.io/s/github/mongodb-js/charts-embed-sdk/tree/master/examples/click-events-filtering)_
+🎮 _[Play with a live demo of this sample here](https://codesandbox.io/s/github/mongodb-js/charts-embed-sdk/tree/master/examples/charts/click-events-filtering)_
 
 MongoDB Charts allows you to create visualizations of your MongoDB data using a simple web interface. You can view the visualizations within the Charts UI, or you can use the Embedding feature to render the charts in an external web application.
 
-When you embed charts using the Embedding SDK, you are able to subscribe to events that show when a user clicked on a chart, and the details of the element on which they clicked. This feature can be used to build interactive charts. This sample shows how to implement interactive filtering, whereby clicks on one chart are used to generate filters which are applied to a second chart. To learn the basics of chart click events, see the [click events](https://github.com/mongodb-js/charts-embed-sdk/tree/master/examples/click-events-basic) sample.
+When you embed charts using the Embedding SDK, you are able to subscribe to events that show when a user clicked on a chart, and the details of the element on which they clicked. This feature can be used to build interactive charts. This sample shows how to implement interactive filtering, whereby clicks on one chart are used to generate filters which are applied to a second chart. To learn the basics of chart click events, see the [click events](https://github.com/mongodb-js/charts-embed-sdk/tree/master/examples/charts/click-events-basic) sample.
 
 More information regarding how to handle click events can be found in the [Charts documentation](https://docs.mongodb.com/charts/saas/handle-click-events/).
 
