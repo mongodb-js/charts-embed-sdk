@@ -1,27 +1,73 @@
-# MongoDB Charts Embedding Example - Interactive Filtering
+# MongoDB Charts Embedding Example - Click Events
 
 ## Background
 
-🎮 _[Play with a live demo of this sample here](https://codesandbox.io/s/github/mongodb-js/charts-embed-sdk/tree/master/examples/click-events-filtering)_
+🎮 _[Play with a live demo of this sample here](https://codesandbox.io/s/github/mongodb-js/charts-embed-sdk/tree/master/examples/charts/click-events-basic)_
 
 MongoDB Charts allows you to create visualizations of your MongoDB data using a simple web interface. You can view the visualizations within the Charts UI, or you can use the Embedding feature to render the charts in an external web application.
 
-When you embed charts using the Embedding SDK, you are able to subscribe to events that show when a user clicked on a chart, and the details of the element on which they clicked. This feature can be used to build interactive charts. This sample shows how to implement interactive filtering, whereby clicks on one chart are used to generate filters which are applied to a second chart. To learn the basics of chart click events, see the [click events](https://github.com/mongodb-js/charts-embed-sdk/tree/master/examples/click-events-basic) sample.
-
-More information regarding how to handle click events can be found in the [Charts documentation](https://docs.mongodb.com/charts/saas/handle-click-events/).
+When you embed charts using the Embedding SDK, you are able to subscribe to events that show when a user clicked on a chart, and the details of the element on which they clicked. This feature can be used to build interactive charts. This sample shows the basics of how to subscribe to and handle click events, including extracting relevant details about the chart elmement that was clicked. You can also see a more advanced demo that demonstrates [interactive filtering](https://github.com/mongodb-js/charts-embed-sdk/tree/master/examples/charts/click-events-filtering).
 
 #### The features included in this demo are as follows:
 
 - Adding a click event handler to a chart, using code similar to:
 
 ```
-chart.addEventListener("click", callback, options);
+chart.addEventListener("click", callback);
 ```
 
-- Adding an option to make just certain parts of the chart clickable (in this case only the bars)
-- Obtaining an MQL filter document based on the data returned in the payload using `selectionFilter`
-- Highlighting the clicked element on the first chart using `setHighlight`
-- Filtering a second chart using the `setFilter` method
+- Highlighting the element clicked on the chart, using the following code:
+
+```
+chart.setHighlight(payload.selectionFilter)
+```
+
+- Parsing the payload returned to the callback event. A typical click event's payload will look something like this:
+
+```
+{
+  "chartId": "c0774a27-3432-4207-b795-afeb56243652",
+  "event": {
+    "type": "click",
+    "altKey": false,
+    "ctrlKey": false,
+    "shiftKey": false,
+    "metaKey": false,
+    "offsetX": 152,
+    "offsetY": 176,
+    "clientX": 172,
+    "clientY": 241,
+    "pageX": 172,
+    "pageY": 241,
+    "screenX": 172,
+    "screenY": 312
+  },
+  "data": {
+    "y": {
+      "label": "unwind array 'genres'",
+      "value": "Adventure"
+    },
+    "x": {
+      "label": "count ( _id )",
+      "value": 659
+    },
+    "color": {
+      "label": "year",
+      "value": "2000 - 2010",
+      "lowerBound": 2000,
+      "upperBound": 2010
+    }
+  },
+  "target": {
+    "type": "rect",
+    "role": "mark",
+    "fill": "#8CB6F2"
+  },
+  "apiVersion": 1
+}
+```
+
+More information regarding how to handle click events can be found in the [Charts documentation](https://docs.mongodb.com/charts/saas/handle-click-events/).
 
 ## Quickstart
 
@@ -56,21 +102,22 @@ This sample is preconfigured to render a specific chart. You can run the sample 
 
 7. Note the Chart ID and the Chart Base URL, as you will need them for running the demo.
 
-8. In the same menu, note the **User Specified Filters** option. If you wish to try out filtering on your own dataset, you will need to whitelist a field by which to filter on. For example, our sample Movies dataset filters on `year` and `genres`.
-   Furthermore, the filter related code in `src/index.js` will need to be updated to conform to the filter query you wish to apply.
-
 ## Running this Sample with your data
 
 1. If you do not wish to use our sample data and have completed the above steps to prepare your own chart for embedding,
-
    - Open the _index.js_ file (`src/index.js`)
    - Replace the `baseUrl` string on with the base URL you copied from the MongoDB Charts Embedded Chart menu (look for "\~REPLACE\~" in the comments)
    - Replace the `chartId` string on with the chart ID you copied from the MongoDB Charts Embedded Chart menu (look for "\~REPLACE\~" in the comments)
-   - Replace the filter in the `addEventListener` callback with a suitable filter document for your chart
-
 2. Run `npm install` to install the package dependencies.
 3. Run `npm start` to launch the sample application
 
 This should create a local server running the Charts demo. Open a web browser and navigate to `http://localhost:1234` in the url bar to see the sample.
+
+## Next Steps
+
+Once you gain an understanding of the API, consider the following
+
+- Embed multiple charts, and use the click events to filter one chart based on the click events detected on the other. This is demonstrated in our
+  [interactive filtering](https://github.com/mongodb-js/charts-embed-sdk/tree/master/examples/charts/click-events-filtering) example.
 
 Happy Charting! 🚀 📈
