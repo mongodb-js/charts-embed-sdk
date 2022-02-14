@@ -4,6 +4,8 @@
 
 📄 _[See the MongoDB Charts Embedding Docs for more details](https://docs.mongodb.com/charts/saas/embedding-charts/)_
 
+🎮 _[Play with a live demo of this sample here](https://codesandbox.io/s/github/mongodb-js/charts-embed-sdk/tree/master/examples/charts/timeline-charts-example)_
+
 The example code in this directory is building a small react app, implementing a chart timeline using the Charts Embedding SDK.
 
 What the application is doing is showing the distribution of Olympic medals through the years.
