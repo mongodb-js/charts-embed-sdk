@@ -23,6 +23,9 @@ const geoChart = sdk.createChart({
 export default function Dashboard() {
   const refBarChart = useRef(null);
   const refGeoChart = useRef(null);
+
+  const [isBarChartRendered, setIsBarChartRendered] = useState(false);
+  const [isGeoChartRendered, setIsGeoChartRendered] = useState(false);
   const [year, setYear] = useState(lastOlympicsYear);
   const [playing, setPlaying] = useState(false);
 
@@ -32,9 +35,12 @@ export default function Dashboard() {
   const timerIdRef = React.useRef();
   const replayRef = React.useRef(false);
 
+  const chartsRendered = isBarChartRendered & isGeoChartRendered;
+
   const renderBarChart = useCallback(async (ref) => {
     try {
       await barChart.render(ref);
+      setIsBarChartRendered(true);
     } catch (e) {
       console.error(e);
     }
@@ -43,6 +49,7 @@ export default function Dashboard() {
   const renderGeoChart = useCallback(async (ref) => {
     try {
       await geoChart.render(ref);
+      setIsGeoChartRendered(true);
     } catch (e) {
       console.error(e);
     }
@@ -137,7 +144,7 @@ export default function Dashboard() {
 
   const buttonClass = `action-button ${
     playing ? "pause-button" : "play-button"
-  }`;
+  } ${chartsRendered ? "show" : "hide"}`;
 
   return (
     <>
@@ -150,7 +157,8 @@ export default function Dashboard() {
         <div className="slider">
           <PrettySlider
             valueLabelDisplay="on"
-            aria-label="pretto slider"
+            aria-label="pretty slider"
+            disabled={!chartsRendered}
             min={firstOlympicsYear}
             max={lastOlympicsYear}
             step={4}
