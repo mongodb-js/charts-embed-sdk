@@ -9,7 +9,7 @@ const dashboard = sdk.createDashboard({
 });
 
 function addEventListeners() {
-  /* Theme toggle*/
+  /* Theme toggle */
   document
     .getElementById("theme")
     .addEventListener("change", async function () {
@@ -17,6 +17,22 @@ function addEventListeners() {
 
       const currentTheme = await dashboard.getTheme();
       document.getElementById("currentTheme").innerText = currentTheme;
+    });
+
+  /* Height Mode select */
+  document
+    .getElementById("height-mode")
+    .addEventListener("change", async (e) => {
+      const heightMode = e.target.value;
+      await dashboard.setHeightMode(heightMode);
+    });
+
+  /* Width Mode select */
+  document
+    .getElementById("width-mode")
+    .addEventListener("change", async (e) => {
+      const widthMode = e.target.value;
+      await dashboard.setWidthMode(widthMode);
     });
 }
 
