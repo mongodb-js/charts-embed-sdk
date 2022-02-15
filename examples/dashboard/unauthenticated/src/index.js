@@ -34,6 +34,14 @@ function addEventListeners() {
       const widthMode = e.target.value;
       await dashboard.setWidthMode(widthMode);
     });
+
+  /* Charts Background select */
+  document
+    .getElementById("charts-background")
+    .addEventListener("change", async (e) => {
+      const chartsBackground = e.target.value;
+      await dashboard.setChartsBackground(chartsBackground);
+    });
 }
 
 async function renderDashboard() {
