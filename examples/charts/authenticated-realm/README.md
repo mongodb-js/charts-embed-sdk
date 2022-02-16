@@ -12,7 +12,7 @@ Charts can be embedded either using a simple IFRAME snippet, or by using the Cha
 
 This sample shows how to use the JavaScript Embedding SDK to render **authenticated** embedded charts, specifically via configuring **MongoDB Realm** as an authentication provider. The sample app is already set up to authenticate with a Realm Application hosted by the Charts Development team.
 
-This sample also demonstrates data filtering by role, thanks to Realm's extensive rules system. See more details [here](https://docs.mongodb.com/stitch/mongodb/define-roles-and-permissions/). Simply login with either australianEmployee@mongodb.com or canadianEmployee@mongodb.com, and take note of the different results!
+This sample also demonstrates data filtering by role, thanks to Realm's extensive rules system. See more details [here](https://docs.mongodb.com/realm/mongodb/define-roles-and-permissions/). Simply login with either australianEmployee@mongodb.com or canadianEmployee@mongodb.com, and take note of the different results!
 
 #### The features included in this demo are as follows:
 
@@ -83,7 +83,7 @@ Choose or create a Realm Cloud app which will be used to authenticate users who 
 
 ### Optionally, Prepare your Dataset
 
-If you want to use your Realm app to filter data for each user, (Like we have done in our sample) set up an [Atlas service](https://www.mongodb.com/cloud/atlas) and corresponding [Rules](https://docs.mongodb.com/stitch/mongodb/define-roles-and-permissions/) that filter the data as desired. Injected Filters and [Dashboard filtering](https://www.mongodb.com/blog/post/filter-your-dashboards-with-mongodb-charts) are other Charts features one can use to attain similar functionality.
+If you want to use your Realm app to filter data for each user, (Like we have done in our sample) set up an [Atlas service](https://www.mongodb.com/cloud/atlas) and corresponding [Rules](https://docs.mongodb.com/realm/mongodb/define-roles-and-permissions/) that filter the data as desired. Injected Filters and [Dashboard filtering](https://www.mongodb.com/blog/post/filter-your-dashboards-with-mongodb-charts) are other Charts features one can use to attain similar functionality.
 
 ### Prepare MongoDB Charts
 
