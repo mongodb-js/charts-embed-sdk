@@ -19,10 +19,25 @@
     <main class="h-full">
       <!-- Navigation Bar-->
       <div class="h-16 flex flex-column m-4 items-center justify-around" id="nav">
+        <!-- Refresh button -->
+        <button class="border text-slate-50 bg-green-600 p-2 rounded"  id="refresh-button">Refresh</button>
+
         <!-- Theme checkbox-->
         <label>
           <input type="checkbox" id="theme" /> 
           Theme (<span id="currentTheme">light</span>)
+        </label>
+
+        <!-- Max Data Age dropdown-->
+        <label>
+          <span class="mr-2">Max Data Age</span>
+          <select class="border border-gray-300 p-2 rounded" id="max-data-age">
+            <option value="-1">None</option>
+            <option value="10">10 Seconds</option>
+            <option value="60"><span>1 Minute</span></option>
+            <option value="600">10 Minutes</option>
+            <option selected value="3600"><span>1 Hour</span></option>
+          </select>
         </label>
 
         <!-- Height Mode dropdown-->

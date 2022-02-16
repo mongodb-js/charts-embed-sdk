@@ -9,6 +9,13 @@ const dashboard = sdk.createDashboard({
 });
 
 function addEventListeners() {
+  /* Refresh button */
+  document
+    .getElementById("refresh-button")
+    .addEventListener("click", async function () {
+      await dashboard.refresh();
+    });
+
   /* Theme toggle */
   document
     .getElementById("theme")
@@ -17,6 +24,15 @@ function addEventListeners() {
 
       const currentTheme = await dashboard.getTheme();
       document.getElementById("currentTheme").innerText = currentTheme;
+    });
+
+  /* Max Data Age select */
+  document
+    .getElementById("max-data-age")
+    .addEventListener("change", async (e) => {
+      const maxDataAge = e.target.value;
+      const defaultMaxDataAge = 3600;
+      await dashboard.setMaxDataAge(Number(maxDataAge) ?? defaultMaxDataAge);
     });
 
   /* Height Mode select */
