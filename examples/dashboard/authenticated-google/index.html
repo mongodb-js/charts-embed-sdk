@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Charts Embedded SDK - Authenticated Embedded Dashboard Demo</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="assets/styles.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    />
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <script src="https://unpkg.com/@mongodb-js/charts-embed-dom@2.2.0-beta.2"></script>
+    <!-- Optional: ~REPLACE~ content with your Google Client ID -->
+    <meta
+    name="google-signin-client_id"
+    content="1052186176591-jho9fasf2dqauk5l6aedu5g7vghijf80.apps.googleusercontent.com"
+    />
+  </head>
+  
+  <body>
+    <script>
+      // Need to define onSignIn as an inline script or else the function won't be called
+      function onSignIn(googleUser) {
+        const id_token = googleUser.getAuthResponse().id_token;
+        const ChartsEmbedSDK = window.ChartsEmbedSDK;
+        
+        const sdk = new ChartsEmbedSDK({
+          baseUrl: "https://localhost/mongodb-charts-vrelu", // Optional: ~REPLACE~ with your Base URL
+          getUserToken: () => id_token,
+        });
+
+        const dashboard = sdk.createDashboard({
+          // Optional: ~REPLACE~ with your Dashboard ID
+          dashboardId: "620c6c64-0868-4c68-8904-d210286a0a59",
+          theme: "dark",
+          widthMode: "scale",
+        });
+
+        document.body.classList.toggle("logged-in", true);
+        dashboard.render(document.getElementById("dashboard"));
+      }
+    </script>
+    <main>
+      <h1 id="lock"></h1>
+      <div id="login-page" class="login-page">
+        <div class="form">
+          <div class="login-form">
+            <h1 class="form-title">Secure Dashboard Viewer</h1>
+            <div class="g-signin2 googleButton" data-onsuccess="onSignIn"></div>
+          </div>
+        </div>
+      </div>
+      <div class="dashboard-container">
+        <div id="dashboard"></div>
+      </div>
+    </main>
+  </body>
+</html>
