@@ -10,15 +10,31 @@ const dashboard = sdk.createDashboard({
 
 async function populateDropdown() {
   const dashboardCharts = await dashboard.getAllCharts();
-  const options = dashboardCharts.map((dashboardChart) => {
-    const title = dashboardChart.chartId;
-    return `<option value=${title}>${title}</option>`;
-  });
   const select = document.getElementById("select-chart");
-  select.innerHTML = options;
+  dashboardCharts.forEach((dashboardChart) => {
+    const title = dashboardChart.chartId;
+    const option = document.createElement("option");
+    option.text = title;
+    option.value = title;
+    select.add(option);
+  });
 }
 
-function addEventListeners() {}
+function addEventListeners() {
+  document.getElementById("select-chart").addEventListener("change", (e) => {
+    const selectedChartId = e.target.value;
+    document.getElementById("select-chart-text").innerText = selectedChartId;
+  });
+
+  document
+    .getElementById("refresh-button")
+    .addEventListener("click", async (e) => {
+      const selectedChartId =
+        document.getElementById("select-chart-text").innerText;
+      const chart = await dashboard.getChart(selectedChartId);
+      await chart.refresh();
+    });
+}
 
 async function renderDashboard() {
   await dashboard.render(document.getElementById("dashboard"));
