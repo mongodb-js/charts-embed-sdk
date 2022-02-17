@@ -1,11 +1,11 @@
 import ChartsEmbedSDK from "@mongodb-js/charts-embed-dom";
 
 const sdk = new ChartsEmbedSDK({
-  baseUrl: "https://localhost/mongodb-charts-vrelu", // Optional: ~REPLACE~ with the Base URL from your Embed Dashboard dialog
+  baseUrl: "https://charts.mongodb.com/charts-embedding-examples-wgffp", // Optional: ~REPLACE~ with the Base URL from your Embed Dashboard dialog
 });
 
 const dashboard = sdk.createDashboard({
-  dashboardId: "6209eedf-cbeb-4b28-8efa-6577b324d6f1",
+  dashboardId: "620ddc92-d1cd-42df-8c16-d94afba775d6",
 });
 
 function addEventListeners() {
