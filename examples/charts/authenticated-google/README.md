@@ -85,7 +85,6 @@ Once you gain an understanding of the API, consider the following
 - Consider how you want to secure your data with the Google Embedding Provider. Anybody can create a Google account. Consider using Charts Injected Filters to make your application more secure.
 
   - For example, consider the following injected filter
-  -
 
   ```javascript
   // Reject tokens that aren't from example.com domain

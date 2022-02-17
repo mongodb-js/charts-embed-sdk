@@ -1,12 +1,12 @@
-# MongoDB Charts Embedding Example - Unauthenticated Embedded Dashboard
+# MongoDB Charts Embedding Example - Authenticated Embedded Dashboard (Custom JWT)
 
 ## Background
 
-🎮 _[Play with a live demo of this sample here](https://codesandbox.io/s/github/mongodb-js/charts-embed-sdk/tree/master/examples/dashboard/unauthenticated)_
+🎮 _[Play with a live demo of this sample here](https://codesandbox.io/s/github/mongodb-js/charts-embed-sdk/tree/master/examples/dashboard/authenticated-custom-jwt)_
 
 The MongoDB Charts Embedding SDK allows you to embed a Chart or a Dashboard directly into your application. Just like embedded charts, you can embed a dashboard via unauthenticated or an authenticated method.
 
-This example, demonstrates how you might render an unauthenticated dashboard embedded onto your application.
+This example, demonstrates how you might render an authenticated dashboard embedded onto your application using Custom JWT as the authentication provider.
 
 _Note that this is not an exhaustive list of all the features for the Dashboard Embedding SDK._
 
@@ -14,12 +14,9 @@ _Note that this is not an exhaustive list of all the features for the Dashboard 
 
 In this example, you should be able to:
 
-- Render an unauthenticated embedded dashboard
-- Manually refresh the dashboard (Refresh all charts within a dashboard)
-- Set the whole dashboard theme to `'light'` or `'dark'`
-- Set background colour of all charts shown on the dashboard. Note that this will overwrite the colour that has been set by the current theme
-- Set the max data age of a chart on a dashboard
-- Set the height and width mode to `'fixed'` or `'scale'`.
+- Render an authenticated embedded dashboard
+- Render a dashboard to valid users only
+- Custom JWT authentication via the `jsonwebtoken` package
 
 ## Quick Start
 
