@@ -1,11 +1,11 @@
 import ChartsEmbedSDK from "@mongodb-js/charts-embed-dom";
 
 const sdk = new ChartsEmbedSDK({
-  baseUrl: "https://localhost/mongodb-charts-vrelu", // Optional: ~REPLACE~ with the Base URL from your Embed Dashboard dialog
+  baseUrl: "https://charts.mongodb.com/charts-embedding-examples-wgffp", // Optional: ~REPLACE~ with the Base URL from your Embed Dashboard dialog
 });
 
 const dashboard = sdk.createDashboard({
-  dashboardId: "6209eedf-cbeb-4b28-8efa-6577b324d6f1",
+  dashboardId: "620ddc92-d1cd-42df-8c16-d94afba775d6",
 });
 
 async function populateDropdown() {
@@ -20,11 +20,71 @@ async function populateDropdown() {
   });
 }
 
+const clickHandler = (payload) => {
+  // Display information about the clicked element
+  document.getElementById("payload").innerHTML =
+    "<pre>" + JSON.stringify(payload, null, 2) + "</pre>";
+
+  let infoText = "";
+  if (payload.target.role) {
+    infoText += `<li>Role: ${payload.target.role}</li>`;
+    infoText += `<li>Type: ${payload.target.type}</li>`;
+  }
+
+  if (payload.target.fill) {
+    infoText += `<li>Fill: <span style="color:${payload.target.fill}">${payload.target.fill}</li>`;
+  }
+  if (payload.data.x) {
+    infoText += `<li>x.label: ${payload.data.x.label}</li>`;
+    infoText += `<li>x.value: ${payload.data.x.value}</li>`;
+  }
+  if (payload.data.y) {
+    infoText += `<li>y.label: ${payload.data.y.label}</li>`;
+    infoText += `<li>y.value: ${payload.data.y.value}</li>`;
+  }
+  if (payload.data.color) {
+    infoText += `<li>color.label: ${payload.data.color.label}</li>`;
+    infoText += `<li>color.value: ${payload.data.color.value}</li>`;
+  }
+
+  document.getElementById("info").innerHTML = "<ul>" + infoText + "</ul>";
+};
+
+function resetInfo() {
+  const infoText = document.getElementById("info");
+  infoText.innerText = "(click the chart to see!)";
+
+  const eventPayloadText = document.getElementById("payload");
+  eventPayloadText.innerHTML = "";
+}
+
 function addEventListeners() {
-  document.getElementById("select-chart").addEventListener("change", (e) => {
-    const selectedChartId = e.target.value;
-    document.getElementById("select-chart-text").innerText = selectedChartId;
-  });
+  document
+    .getElementById("select-chart")
+    .addEventListener("change", async (e) => {
+      // Remove previous click event handler
+      const currentChartId =
+        document.getElementById("select-chart-text").innerText;
+
+      // Remove old click event listener from previous Chart
+      if (currentChartId !== "") {
+        const prevDashboardChart = await dashboard.getChart(currentChartId);
+        prevDashboardChart.removeEventListener("click", clickHandler);
+      }
+
+      // Update text with new chart ID
+      const selectedChartId = e.target.value;
+      document.getElementById("select-chart-text").innerText = selectedChartId;
+
+      // Add new click event listeners
+      if (selectedChartId !== "") {
+        const selectedDashboardChart = await dashboard.getChart(
+          selectedChartId
+        );
+        selectedDashboardChart.addEventListener("click", clickHandler);
+      }
+      resetInfo();
+    });
 
   document
     .getElementById("refresh-button")

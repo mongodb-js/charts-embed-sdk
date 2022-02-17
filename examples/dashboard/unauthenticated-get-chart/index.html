@@ -19,7 +19,7 @@
       </div>
 
       <!-- Sidebar-->
-      <div class="space-y-4 basis-3/12 p-4">
+      <div class="space-y-4 basis-3/12 p-4 overflow-scroll">
         <!-- Select Chart dropdown-->
         <div class="block mb-10">
           <label class="block font-bold text-gray-700 mb-2">
@@ -33,11 +33,23 @@
         </div>
 
         <p class="block font-bold text-gray-700">
-         Selected Chart: <span id="select-chart-text">None</span> 
+         Selected Chart: <span id="select-chart-text"></span> 
         </p>
         <!-- Refresh button -->
-        <div class="block">
+        <div class="block mb-10">
           <button class="border text-slate-50 bg-green-600 p-2 rounded" id="refresh-button">Refresh Chart</button>
+        </div>
+
+        <!-- Clicked element information -->
+        <div>
+          <p class="block font-bold text-gray-700">
+            Clicked Element
+          </p>
+          <div class="mb-10" id="info">(click the chart to see!)</div>
+          <p class="block font-bold text-gray-700">
+            Full Event Payload
+          </p>
+          <div id="payload"></div>
         </div>
       </div>
     </main>
