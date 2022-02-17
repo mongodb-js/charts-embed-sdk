@@ -50,7 +50,7 @@ async function login(username, password) {
  */
 async function renderDashboard() {
   const sdk = new ChartsEmbedSDK({
-    baseUrl: "https://localhost/mongodb-charts-vrelu", // Optional: ~REPLACE~ with the Base URL from your Embed Dashboard dialog
+    baseUrl: "https://charts.mongodb.com/charts-embedding-examples-wgffp", // Optional: ~REPLACE~ with the Base URL from your Embed Dashboard dialog
     getUserToken: async function () {
       return await login(getUser(), getPass());
     },
@@ -58,7 +58,7 @@ async function renderDashboard() {
 
   const dashboard = sdk.createDashboard({
     // Optional: ~REPLACE~ with the Dashboard ID from your Embed Dashboard dialog
-    dashboardId: "620c6c64-0868-4c68-8904-d210286a0a59",
+    dashboardId: "620c9847-fc5c-4199-865d-27b2ae20db07",
     theme: "dark",
     widthMode: "scale",
   });
