@@ -24,7 +24,8 @@ function addEventListeners() {
       await dashboard.setTheme(this.checked ? "dark" : "light");
 
       const currentTheme = await dashboard.getTheme();
-      document.getElementById("currentTheme").innerText = currentTheme;
+      document.getElementById("currentTheme").innerText =
+        currentTheme === "light" ? "dark" : "light";
     });
 
   /* Max Data Age select */
