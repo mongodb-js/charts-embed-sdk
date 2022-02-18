@@ -2,11 +2,13 @@
 
 ## Background
 
+📄 _[See the MongoDB Charts Embedding Docs for more details](https://dochub.mongodb.org/core/charts-embedding-dashboards)_
+
 🎮 _[Play with a live demo of this sample here](https://codesandbox.io/s/github/mongodb-js/charts-embed-sdk/tree/master/examples/dashboard/unauthenticated)_
 
 The MongoDB Charts Embedding SDK allows you to embed a Chart or a Dashboard directly into your application. Just like embedded charts, you can embed a dashboard via unauthenticated or an authenticated method.
 
-This example, demonstrates how you might render an unauthenticated dashboard embedded onto your application.
+This example, demonstrates how you might render an unauthenticated dashboard embedded onto your application via the SDK. If you don't want to use the SDK but want an easier way to render your dashboard, you can use an [embedded iframe](https://dochub.mongodb.org/core/charts-embedding-dashboards-iframe) instead.
 
 _Note that this is not an exhaustive list of all the features for the Dashboard Embedding SDK._
 

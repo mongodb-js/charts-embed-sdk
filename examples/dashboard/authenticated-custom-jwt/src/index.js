@@ -56,6 +56,7 @@ async function renderDashboard() {
     },
   });
 
+  // Read https://dochub.mongodb.org/core/charts-dashboards-embedded-dashboard-options for more options
   const dashboard = sdk.createDashboard({
     // Optional: ~REPLACE~ with the Dashboard ID from your Embed Dashboard dialog
     dashboardId: "620c9847-fc5c-4199-865d-27b2ae20db07",

@@ -4,6 +4,7 @@ const sdk = new ChartsEmbedSDK({
   baseUrl: "https://charts.mongodb.com/charts-embedding-examples-wgffp", // Optional: ~REPLACE~ with the Base URL from your Embed Dashboard dialog
 });
 
+// Read https://dochub.mongodb.org/core/charts-dashboards-embedded-dashboard-options for more options
 const dashboard = sdk.createDashboard({
   dashboardId: "620ddc92-d1cd-42df-8c16-d94afba775d6",
 });
