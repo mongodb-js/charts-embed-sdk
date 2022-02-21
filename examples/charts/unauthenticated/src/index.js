@@ -105,6 +105,19 @@ async function renderChart() {
       document.getElementById("currentTheme").innerText = currentTheme;
     });
 
+  /*
+    chart.getData();
+    Retrieves the data used to render the current chart.
+
+    The data that returns usually has the format of:
+
+    ```
+    {
+      documents: [ ... ],
+      fields: [ ... ]
+    }
+    ```
+  */
   document
     .getElementById("chartDataButton")
     .addEventListener("click", async function () {
