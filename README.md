@@ -38,3 +38,11 @@ yarn add @mongodb-js/charts-embed-dom
 - [Getting started with click events](https://github.com/mongodb-js/charts-embed-sdk/tree/master/examples/charts/click-events-basic)
 - [Interactive filtering using click events](https://github.com/mongodb-js/charts-embed-sdk/tree/master/examples/charts/click-events-filtering)
 - [Programmatic highlighting](https://github.com/mongodb-js/charts-embed-sdk/tree/master/examples/charts/programmatic-highlighting)
+
+### Embedded Dashboard Guides
+
+- [Embedding an unauthenticated dashboard](https://github.com/mongodb-js/charts-embed-sdk/tree/master/examples/dashboard/unauthenticated)
+- [Dashboard embedding with custom JWT authentication](https://github.com/mongodb-js/charts-embed-sdk/tree/master/examples/dashboard/authenticated-custom-jwt)
+- [Dashboard embedding with Realm authentication](https://github.com/mongodb-js/charts-embed-sdk/tree/master/examples/dashboard/authenticated-realm)
+- [Dashboard embedding with Google authentication](https://github.com/mongodb-js/charts-embed-sdk/tree/master/examples/dashboard/authenticated-google)
+- [Accessing a Chart instance via Dashboard class](https://github.com/mongodb-js/charts-embed-sdk/tree/master/examples/dashboard/unauthenticated-get-chart)

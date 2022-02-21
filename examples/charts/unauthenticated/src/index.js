@@ -27,19 +27,19 @@ async function renderChart() {
 
     chart.getMaxDataAge()
     Returns a number pertaining to the charts current
-    refresh interval.
+    max data age.
    */
   document
-    .getElementById("refresh-interval")
+    .getElementById("maxDataAge")
     .addEventListener("change", async (e) => {
-      var refreshInterval = e.target.value;
-      refreshInterval
-        ? chart.setMaxDataAge(Number(refreshInterval))
+      var maxDataAge = e.target.value;
+      maxDataAge
+        ? chart.setMaxDataAge(Number(maxDataAge))
         : chart.setMaxDataAge(3600);
 
-      var currentRefreshInterval = await chart.getMaxDataAge();
-      document.getElementById("currentRefreshInterval").innerText =
-        currentRefreshInterval;
+      var currentMaxDataAge = await chart.getMaxDataAge();
+      document.getElementById("currentMaxDataAge").innerText =
+        currentMaxDataAge;
     });
 
   /*

@@ -17,10 +17,8 @@ This sample shows how to use the JavaScript Embedding SDK to render unauthentica
 - Render an embedded chart on a web page
 - Set the charts theme to either `'light'` or `'dark'`
 - Get the charts current theme
-- Set the charts refresh interval
-  - Note, the default interval is 0, implying that after rendering, the chart will never refresh.
-  - The minimum refresh interval is 10 seconds.
-- Get the charts current refresh interval
+- Set the charts max data age to various values
+- Get the charts current max data age
 - Manually refresh the chart
 - Set the charts current filter
   - Note, filtering on a chart requires setting up white listed fields in MongoDB Charts. We have done this for our sample data.

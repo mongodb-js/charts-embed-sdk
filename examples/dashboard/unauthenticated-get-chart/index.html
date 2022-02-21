@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html  class="h-full font-sans">
+  <head>
+    <title>Charts SDK - Embedded Dashboard getCharts Demo</title>
+    <meta charset="UTF-8" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+
+  <body class="h-full font-sans">
+    <main class="h-full flex flex-direction">
+      <!-- Embedded Dashboard-->
+      <div class="h-full basis-9/12" id="content">
+        <div class="h-full" id="dashboard"></div>
+      </div>
+
+      <!-- Sidebar-->
+      <div class="space-y-4 basis-3/12 p-4 overflow-scroll">
+        <!-- Select Chart dropdown-->
+        <div class="block mb-10">
+          <label class="block font-bold text-gray-700 mb-2">
+            Select Chart
+          </label>
+
+          <select class="block border border-gray-300 p-2 rounded" id="select-chart">
+            <!-- Options are populated via populateDropdown() -->
+            <option value="">None</option>
+          </select>
+        </div>
+
+        <p class="block font-bold text-gray-700">
+         Selected Chart: <span id="select-chart-text"></span> 
+        </p>
+        <!-- Refresh button -->
+        <div class="block mb-10">
+          <button class="border text-slate-50 bg-green-600 p-2 rounded" id="refresh-button">Refresh Chart</button>
+        </div>
+
+        <!-- Clicked element information -->
+        <div>
+          <p class="block font-bold text-gray-700">
+            Clicked Element
+          </p>
+          <div class="mb-10" id="info">(click the chart to see!)</div>
+          <p class="block font-bold text-gray-700">
+            Full Event Payload
+          </p>
+          <div id="payload"></div>
+        </div>
+      </div>
+    </main>
+    <script src="src/index.js"></script>
+  </body>
+</html>

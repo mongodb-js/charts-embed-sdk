@@ -11,7 +11,7 @@ This directory contains example applications making use of both unauthenticated 
 
 in the example directory of your choosing.
 
----
+## Embedded Charts
 
 The [Unauthenticated](https://github.com/mongodb-js/charts-embed-sdk/tree/master/examples/charts/unauthenticated) example is the best place to see all the current SDK features being used. Since it doesn't require authentication, it's the easiest example to set up and follow along with.
 
@@ -27,6 +27,24 @@ If you'd like to build **interactive** charts, we have two examples showing this
 - [Interactive filtering using click events](https://github.com/mongodb-js/charts-embed-sdk/tree/master/examples/charts/click-events-filtering)
 
 There is also an [example](https://github.com/mongodb-js/charts-embed-sdk/tree/master/examples/charts/timeline-charts-example) of how to build an animated timeline chart.
+
+## Embedded Dashboard
+
+The embedded dashboards are very similar to the embedded charts examples, but with a few differences that are highlighted in each example.
+
+The easiest method of embedding a dashboard is by following the [unauthenticated example](https://github.com/mongodb-js/charts-embed-sdk/tree/master/examples/dashboard/unauthenticated). 
+
+For interactive purposes, you can also look at the [unauthenticated get chart example](https://github.com/mongodb-js/charts-embed-sdk/tree/master/examples/dashboard/unauthenticated-get-chart) where you can attach a click event listener to individual charts on an embedded dashboard.
+
+If your dashboard needs some privacy, you can look at our authenticated examples which uses the same authentication providers as the embedded chart examples too.
+
+
+- [Custom JWT](https://github.com/mongodb-js/charts-embed-sdk/tree/master/examples/dashboard/authenticated-custom-jwt)
+- [MongoDB Realm](https://github.com/mongodb-js/charts-embed-sdk/tree/master/examples/dashboard/authenticated-realm)
+- [Google](https://github.com/mongodb-js/charts-embed-sdk/tree/master/examples/dashboard/authenticated-google)
+
+
+---
 
 We hope these resources help, and as always,
 
