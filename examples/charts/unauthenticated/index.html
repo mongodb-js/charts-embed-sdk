@@ -55,10 +55,11 @@
           <span id="themeEmoji" class="theme-label"></span>
         </label>
       </div>
+
       <div class="body-content">
         <div id="chart"></div>
         <div class="chartInfo">
-          <h3 class="chart-title">CHART DATA</h3>
+          <h3 class="chart-title">CHART OPTIONS</h3>
           <table>
             <tr>
               <th>Current Refresh Interval (in secs)</th>
@@ -73,8 +74,14 @@
               <td id="currentFilter">None</td>
             </tr>
           </table>
+
+          <button id="chartDataButton">
+            <span id="chartDataButtonText">Show</span> Chart Data
+          </button>
         </div>
       </div>
+
+      <json-viewer id="jsonViewer">{}</json-viewer>
     </main>
     <script src="src/index.js"></script>
   </body>

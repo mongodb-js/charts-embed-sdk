@@ -1,3 +1,8 @@
+:root {
+  --bg-light-mode-color: #ffffff;
+  --bg-dark-mode-color: #21313c;
+  --font-dark-mode-color: #ffffff;
+}
 html,
 body {
   height: 100%;
@@ -51,8 +56,10 @@ main {
 }
 
 .dark-mode {
-  background-color: #21313c; /* to match the chart's background */
-  color: #ffffff;
+  background-color: var(
+    --bg-dark-mode-color
+  ); /* to match the chart's background */
+  color: var(--font-dark-mode-color);
 }
 
 body span.theme-label::before {
@@ -87,7 +94,26 @@ body.dark-mode span.theme-label::before {
   color: #89989b;
 }
 
+#chartDataButton {
+  margin-top: 1em;
+  padding: 0.5rem 1rem;
+  width: 100%;
+}
+
 /* JSON Viewer */
 #jsonViewer {
   visibility: hidden;
+  transition: background-color 0.5s ease;
+  --background-color: var(--bg-light-mode-color);
+  --string-color: #00a35c;
+  --preview-color: #ffc010;
+  --property-color: #0498ec;
+  --number-color: #b45af2;
+  --boolean-color: #ef5752;
+}
+
+body.dark-mode #jsonViewer {
+  --background-color: var(--bg-dark-mode-color);
+  --string-color: #00ed64;
+  --preview-color: #ffec9e;
 }
