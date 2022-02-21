@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "@alenaksu/json-viewer": "^0.3.4",
-    "@mongodb-js/charts-embed-dom": "^2.2.0-beta.2",
+    "@mongodb-js/charts-embed-dom": "^2.2.0",
     "parcel": "^1.12.4"
   },
   "devDependencies": {
