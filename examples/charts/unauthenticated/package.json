@@ -8,7 +8,8 @@
     "build": "parcel build index.html"
   },
   "dependencies": {
-    "@mongodb-js/charts-embed-dom": "^2.1.0",
+    "@alenaksu/json-viewer": "^0.3.4",
+    "@mongodb-js/charts-embed-dom": "^2.2.0",
     "parcel": "^1.12.4"
   },
   "devDependencies": {

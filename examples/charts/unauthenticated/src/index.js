@@ -1,4 +1,5 @@
 import ChartsEmbedSDK from "@mongodb-js/charts-embed-dom";
+import "@alenaksu/json-viewer";
 
 const sdk = new ChartsEmbedSDK({
   baseUrl: "https://charts.mongodb.com/charts-embedding-examples-wgffp", // Optional: ~REPLACE~ with the Base URL from your Embed Chart dialog
@@ -67,6 +68,16 @@ async function renderChart() {
         const filter = await chart.getFilter();
         currentFilterDOM.innerText = JSON.stringify(filter);
       }
+
+      // Update JSON Viewer values
+      const chartDataButtonTextElement = document.getElementById(
+        "chartDataButtonText"
+      );
+      const jsonViewerElement = document.getElementById("jsonViewer");
+      if (chartDataButtonTextElement.textContent === "Hide") {
+        const data = await chart.getData();
+        jsonViewerElement.data = data;
+      }
     });
 
   /*
@@ -92,6 +103,45 @@ async function renderChart() {
 
       var currentTheme = await chart.getTheme();
       document.getElementById("currentTheme").innerText = currentTheme;
+    });
+
+  /*
+    chart.getData();
+    Retrieves the data used to render the current chart.
+
+    The data that returns usually has the format of:
+
+    ```
+    {
+      documents: [ ... ],
+      fields: [ ... ]
+    }
+    ```
+  */
+  document
+    .getElementById("chartDataButton")
+    .addEventListener("click", async function () {
+      const chartDataButtonTextElement = document.getElementById(
+        "chartDataButtonText"
+      );
+      const jsonViewerElement = document.getElementById("jsonViewer");
+
+      const currentState = chartDataButtonTextElement.textContent;
+      if (currentState === "Show") {
+        // Update text inside button
+        chartDataButtonTextElement.innerText = "Hide";
+
+        // Get chart data and display it
+        const data = await chart.getData();
+        jsonViewerElement.data = data;
+        jsonViewerElement.style.visibility = "visible";
+      } else {
+        // Update text inside button
+        chartDataButtonTextElement.innerText = "Show";
+        // Reset JSON Viewer element
+        jsonViewerElement.data = "{}";
+        jsonViewerElement.style.visibility = "hidden";
+      }
     });
 }
 
