@@ -17,9 +17,7 @@ This sample shows how to use the JavaScript Embedding SDK to render unauthentica
 - Render an embedded chart on a web page
 - Set the charts theme to either `'light'` or `'dark'`
 - Get the charts current theme
-- Set the charts max data age
-  - Note, the max data age is 0, implying that after rendering, the chart will never refresh.
-  - The minimum max data age is 10 seconds.
+- Set the charts max data age to various values
 - Get the charts current max data age
 - Manually refresh the chart
 - Set the charts current filter
