@@ -5,13 +5,8 @@ body {
   transition: background-color 0.5s ease;
 }
 
-.chart-title {
-  text-align: center;
-  color: #89989b;
-}
-
-.body-content {
-  display: flex;
+span {
+  white-space: pre;
 }
 
 th {
@@ -20,17 +15,8 @@ th {
   text-align: right;
 }
 
-.chartInfo {
-  font-size: 20px;
-  width: 520px;
-}
-
 td {
   padding-left: 20px;
-}
-
-.chartsContainer {
-  display: flex;
 }
 
 main {
@@ -41,6 +27,7 @@ main {
   flex-direction: column;
 }
 
+/* Navigation Bar */
 #nav {
   flex-shrink: 0;
   padding: 1rem;
@@ -58,20 +45,9 @@ main {
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
 }
 
-#chart {
-  border-top: none;
-  flex-grow: 1;
-  height: 100%;
-  width: 80%;
-}
-
 .theme-label {
   line-height: 35px;
   padding-left: 10px;
-}
-
-span {
-  white-space: pre;
 }
 
 .dark-mode {
@@ -85,4 +61,33 @@ body span.theme-label::before {
 
 body.dark-mode span.theme-label::before {
   content: "🌙";
+}
+
+/* Body */
+.body-content {
+  display: flex;
+}
+
+/* Chart */
+#chart {
+  border-top: none;
+  flex-grow: 1;
+  height: 100%;
+  width: 80%;
+}
+
+/* Chart Info */
+.chartInfo {
+  font-size: 20px;
+  width: 520px;
+}
+
+.chart-title {
+  text-align: center;
+  color: #89989b;
+}
+
+/* JSON Viewer */
+#jsonViewer {
+  visibility: hidden;
 }
