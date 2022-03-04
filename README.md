@@ -27,6 +27,7 @@ yarn add @mongodb-js/charts-embed-dom
 ## Documentation 📖
 
 - [Installation & MongoDB Docs](https://docs.mongodb.com/charts/master/embedding-charts-sdk/)
+- [Embedding SDK API Reference](https://www.npmjs.com/package/@mongodb-js/charts-embed-dom)
 - [Examples](https://github.com/mongodb-js/charts-embed-sdk/tree/master/examples)
 
 ### Embedded Chart Guides
