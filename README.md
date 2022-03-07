@@ -27,6 +27,7 @@ yarn add @mongodb-js/charts-embed-dom
 ## Documentation 📖
 
 - [Installation & MongoDB Docs](https://docs.mongodb.com/charts/master/embedding-charts-sdk/)
+- [Embedding SDK API Reference](https://www.npmjs.com/package/@mongodb-js/charts-embed-dom)
 - [Examples](https://github.com/mongodb-js/charts-embed-sdk/tree/master/examples)
 
 ### Embedded Chart Guides
@@ -38,6 +39,7 @@ yarn add @mongodb-js/charts-embed-dom
 - [Getting started with click events](https://github.com/mongodb-js/charts-embed-sdk/tree/master/examples/charts/click-events-basic)
 - [Interactive filtering using click events](https://github.com/mongodb-js/charts-embed-sdk/tree/master/examples/charts/click-events-filtering)
 - [Programmatic highlighting](https://github.com/mongodb-js/charts-embed-sdk/tree/master/examples/charts/programmatic-highlighting)
+- [Timeline Chart (React Example)](https://github.com/mongodb-js/charts-embed-sdk/tree/master/examples/charts/timeline-charts-example)
 
 ### Embedded Dashboard Guides
 
