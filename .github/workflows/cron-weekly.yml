@@ -1,0 +1,10 @@
+name: Weekly job
+
+on:
+  schedule:
+    # Run every Sunday at 9AM
+    - cron: "0 9 * * 0"
+
+jobs: 
+  markdown-link-check:
+    uses: ./.github/workflows/markdown-link-check.yml
