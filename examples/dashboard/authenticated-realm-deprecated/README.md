@@ -1,5 +1,6 @@
-# MongoDB Charts Embedding Example - Authenticated Embedded Dashboard (Realm)
+# MongoDB Charts Embedding Example - Authenticated Embedded Dashboard (Realm) [DEPRECATED]
 
+> ## :rotating_light: The [`mongodb-stitch-browser-sdk`](https://www.npmjs.com/package/mongodb-stitch-browser-sdk) package is now deprecated. Please use [`realm-web`](https://www.npmjs.com/package/realm-web) instead.
 
 ## Background
 
