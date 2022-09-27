@@ -1,6 +1,6 @@
 # MongoDB Charts Embedding Example - App Services Authentication [DEPRECATED]
 
-> ## :rotating_light: The [`mongodb-stitch-browser-sdk`](https://www.npmjs.com/package/mongodb-stitch-browser-sdk) package is now deprecated. Please use [`realm-web`](https://www.npmjs.com/package/realm-web) instead and follow the [authenticated-realm](https://github.com/mongodb-js/charts-embed-sdk/tree/master/examples/charts/authenticated-realm) example.
+> ## :rotating_light: The [`mongodb-stitch-browser-sdk`](https://www.npmjs.com/package/mongodb-stitch-browser-sdk) package is now deprecated. Please use [`realm-web`](https://www.npmjs.com/package/realm-web) instead and follow the [authenticated-realm-web](https://github.com/mongodb-js/charts-embed-sdk/tree/master/examples/charts/authenticated-realm-web) example.
 
 ## Background
 

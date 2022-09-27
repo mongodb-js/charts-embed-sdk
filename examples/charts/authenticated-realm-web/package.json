@@ -1,5 +1,5 @@
 {
-  "name": "charts-sdk-example-authenticated-realm-dashboard",
+  "name": "mongodb-charts-embedded-sdk-authenticated-realm-web-demo",
   "version": "1.0.0",
   "description": "",
   "main": "index.html",

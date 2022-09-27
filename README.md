@@ -34,7 +34,7 @@ yarn add @mongodb-js/charts-embed-dom
 
 - [Getting started with the MongoDB Charts SDK](https://github.com/mongodb-js/charts-embed-sdk/tree/master/examples/charts/unauthenticated)
 - [Getting started with custom JWT authentication](https://github.com/mongodb-js/charts-embed-sdk/tree/master/examples/charts/authenticated-custom-jwt)
-- [Getting started with Realm Web authentication](https://github.com/mongodb-js/charts-embed-sdk/tree/master/examples/charts/authenticated-realm)
+- [Getting started with Realm Web authentication](https://github.com/mongodb-js/charts-embed-sdk/tree/master/examples/charts/authenticated-realm-web)
 - [Getting started with Google authentication](https://github.com/mongodb-js/charts-embed-sdk/tree/master/examples/charts/authenticated-google)
 - [Getting started with click events](https://github.com/mongodb-js/charts-embed-sdk/tree/master/examples/charts/click-events-basic)
 - [Interactive filtering using click events](https://github.com/mongodb-js/charts-embed-sdk/tree/master/examples/charts/click-events-filtering)
@@ -45,6 +45,6 @@ yarn add @mongodb-js/charts-embed-dom
 
 - [Embedding an unauthenticated dashboard](https://github.com/mongodb-js/charts-embed-sdk/tree/master/examples/dashboard/unauthenticated)
 - [Dashboard embedding with custom JWT authentication](https://github.com/mongodb-js/charts-embed-sdk/tree/master/examples/dashboard/authenticated-custom-jwt)
-- [Dashboard embedding with Realm Web authentication](https://github.com/mongodb-js/charts-embed-sdk/tree/master/examples/dashboard/authenticated-realm)
+- [Dashboard embedding with Realm Web authentication](https://github.com/mongodb-js/charts-embed-sdk/tree/master/examples/dashboard/authenticated-realm-web)
 - [Dashboard embedding with Google authentication](https://github.com/mongodb-js/charts-embed-sdk/tree/master/examples/dashboard/authenticated-google)
 - [Accessing a Chart instance via Dashboard class](https://github.com/mongodb-js/charts-embed-sdk/tree/master/examples/dashboard/unauthenticated-get-chart)
