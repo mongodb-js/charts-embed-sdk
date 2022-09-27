@@ -14,7 +14,7 @@ Charts can be embedded either using a simple IFRAME snippet, or by using the Cha
 
 This sample shows how to use the JavaScript Embedding SDK to render **authenticated** embedded charts, specifically via configuring **MongoDB Realm** as an authentication provider. The sample app is already set up to authenticate with a Realm Application hosted by the Charts Development team.
 
-This sample also demonstrates data filtering by role, thanks to Realm's extensive rules system. See more details [here](https://docs.mongodb.com/realm/mongodb/define-roles-and-permissions/). Simply login with either australianEmployee@mongodb.com or canadianEmployee@mongodb.com, and take note of the different results!
+This sample also demonstrates data filtering by role, thanks to Realm's extensive rules system. See more details [here](https://docs.mongodb.com/realm/mongodb/define-roles-and-permissions/). Simply login with either `australianEmployee@mongodb.com` or `canadianEmployee@mongodb.com`, and take note of the different results!
 
 #### The features included in this demo are as follows:
 
@@ -87,19 +87,48 @@ Choose or create a Realm Cloud app which will be used to authenticate users who 
 
 If you want to use your Realm app to filter data for each user, (Like we have done in our sample) set up an [Atlas service](https://www.mongodb.com/cloud/atlas) and corresponding [Rules](https://docs.mongodb.com/realm/mongodb/define-roles-and-permissions/) that filter the data as desired. Injected Filters and [Dashboard filtering](https://www.mongodb.com/blog/post/filter-your-dashboards-with-mongodb-charts) are other Charts features one can use to attain similar functionality.
 
-### Prepare MongoDB Charts
+## Prepare MongoDB Charts
+
+This sample is preconfigured to render a specific chart. You can run the sample as-is, or you can modify it to render your own chart by completing the following steps:
+
+## Create chart to embed
 
 1. Log onto MongoDB Charts
 
 2. If you haven't done so already, create a chart you would like to embed on any dashboard.
 
-3. Go to the Data Sources tab on the left navigation column. Find the data source that you are using on the chart, and choose External Sharing Options from the ... menu. Make sure that embedding is enabled for this data source and select '**Authenticated Embedding Only**'
+### Enable data source for authenticated access
 
-4. Go to the Admin Settings tab on the left navigation column. Under 'Embedding Authentication Providers', click 'Add New Provider'.
+3. Go to the Data Sources tab found on the side panel.
 
-   - Select the Realm Provider.
-   - Select the Realm Project that contains the Realm Application you configured in the previous steps
-   - Select the Realm Application you configured in the previous steps
+4. Find the data source that you want to use on the chart by selecting the deployment, database and collection. Once found, click on the Manage button in the Data access section to access the Data source management page.
+
+5. Make sure the "External users can view data in this data source" option is toggled on and "Allow authenticated data access" has been selected.
+
+### Enable chart for embedded access
+
+6. Go to the Dashboards tab on the left navigation column, and select the dashboard that contains the chart you wish to embed.
+
+7. Find the chart you want to embed, click the **...** menu and select **Embed chart**
+
+8. Ensure the Unauthenticated tab is selected and turn on '**Enable Authenticated access**'
+
+9. Note the Chart ID and the Base URL, as you will need them for running the demo.
+
+### Create authentication provider
+
+10. Go to the Embedding tab on the side panel.
+
+11. Ensure the "Authentication Settings" tab is selected and press the "Add" button in the Authentication providers section.
+
+12. Fill in the details like so:
+
+       - Name: `App Services Auth Provider` _Note, this is only for your convenience and can be named anything_
+       - Provider: `Atlas App Services`
+       - Atlas Project: Select the Atlas project that contains the App Services Application you configured in the previous steps
+       - App ID: Select the ID of the App Services App you configured in the previous steps
+
+13. Click "Save"
 
      **Optional**
 
@@ -110,18 +139,6 @@ If you want to use your Realm app to filter data for each user, (Like we have do
      - Navigate to Clusters on the left hand navigation panel.
      - Look for the Stitch Service Name associated with your Atlas cluster.
        ![Screen Shot 2020-04-14 at 4 51 30 pm](https://user-images.githubusercontent.com/19422770/79194609-3478f280-7e70-11ea-9267-a1c7d35aad09.png)
-
-Your provider config, (ignoring the completed optional settings) should look something like this.
-
-![](https://i.imgur.com/e5DDM4B.png)
-
-5. Go to the Dashboards tab on the left navigation column, and select the dashboard that contains the chart you wish to embed.
-
-6. Find the chart you want to embed, click the **...** menu and select **Embed Chart**
-
-7. Ensure the Unauthenticated tab is selected and turn on '**Enable Authenticated access**'
-
-8. Note the Chart ID and the Chart Base URL, as you will need them for running the demo.
 
 ## Running this Sample with your data
 

@@ -33,24 +33,39 @@ _The following steps presume the use of npm, though yarn works as well._
 
 This sample is preconfigured to render a specific chart. You can run the sample as-is, or you can modify it to render your own chart by completing the following steps:
 
-1. Log onto MongoDB Charts
+### Create chart to embed
+
+1. Log onto MongoDB Charts.
 
 2. If you haven't done so already, create a chart on any dashboard that you would like to embed.
 
-3. Go to the Data Sources tab, find the data source that you are using on the chart, and choose External Sharing Options from the ... menu. Make sure that embedding is enabled for this data source and select '**Verified Signature Only**'
+### Enable data source for authenticated access
 
-4. Find the chart you want to embed, click the **...** menu and select **Embed Chart**
+3. Go to the Data Sources tab found on the side panel.
 
-5. Ensure the Unauthenticated tab is selected and turn on '**Enable authenticated access**'
+4. Find the data source that you want to use on the chart by selecting the deployment, database and collection. Once found, click on the Manage button in the Data access section to access the Data source management page.
 
-6. Note the Chart ID and the Chart Base URL, as you will need them for running the demo.
+5. Make sure the "External users can view data in this data source" option is toggled on and "Allow authenticated data access" has been selected.
 
-7. Close the menu and click on the Admin Settings button.
+### Enable chart for embedded access
 
-8. Under Embedding Authentication Providers, press the **Add New Provider** button
-9. Fill in the details like so:
+6. Go to the Dashboards tab on the side panel, and select the dashboard that contains the chart you wish to embed.
 
-![](https://i.imgur.com/8cS1iSJ.png)
+7. Click the **...** menu and select **Embed chart**.
+
+8. Ensure the Authenticated tab is selected and turn on '**Enable authenticated access**'.
+
+9.  Note the Chart ID and the Base URL, as you will need them for running the demo.
+
+10. Close the menu.
+
+### Create authentication provider
+
+11. Go to the Embedding tab on the side panel.
+
+12. Ensure the "Authentication Settings" tab is selected and press the "Add" button in the Authentication providers section.
+
+13. Fill in the details like so:
 
 - Name: `Custom JWT` _Note, this is only for your convenience and can be named anything_
 - Provider: `Custom JSON Web Token`
@@ -69,8 +84,9 @@ This sample is preconfigured to render a specific chart. You can run the sample 
 This should create a local server running the Charts demo. Open a web browser and navigate to `http://localhost:1234` in the url bar to see the sample. Along with this, a local jwt authentication server will be spun up on `http://localhost:8000`.
 
 The hard coded credentials used in this demo are:
-username : `admin`
-password: `password`
+
+- Username : `admin`
+- Password: `password`
 
 ## Next Steps
 
