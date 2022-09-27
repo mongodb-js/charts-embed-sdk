@@ -1,4 +1,4 @@
-# MongoDB Charts Embedding Example - Authenticated Embedded Dashboard (Realm)
+# MongoDB Charts Embedding Example - Authenticated Embedded Dashboard (App Services)
 
 ## Background
 
@@ -8,7 +8,7 @@
 
 The MongoDB Charts Embedding SDK allows you to embed a Chart or a Dashboard directly into your application. Just like embedded charts, you can embed a dashboard via unauthenticated or an authenticated method.
 
-This example, demonstrates how you might render an authenticated dashboard embedded onto your application using Realm as the authentication provider.
+This example, demonstrates how you might render an authenticated dashboard embedded onto your application using App Services as the authentication provider.
 
 _Note that this is not an exhaustive list of all the features for the Dashboard Embedding SDK._
 
@@ -18,8 +18,8 @@ In this example, you should be able to:
 
 - Render an authenticated embedded dashboard
 - Render a dashboard to valid users only
-- Use Realm authentication
-- Data filtering by Realm User Role.
+- Use App Services authentication
+- Data filtering by App Services User Role.
 
 ## Quick Start
 
@@ -49,5 +49,4 @@ username: canadianEmployee@mongodb.com
 password: password
 ```
 
-And they will display localised data thanks to the configured Realm User Roles.
-
+And they will display localised data thanks to the configured App Services User Roles.

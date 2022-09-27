@@ -1,4 +1,4 @@
-# MongoDB Charts Embedding Example - Realm Authentication [DEPRECATED]
+# MongoDB Charts Embedding Example - App Services Authentication [DEPRECATED]
 
 > ## :rotating_light: The [`mongodb-stitch-browser-sdk`](https://www.npmjs.com/package/mongodb-stitch-browser-sdk) package is now deprecated. Please use [`realm-web`](https://www.npmjs.com/package/realm-web) instead and follow the [authenticated-realm](https://github.com/mongodb-js/charts-embed-sdk/tree/master/examples/charts/authenticated-realm) example.
 
@@ -12,16 +12,16 @@ MongoDB Charts allows you to create visualizations of your MongoDB data using a 
 
 Charts can be embedded either using a simple IFRAME snippet, or by using the Charts Embedding SDK from your JavaScript code. When using the SDK, embedded charts can be either unauthenticated (meaning anyone who has the embed code can view the chart), or authenticated (whereby the user can only view the chart if they have an active authentication session linked to a Charts authentication provider).
 
-This sample shows how to use the JavaScript Embedding SDK to render **authenticated** embedded charts, specifically via configuring **MongoDB Realm** as an authentication provider. The sample app is already set up to authenticate with a Realm Application hosted by the Charts Development team.
+This sample shows how to use the JavaScript Embedding SDK to render **authenticated** embedded charts, specifically via configuring **Atlas App Services** as an authentication provider. The sample app is already set up to authenticate with an App Services application hosted by the Charts Development team.
 
-This sample also demonstrates data filtering by role, thanks to Realm's extensive rules system. See more details [here](https://docs.mongodb.com/realm/mongodb/define-roles-and-permissions/). Simply login with either `australianEmployee@mongodb.com` or `canadianEmployee@mongodb.com`, and take note of the different results!
+This sample also demonstrates data filtering by role, thanks to App Services Rules system. See more details [here](https://www.mongodb.com/docs/atlas/app-services/mongodb/define-roles-and-permissions/). Simply login with either `australianEmployee@mongodb.com` or `canadianEmployee@mongodb.com`, and take note of the different results!
 
 #### The features included in this demo are as follows:
 
 - 📈 Render an embedded chart on a web page
 - 🔒 Only render charts to valid users
-- 🔑 Realm authentication
-- 🙋‍♂️ Data filtering by Realm User Role.
+- 🔑 Appp Serviecs authentication
+- 🙋‍♂️ Data filtering by App Services User Role.
 
 ## Quickstart
 
@@ -50,19 +50,19 @@ username: canadianEmployee@mongodb.com
 password: password
 ```
 
-And they will display localised data thanks to the configured Realm User Roles.
+And they will display localised data thanks to the configured App Services User Roles.
 
-## Authenticate with your Realm App
+## Authenticate with your App Services App
 
 This sample is preconfigured to render, and more specifically, **authenticate** users who are verified to view a specific chart. You can run the sample as-is, or you can modify it to render and authenticate your own chart by completing the following steps:
 
-### Prepare MongoDB Realm
+### Prepare your App Services App
 
-Choose or create a Realm Cloud app which will be used to authenticate users who wish to view your chart.
+Choose or create a App which will be used to authenticate users who wish to view your chart.
 
-1. Log onto MongoDB Realm
+1. Log onto Atlas App Services
 
-   - Create Realm App if you haven't already
+   - Create App Services App if you haven't already
 
 2. Click on Users on the left navigation column
 
@@ -85,7 +85,7 @@ Choose or create a Realm Cloud app which will be used to authenticate users who 
 
 ### Optionally, Prepare your Dataset
 
-If you want to use your Realm app to filter data for each user, (Like we have done in our sample) set up an [Atlas service](https://www.mongodb.com/cloud/atlas) and corresponding [Rules](https://docs.mongodb.com/realm/mongodb/define-roles-and-permissions/) that filter the data as desired. Injected Filters and [Dashboard filtering](https://www.mongodb.com/blog/post/filter-your-dashboards-with-mongodb-charts) are other Charts features one can use to attain similar functionality.
+If you want to use your App to filter data for each user, (Like we have done in our sample) set up an [Atlas service](https://www.mongodb.com/cloud/atlas) and corresponding [Rules](https://www.mongodb.com/docs/atlas/app-services/mongodb/define-roles-and-permissions/) that filter the data as desired. Injected Filters and [Dashboard filtering](https://www.mongodb.com/blog/post/filter-your-dashboards-with-mongodb-charts) are other Charts features one can use to attain similar functionality.
 
 ## Prepare MongoDB Charts
 
@@ -132,20 +132,19 @@ This sample is preconfigured to render a specific chart. You can run the sample 
 
      **Optional**
 
-   - Turn on Fetch data using the Realm App.
-     - This option should be turned on when you wish to delegate data fetching logic to your Realm App. Specifically, if you have configured Realm Rules that apply to the users that are being authenticated, and you wish to have these rules enforced before the chart is rendered, turn this setting on.
-     - This setting should be left off if you only require Realm to authenticate valid users, and you have no desire to filter data by their role in your Realm App. i.e, all valid users see the same chart, invalid users cannot see the chart.
-   - Enter the Realm Service name that retrieves your data. To find the name of this,
-     - Navigate to Clusters on the left hand navigation panel.
-     - Look for the Stitch Service Name associated with your Atlas cluster.
-       ![Screen Shot 2020-04-14 at 4 51 30 pm](https://user-images.githubusercontent.com/19422770/79194609-3478f280-7e70-11ea-9267-a1c7d35aad09.png)
+   - Turn on "Fetch data using App Services".
+     - This option should be turned on when you wish to delegate data fetching logic to your App. Specifically, if you have configured App Services Rules that apply to the users that are being authenticated, and you wish to have these rules enforced before the chart is rendered, turn this setting on.
+     - This setting should be left off if you only require App Services to authenticate valid users, and you have no desire to filter data by their role in your App. i.e, all valid users see the same chart, invalid users cannot see the chart.
+   - Enter the Service name that retrieves your data. To find the name of this,
+     - Navigate to "Linked Data Sources" on the left hand navigation panel.
+     - Look for the "Service Name" associated with your deployment.
 
 ## Running this Sample with your data
 
 If you do not wish to use our sample data and have completed the above steps to prepare your own chart for embedding,
 
 - Open the _index.js_ file (`src/index.js`)
-- Replace the Realm `AppClientID` string with the base URL for your Realm app (look for "\~REPLACE\~" in the comments)
+- Replace the Realm `AppClientID` string with the base URL for your App Services app (look for "\~REPLACE\~" in the comments)
 - Replace the Charts `baseUrl` string with the base URL you copied from the MongoDB Charts Embedded Chart menu (look for "\~REPLACE\~" in the comments)
 - Replace the `chartId` string with the chart ID you copied from the MongoDB Charts Embedded Chart menu (look for "\~REPLACE\~" in the comments)
 - Replace the Stitch App ID in the Stitch Constructor, and remove the base URL. `Stitch.initializeAppClient('<your-app-id>')`
@@ -155,7 +154,7 @@ If you do not wish to use our sample data and have completed the above steps to 
 Once you gain an understanding of the API, consider the following
 
 - Take on the optional steps to prepare and manipulate your own data source rather than the sample.
-- Play with Realms Rules system, and change how different accounts see your Chart.
+- Play with App Services Rules system, and change how different accounts see your Chart.
 - Think whether an authenticated chart is the feature you're after. If you're simply looking for a way to show off your data, [unauthenticated embedding](https://github.com/mongodb-js/charts-embed-sdk/tree/master/examples/charts/unauthenticated) simplifies the workflow even further.
 
 Happy Charting! 🚀 📈

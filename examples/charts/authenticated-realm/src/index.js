@@ -4,7 +4,7 @@ import ChartsEmbedSDK, {
 import * as Realm from "realm-web";
 
 const client = new Realm.App({
-  id: "charts-embedding-sdk-nsuat", // Optional: ~REPLACE~ with your Realm App ID
+  id: "charts-embedding-sdk-nsuat", // Optional: ~REPLACE~ with your App Services App ID
 });
 
 function getUser() {

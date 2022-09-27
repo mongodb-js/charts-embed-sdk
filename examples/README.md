@@ -18,7 +18,7 @@ The [Unauthenticated](https://github.com/mongodb-js/charts-embed-sdk/tree/master
 Our **authenticated** examples are great references if you need help getting started creating Authenticated Embedded Charts. We have three examples, each tailored for the three Authentication Providers now available in MongoDB Charts. The three examples are:
 
 - [Custom JWT](https://github.com/mongodb-js/charts-embed-sdk/tree/master/examples/charts/authenticated-custom-jwt)
-- [MongoDB Realm](https://github.com/mongodb-js/charts-embed-sdk/tree/master/examples/charts/authenticated-realm)
+- [Atlas App Services](https://github.com/mongodb-js/charts-embed-sdk/tree/master/examples/charts/authenticated-realm)
 - [Google](https://github.com/mongodb-js/charts-embed-sdk/tree/master/examples/charts/authenticated-google)
 
 If you'd like to build **interactive** charts, we have two examples showing this capability:
@@ -40,7 +40,7 @@ If your dashboard needs some privacy, you can look at our authenticated examples
 
 
 - [Custom JWT](https://github.com/mongodb-js/charts-embed-sdk/tree/master/examples/dashboard/authenticated-custom-jwt)
-- [MongoDB Realm](https://github.com/mongodb-js/charts-embed-sdk/tree/master/examples/dashboard/authenticated-realm)
+- [Atlas App Services](https://github.com/mongodb-js/charts-embed-sdk/tree/master/examples/dashboard/authenticated-realm)
 - [Google](https://github.com/mongodb-js/charts-embed-sdk/tree/master/examples/dashboard/authenticated-google)
 
 
