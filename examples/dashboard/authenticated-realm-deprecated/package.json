@@ -1,24 +1,25 @@
 {
-  "name": "mongodb-charts-embedded-sdk-authenticated-demo",
+  "name": "charts-sdk-example-authenticated-realm-deprecated-dashboard",
   "version": "1.0.0",
   "description": "",
   "main": "index.html",
   "scripts": {
-    "start": "node app.js & parcel index.html --open",
+    "start": "parcel index.html --open",
     "build": "parcel build index.html"
   },
   "dependencies": {
     "@mongodb-js/charts-embed-dom": "^2.3.0",
-    "cors": "^2.8.5",
-    "express": "^4.16.3",
     "jsonwebtoken": "^8.3.0",
+    "mongodb-stitch-browser-sdk": "^4.8.0",
     "parcel": "^1.12.4",
-    "regenerator-runtime": "^0.13.3",
     "request": "^2.88.2"
   },
   "devDependencies": {
     "@babel/core": "^7.8.6",
     "@babel/preset-env": "^7.8.6",
     "parcel-bundler": "^1.6.1"
-  }
+  },
+  "browserslist": [
+    "since 2020"
+  ]
 }

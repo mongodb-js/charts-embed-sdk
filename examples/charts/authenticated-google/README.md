@@ -6,7 +6,7 @@
 
 MongoDB Charts allows you to create visualizations of your MongoDB data using a simple web interface. You can view the visualizations within the Charts UI, or you can use the Embedding feature to render the charts in an external web application.
 
-Charts can be embedded either using a simple IFRAME snippet, or by using the Charts Embedding SDK from your JavaScript code. When using the SDK, embedded charts can be either unauthenticated (meaning anyone who has the embed code can view the chart), or authenticated (whereby the user can only view the chart if they have an active authentication session linked to a Charts authentication provider).
+Charts can be embedded either using a simple IFRAME snippet, or by using the Charts Embedding SDK from your JavaScript code. When using the SDK, embedded charts can be either unauthenticated (meaning anyone who has access to the page where the chart is embedded can view the chart), or authenticated (whereby the user can only view the chart if they have an active authentication session linked to a Charts authentication provider).
 
 This sample shows how to use the JavaScript Embedding SDK to render **authenticated** embedded charts, specifically via configuring **Google** as an authentication provider. The sample app is already set up to authenticate with a Google Client ID hosted by the Charts Development team.
 
@@ -39,30 +39,48 @@ This sample is pre-configured with a MongoDB-owned test Client ID. To use Google
 
 Steps on how to configure a Project with Google and attain a Google Client ID can be found [here](https://developers.google.com/identity/sign-in/web/sign-in). You'll need to set the Origin and Redirect URIs to whatever you use in your application. In our sample, that is http://localhost:3000.
 
-### Preparing your Chart for Embedding
+## Preparing your Chart for Embedding
 
 This sample is preconfigured to render a specific chart. You can run the sample as-is, or you can modify it to render your own chart by completing the following steps:
+
+### Create chart to embed
 
 1. Log onto MongoDB Charts
 
 2. If you haven't done so already, create a chart you would like to embed on any dashboard.
 
-3. Go to the Data Sources tab on the left navigation column. Find the data source that you are using on the chart, and choose External Sharing Options from the ... menu. Make sure that embedding is enabled for this data source and select '**Authenticated Embedding Only**'
+### Enable data source for authenticated access
 
-4. Go to the Admin Settings tab on the left navigation column. Under 'Embedding Authentication Providers', click 'Add New Provider'.
+3. Go to the Data Sources tab found on the side panel.
 
-   - Name your Provider e.g `Google`
-   - Select the Google Provider.
-   - Enter your Google Client ID
+4. Find the data source that you want to use on the chart by selecting the deployment, database and collection. Once found, click on the Manage button in the Data access section to access the Data source management page.
+
+5. Make sure the "External users can view data in this data source" option is toggled on and "Allow authenticated data access" has been selected.
+
+### Enable chart for embedded access
+
+6. Go to the Dashboards tab on the side panel, and select the dashboard that contains the chart you wish to embed.
+
+7. Find the chart you want to embed, click the **...** menu and select **Embed chart**
+
+8. Ensure the **Authenticated** tab is selected and turn on '**Enable authenticated access**'
+
+9. Note the **Chart ID** and the **Base URL**, as you will need them for running the demo.
+
+### Create authentication provider
+
+10. Go to the Embedding tab on the side panel.
+
+11. Ensure the "Authentication Settings" tab is selected and press the "Add" button in the Authentication providers section.
+
+12. Go to the Admin Settings tab on the left navigation column. Under 'Embedding Authentication Providers', click 'Add New Provider'.
+
+13. Fill in the details like so:
+
+   - Name: `Google` _Note, this is only for your convenience and can be named anything you want here_
+   - Provider: `Google`
+   - Google Client ID: _See above for 
      - This should be the entire string `<encodedData>.apps.googleusercontent.com`
-
-5. Go to the Dashboards tab on the left navigation column, and select the dashboard that contains the chart you wish to embed.
-
-6. Find the chart you want to embed, click the **...** menu and select **Embed Chart**
-
-7. Ensure the Unauthenticated tab is selected and turn on '**Enable Authenticated access**'
-
-8. Note the Chart ID and the Chart Base URL, as you will need them for running the demo.
 
 ## Running this Sample with your data
 

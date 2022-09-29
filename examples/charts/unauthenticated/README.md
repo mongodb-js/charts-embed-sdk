@@ -8,7 +8,7 @@
 
 MongoDB Charts allows you to create visualizations of your MongoDB data using a simple web interface. You can view the visualizations within the Charts UI, or you can use the Embedding feature to render the charts in an external web application.
 
-Charts can be embedded either using a simple IFRAME snippet, or by using the Charts Embedding SDK from your JavaScript code. When using the SDK, embedded charts can be either unauthenticated (meaning anyone who has the embed code can view the chart), or authenticated (whereby the user can only view the chart if they have an active authentication session linked to a Charts authentication provider).
+Charts can be embedded either using a simple IFRAME snippet, or by using the Charts Embedding SDK from your JavaScript code. When using the SDK, embedded charts can be either unauthenticated (meaning anyone who has access to the page where the chart is embedded can view the chart), or authenticated (whereby the user can only view the chart if they have an active authentication session linked to a Charts authentication provider).
 
 This sample shows how to use the JavaScript Embedding SDK to render unauthenticated embedded charts, along with showing off the various ways your application can interact with charts using the SDK.
 
@@ -43,25 +43,36 @@ This should create a local server running the Charts demo. Open a web browser an
 
 This sample is preconfigured to render a specific chart. You can run the sample as-is, or you can modify it to render your own chart by completing the following steps:
 
+### Create chart to embed
+
 1. Log onto MongoDB Charts
 
 2. If you haven't done so already, create a chart on any dashboard that you would like to embed.
 
-3. Go to the Data Sources tab, find the data source that you are using on the chart, and choose External Sharing Options from the ... menu. Make sure that embedding is enabled for this data source and select '**Unauthenticated or Verified Signature**'
+### Enable data source for unauthenticated access
 
-4. Find the chart you want to embed, click the **...** menu and select **Embed Chart**
+3. Go to the Data Sources tab found on the side panel.
 
-5. Ensure the Unauthenticated tab is selected and turn on '**Enable unauthenticated access**'
+4. Find the data source that you want to use on the chart by selecting the deployment, database and collection. Once found, click on the Manage button in the Data access section to access the Data source management page.
 
-6. Select the **Javascript SDK** option
+5. Make sure the "External users can view data in this data source" option is toggled on and "Allow unauthenticated data access" has been selected.
 
-7. Note the Chart ID and the Chart Base URL, as you will need them for running the demo.
+### Enable chart for embedded access
 
-8. **Optional**
+6. Find the chart you want to embed, click the **...** menu and select **Embed chart**
+
+7. Ensure the **Unauthenticated** tab is selected and turn on '**Enable unauthenticated access**'
+
+8. Select the **Javascript SDK** option
+
+9.  Note the **Chart ID** and the **Base URL**, as you will need them for running the demo.
+
+10. **Optional**
    In the same menu, note the **User Specified Filters** option. If you wish to try out filtering on your own dataset, you will need to whitelist a field by which to filter on. For example, our sample AirBnB dataset filters on `address.country`.
-   Furthermore, the filter related code in `src/index.js` will need to be updated to conform to the filter query you wish to run, and the options provided in `index.html` will need to be updated too. To be clear,
-   - Update the query **field** in `src/index.js`
-   - Update the query **values** in `index.html`
+
+      Furthermore, the filter related code in `src/index.js` will need to be updated to conform to the filter query you wish to run, and the options provided in `index.html` will need to be updated too. To be clear,
+       - Update the query **field** in `src/index.js`
+       - Update the query **values** in `index.html`
 
 ## Running this Sample with your data
 

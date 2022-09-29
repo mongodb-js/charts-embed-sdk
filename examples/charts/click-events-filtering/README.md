@@ -14,7 +14,7 @@ More information regarding how to handle click events can be found in the [Chart
 
 - Adding a click event handler to a chart, using code similar to:
 
-```
+```javascript
 chart.addEventListener("click", callback, options);
 ```
 
@@ -42,22 +42,35 @@ This should create a local server running the Charts demo. Open a web browser an
 
 This sample is preconfigured to render a specific chart. You can run the sample as-is, or you can modify it to render your own chart by completing the following steps:
 
+### Create chart to embed
+
 1. Log onto MongoDB Charts
 
 2. If you haven't done so already, create a chart on any dashboard that you would like to embed.
 
-3. Go to the Data Sources tab, find the data source that you are using on the chart, and choose External Sharing Options from the ... menu. Make sure that embedding is enabled for this data source and select '**Unauthenticated or Verified Signature**'
+### Enable data source for unauthenticated access
 
-4. Find the chart you want to embed, click the **...** menu and select **Embed Chart**
+3. Go to the Data Sources tab found on the side panel.
 
-5. Ensure the Unauthenticated tab is selected and turn on '**Enable unauthenticated access**'
+4. Find the data source that you want to use on the chart by selecting the deployment, database and collection. Once found, click on the Manage button in the Data access section to access the Data source management page.
 
-6. Select the **Javascript SDK** option
+5. Make sure the "External users can view data in this data source" option is toggled on and "Allow unauthenticated data access" has been selected.
 
-7. Note the Chart ID and the Chart Base URL, as you will need them for running the demo.
+6. Go to the Data Sources tab, find the data source that you are using on the chart, and choose External Sharing Options from the ... menu. Make sure that embedding is enabled for this data source and select '**Unauthenticated or Verified Signature**'
 
-8. In the same menu, note the **User Specified Filters** option. If you wish to try out filtering on your own dataset, you will need to whitelist a field by which to filter on. For example, our sample Movies dataset filters on `year` and `genres`.
-   Furthermore, the filter related code in `src/index.js` will need to be updated to conform to the filter query you wish to apply.
+### Enable chart for embedded access
+
+7. Find the chart you want to embed, click the **...** menu and select **Embed chart**
+
+8. Ensure the **Unauthenticated** tab is selected and turn on '**Enable unauthenticated access**'
+
+9. Select the **Javascript SDK** option
+
+10. Note the **Chart ID** and the **Base URL**, as you will need them for running the demo.
+
+11. In the same menu, note the **User Specified Filters** option. If you wish to try out filtering on your own dataset, you will need to whitelist a field by which to filter on. For example, our sample Movies dataset filters on `year` and `genres`.
+
+      Furthermore, the filter related code in `src/index.js` will need to be updated to conform to the filter query you wish to apply.
 
 ## Running this Sample with your data
 

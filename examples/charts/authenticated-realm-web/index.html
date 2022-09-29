@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Charts Embedded SDK - Authenticated Embedded Chart Demo</title>
+    <meta charset="UTF-8" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Heebo&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" href="assets/styles.css" />
+  </head>
+
+  <body>
+    <main>
+      <h1 id="lock"></h1>
+      <div id="login-page" class="login-page">
+        <div class="form">
+          <div class="login-form">
+            <h1 class="form-title">Secure Chart Viewer</h1>
+            <h4 class="input-title">Email Address</h4>
+            <input id="username" type="text" placeholder="Enter your email address" />
+            <h4 class="input-title">Password</h4>
+            <input type="password" id="password" placeholder="Hint: it's password" />
+            <p id="errorMessage">Authentication failed. If you are using the pre-built sample, 
+              please use one of the listed email addresses and use 'password' as the password.</p>
+            <button id="loginButton">Log In</button>
+            <p class="message">🇦🇺 <br>See Australian data via logging in with australianEmployee@mongodb.com</p>
+            <p class="message">🇨🇦 <br>See Canadian data via logging in with canadianEmployee@mongodb.com</p>
+          </div>
+        </div>
+      </div>
+      <div class="chart-container">
+        <div id="chart"></div>
+      </div>
+      <button id="logoutButton">Log Out</button>
+    </main>
+    <script src="src/index.js"></script>
+  </body>
+</html>

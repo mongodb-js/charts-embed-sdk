@@ -12,19 +12,19 @@ When you embed charts using the Embedding SDK, you are able to subscribe to even
 
 - Adding a click event handler to a chart, using code similar to:
 
-```
+```javascript
 chart.addEventListener("click", callback);
 ```
 
 - Highlighting the element clicked on the chart, using the following code:
 
-```
+```javascript
 chart.setHighlight(payload.selectionFilter)
 ```
 
 - Parsing the payload returned to the callback event. A typical click event's payload will look something like this:
 
-```
+```json
 {
   "chartId": "c0774a27-3432-4207-b795-afeb56243652",
   "event": {
@@ -88,19 +88,29 @@ This should create a local server running the Charts demo. Open a web browser an
 
 This sample is preconfigured to render a specific chart. You can run the sample as-is, or you can modify it to render your own chart by completing the following steps:
 
+### Create chart to embed
+
 1. Log onto MongoDB Charts
 
 2. If you haven't done so already, create a chart on any dashboard that you would like to embed.
 
-3. Go to the Data Sources tab, find the data source that you are using on the chart, and choose External Sharing Options from the ... menu. Make sure that embedding is enabled for this data source and select '**Unauthenticated or Verified Signature**'
+### Enable data source for unauthenticated access
 
-4. Find the chart you want to embed, click the **...** menu and select **Embed Chart**
+3. Go to the Data Sources tab found on the side panel.
 
-5. Ensure the Unauthenticated tab is selected and turn on '**Enable unauthenticated access**'
+4. Find the data source that you want to use on the chart by selecting the deployment, database and collection. Once found, click on the Manage button in the Data access section to access the Data source management page.
 
-6. Select the **Javascript SDK** option
+5. Make sure the "External users can view data in this data source" option is toggled on and "Allow unauthenticated data access" has been selected.
 
-7. Note the Chart ID and the Chart Base URL, as you will need them for running the demo.
+### Enable chart for embedded access
+
+6. Find the chart you want to embed, click the **...** menu and select **Embed chart**
+
+7. Ensure the **Unauthenticated** tab is selected and turn on '**Enable unauthenticated access**'
+
+8. Select the **Javascript SDK** option
+
+9. Note the **Chart ID** and the **Base URL**, as you will need them for running the demo.
 
 ## Running this Sample with your data
 

@@ -1,5 +1,5 @@
 {
-  "name": "mongodb-charts-embedded-sdk-authenticated-demo",
+  "name": "charts-sdk-example-authenticated-realm-web-dashboard",
   "version": "1.0.0",
   "description": "",
   "main": "index.html",
@@ -8,10 +8,10 @@
     "build": "parcel build index.html"
   },
   "dependencies": {
-    "@mongodb-js/charts-embed-dom": "^2.1.0",
+    "@mongodb-js/charts-embed-dom": "^2.3.0",
     "jsonwebtoken": "^8.3.0",
-    "mongodb-stitch-browser-sdk": "^4.8.0",
     "parcel": "^1.12.4",
+    "realm-web": "^1.7.1",
     "request": "^2.88.2"
   },
   "devDependencies": {
