@@ -59,11 +59,11 @@ This sample is preconfigured to render a specific chart. You can run the sample 
 
 6. Find the chart you want to embed, click the **...** menu and select **Embed chart**
 
-7. Ensure the Unauthenticated tab is selected and turn on '**Enable unauthenticated access**'
+7. Ensure the **Unauthenticated** tab is selected and turn on '**Enable unauthenticated access**'
 
 8.  Select the **Javascript SDK** option
 
-9.  Note the Chart ID and the Base URL, as you will need them for running the demo.
+9.  Note the **Chart ID** and the **Base URL**, as you will need them for running the demo.
 
 ## Running this Sample with your data
 

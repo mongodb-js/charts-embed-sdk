@@ -62,11 +62,11 @@ This sample is preconfigured to render a specific chart. You can run the sample 
 
 7. Find the chart you want to embed, click the **...** menu and select **Embed chart**
 
-8. Ensure the Unauthenticated tab is selected and turn on '**Enable unauthenticated access**'
+8. Ensure the **Unauthenticated** tab is selected and turn on '**Enable unauthenticated access**'
 
 9. Select the **Javascript SDK** option
 
-10. Note the Chart ID and the Base URL, as you will need them for running the demo.
+10. Note the **Chart ID** and the **Base URL**, as you will need them for running the demo.
 
 11. In the same menu, note the **User Specified Filters** option. If you wish to try out filtering on your own dataset, you will need to whitelist a field by which to filter on. For example, our sample Movies dataset filters on `year` and `genres`.
 
