@@ -24,7 +24,7 @@ async function renderChart() {
   /*
     chart.setMaxDataAge(interval: number)
     The default rate is to auto refresh every 1 hour.
-    The minimum rate is every 10 seconds.
+    The minimum rate is every 60 seconds.
 
     chart.getMaxDataAge()
     Returns a number pertaining to the charts current

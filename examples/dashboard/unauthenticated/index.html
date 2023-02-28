@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html  class="h-full font-sans">
+<html class="h-full font-sans">
   <head>
     <title>Charts SDK - Embedded Dashboard Demo</title>
     <meta charset="UTF-8" />
@@ -14,13 +14,21 @@
   <body class="h-full font-sans">
     <main class="h-full">
       <!-- Navigation Bar-->
-      <div class="h-16 flex flex-column m-4 items-center justify-around" id="nav">
+      <div
+        class="h-16 flex flex-column m-4 items-center justify-around"
+        id="nav"
+      >
         <!-- Refresh button -->
-        <button class="border text-slate-50 bg-green-600 p-2 rounded"  id="refresh-button">Refresh</button>
+        <button
+          class="border text-slate-50 bg-green-600 p-2 rounded"
+          id="refresh-button"
+        >
+          Refresh
+        </button>
 
         <!-- Theme checkbox-->
         <label>
-          <input type="checkbox" id="theme" /> 
+          <input type="checkbox" id="theme" />
           Theme (<span id="currentTheme">dark</span>)
         </label>
 
@@ -29,7 +37,6 @@
           <span class="mr-2">Max Data Age</span>
           <select class="border border-gray-300 p-2 rounded" id="max-data-age">
             <option value="-1">None</option>
-            <option value="10">10 Seconds</option>
             <option value="60"><span>1 Minute</span></option>
             <option value="600">10 Minutes</option>
             <option selected value="3600"><span>1 Hour</span></option>
@@ -57,7 +64,10 @@
         <!-- Charts Background dropdown-->
         <label>
           <span class="mr-2">Charts Background</span>
-          <select class="border border-gray-300 p-2 rounded" id="charts-background">
+          <select
+            class="border border-gray-300 p-2 rounded"
+            id="charts-background"
+          >
             <option selected value="transparent">Transparent</option>
             <option value="#C3E7FE">Blue</option>
             <option value="#FFEC9E">Yellow</option>
@@ -67,8 +77,26 @@
             <option value="#4C2100">Dark Yellow</option>
           </select>
         </label>
+
+        <!-- Country dropdown-->
+        <label
+          ><span>Filter by country </span>
+          <select
+            id="country-filter"
+            class="border border-gray-300 p-2 rounded"
+          >
+            <option value="All">--All--</option>
+            <option value="Australia">Australia</option>
+            <option value="Brazil">Brazil</option>
+            <option value="Canada">Canada</option>
+            <option value="China">China</option>
+            <option value="Hong Kong">Hong Kong</option>
+            <option value="Portugal">Portugal</option>
+            <option value="United States" selected>United States</option>
+          </select>
+        </label>
       </div>
-      
+
       <!-- Embedded Dashboard-->
       <div class="h-full" id="content">
         <div class="h-full" id="dashboard"></div>

@@ -7,6 +7,7 @@ const sdk = new ChartsEmbedSDK({
 // Read https://dochub.mongodb.org/core/charts-dashboards-embedded-dashboard-options for more options
 const dashboard = sdk.createDashboard({
   dashboardId: "620ddc92-d1cd-42df-8c16-d94afba775d6",
+  filter: { "address.country": "United States" },
 });
 
 function addEventListeners() {
@@ -59,6 +60,20 @@ function addEventListeners() {
     .addEventListener("change", async (e) => {
       const chartsBackground = e.target.value;
       await dashboard.setChartsBackground(chartsBackground);
+    });
+
+  /* Dashboard filter select */
+  document
+    .getElementById("country-filter")
+    .addEventListener("change", async (e) => {
+      const country = e.target.value;
+      const dashboardFilter =
+        country === "All"
+          ? {}
+          : {
+              "address.country": country,
+            };
+      await dashboard.setFilter(dashboardFilter);
     });
 }
 
