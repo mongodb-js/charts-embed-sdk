@@ -1,8 +1,6 @@
 # MongoDB Charts Embedding Example - Timeline Chart
 
-## Background
-
-📄 _[See the MongoDB Charts Embedding Docs for more details](https://docs.mongodb.com/charts/saas/embedding-charts/)_
+#include "examples/docs/chart/background/start-block.md"
 
 🎮 _[Play with a live demo of this sample here](https://codesandbox.io/s/github/mongodb-js/charts-embed-sdk/tree/master/examples/charts/timeline-charts-example)_
 
@@ -39,42 +37,13 @@ _The following steps presume the use of npm, though yarn works as well._
 
 4. Run `npm start` to start the application. It will open directly in the browser at this address `http://localhost:3000`.
 
-## Preparing your Chart for Embedding
+#include "examples/docs/chart/preparing-chart-for-embedding/create-chart-to-embed.md"
 
-This sample is preconfigured to render a specific chart. You can run the sample as-is, or you can modify it to render your own chart by completing the following steps:
+#include "examples/docs/chart/preparing-chart-for-embedding/enable-unauthenticated-access.md" Ensure you have whitelisted all the fileds you want to use filters for.
 
-### Create chart to embed
-
-1. Log onto MongoDB Charts.
-
-2. If you haven't done so already, create a chart on any dashboard that you would like to embed.
-
-### Enable data source for unauthenticated access
-
-3. Go to the Data Sources tab found on the side panel.
-
-4. Find the data source that you want to use on the chart by selecting the deployment, database and collection. Once found, click on the Manage button in the Data access section to access the Data source management page.
-
-5. Make sure the "External users can view data in this data source" option is toggled on and "Allow unauthenticated data access" has been selected.
-
-6. Go to the Data Sources tab, find the data source that you are using on the chart, and choose External Sharing Options from the ... menu. Make sure that embedding is enabled for this data source and select '**Unauthenticated or Verified Signature**'
-
-### Enable chart for embedded access
-
-7. Find the chart you want to embed, click the **...** menu and select **Embed chart**
-
-8. Ensure the **Unauthenticated** tab is selected and turn on '**Enable unauthenticated access**'
-
-9. Select the **Javascript SDK** option
-
-10. Note the **Chart ID** and the **Base URL**, as you will need them for running the demo. Ensure you have whitelisted all the fileds you want to use filters for.
-
-## Running this Sample with your data
-
-1. If you do not wish to use our sample data and have completed the above steps to prepare your own chart for embedding,
+#include "examples/docs/chart/using-own-data/start-block.md"
     - Open the _Dashboard.jsx_ file (`src/Dashboard.jsx`)
-    - Replace the Charts `baseUrl` string with the base URL you copied from the MongoDB Charts Embedded Chart menu (look for "\~REPLACE\~" in the comments)
-    - Replace the `chartId` string with the chart ID you copied from the MongoDB Charts Embedded Chart menu (look for "\~REPLACE\~" in the comments)
+#include "examples/docs/chart/using-own-data/replace-block.md"
     - Change the filter to whatever makes sense for your project. Currently the filter gets the data between two years and is using the "Year" field for filtering.
 
-Happy Charting! 🚀 📈
+#include "examples/docs/happy-charting.md"

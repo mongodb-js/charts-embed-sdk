@@ -23,7 +23,7 @@ In this example, you should be able to:
 - Set the max data age of a chart on a dashboard
 - Set the height and width mode to `'fixed'` or `'scale'`.
 
-## Quick Start
+## Quickstart
 
 _The following steps presume the use of npm, though yarn works as well._
 
@@ -33,7 +33,10 @@ _The following steps presume the use of npm, though yarn works as well._
 
 3. Run `npm install` to install the package dependencies.
 
-4. Run `npm start` to start the application. This will utilise parcel.js
+4. Run `npm start` to start the application. This will utilise parcel.js.
    - Optional Parcel.js documentation https://parceljs.org/ for more information on what this is
 
 This should create a local server running the Charts demo. Open a web browser and navigate to `http://localhost:1234` in the url bar to see the sample.
+
+Happy Charting! 🚀 📈
+

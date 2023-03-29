@@ -17,12 +17,13 @@ _Note that this is not an exhaustive list of all the features for the Dashboard 
 In this example, you should be able to:
 
 - Render an unauthenticated embedded dashboard
+- Manually refresh the dashboard (Refresh all charts within a dashboard)
 - Get all the charts that are rendered on a dashboard via the SDK
 - Manually refresh a chart instance that you have specified
 - Adding/Removing click event listeners to a specific chart instance that you have specified
 - Viewing the payload for a click event
 
-## Quick Start
+## Quickstart
 
 _The following steps presume the use of npm, though yarn works as well._
 
@@ -32,7 +33,9 @@ _The following steps presume the use of npm, though yarn works as well._
 
 3. Run `npm install` to install the package dependencies.
 
-4. Run `npm start` to start the application. This will utilise parcel.js
+4. Run `npm start` to start the application. This will utilise parcel.js.
    - Optional Parcel.js documentation https://parceljs.org/ for more information on what this is
 
 This should create a local server running the Charts demo. Open a web browser and navigate to `http://localhost:1234` in the url bar to see the sample.
+
+Happy Charting! 🚀 📈

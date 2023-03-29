@@ -2,11 +2,14 @@
 
 ## Background
 
+📄 _[See the MongoDB Charts Embedding Docs for more details](https://docs.mongodb.com/charts/saas/embedding-charts/)_
+
 🎮 _[Play with a live demo of this sample here](https://codesandbox.io/s/github/mongodb-js/charts-embed-sdk/tree/master/examples/charts/click-events-filtering)_
 
 MongoDB Charts allows you to create visualizations of your MongoDB data using a simple web interface. You can view the visualizations within the Charts UI, or you can use the Embedding feature to render the charts in an external web application.
 
-When you embed charts using the Embedding SDK, you are able to subscribe to events that show when a user clicked on a chart, and the details of the element on which they clicked. This feature can be used to build interactive charts. This sample shows how to implement interactive filtering, whereby clicks on one chart are used to generate filters which are applied to a second chart. To learn the basics of chart click events, see the [click events](https://github.com/mongodb-js/charts-embed-sdk/tree/master/examples/charts/click-events-basic) sample.
+When you embed charts using the Embedding SDK, you are able to subscribe to events that show when a user clicked on a chart, and the details of the element on which they clicked. This feature can be used to build interactive charts.
+This sample shows how to implement interactive filtering, whereby clicks on one chart are used to generate filters which are applied to a second chart. To learn the basics of chart click events, see the [click events](https://github.com/mongodb-js/charts-embed-sdk/tree/master/examples/charts/click-events-basic) sample.
 
 More information regarding how to handle click events can be found in the [Charts documentation](https://docs.mongodb.com/charts/saas/handle-click-events/).
 
@@ -33,7 +36,7 @@ _The following steps presume the use of npm, though yarn works as well._
 
 3. Run `npm install` to install the package dependencies.
 
-4. Run `npm start` to start the application. This will utilise parcel.js
+4. Run `npm start` to start the application. This will utilise parcel.js.
    - Optional Parcel.js documentation https://parceljs.org/ for more information on what this is
 
 This should create a local server running the Charts demo. Open a web browser and navigate to `http://localhost:1234` in the url bar to see the sample.
@@ -44,7 +47,7 @@ This sample is preconfigured to render a specific chart. You can run the sample 
 
 ### Create chart to embed
 
-1. Log onto MongoDB Charts
+1. Log onto MongoDB Charts.
 
 2. If you haven't done so already, create a chart on any dashboard that you would like to embed.
 
@@ -75,14 +78,12 @@ This sample is preconfigured to render a specific chart. You can run the sample 
 ## Running this Sample with your data
 
 1. If you do not wish to use our sample data and have completed the above steps to prepare your own chart for embedding,
-
-   - Open the _index.js_ file (`src/index.js`)
-   - Replace the `baseUrl` string on with the base URL you copied from the MongoDB Charts Embedded Chart menu (look for "\~REPLACE\~" in the comments)
-   - Replace the `chartId` string on with the chart ID you copied from the MongoDB Charts Embedded Chart menu (look for "\~REPLACE\~" in the comments)
-   - Replace the filter in the `addEventListener` callback with a suitable filter document for your chart
-
+    - Open the _index.js_ file (`src/index.js`)
+    - Replace the Charts `baseUrl` string with the base URL you copied from the MongoDB Charts Embedded Chart menu (look for "\~REPLACE\~" in the comments)
+    - Replace the `chartId` string with the chart ID you copied from the MongoDB Charts Embedded Chart menu (look for "\~REPLACE\~" in the comments)
+    - Replace the filter in the `addEventListener` callback with a suitable filter document for your chart
 2. Run `npm install` to install the package dependencies.
-3. Run `npm start` to launch the sample application
+3. Run `npm start` to launch the sample application.
 
 This should create a local server running the Charts demo. Open a web browser and navigate to `http://localhost:1234` in the url bar to see the sample.
 

@@ -26,7 +26,7 @@ _The following steps presume the use of npm, though yarn works as well._
 
 3. Run `npm install` to install the package dependencies.
 
-4. Run `npm start` to start the application. This will utilise parcel.js
+4. Run `npm start` to start the application. This will utilise parcel.js.
    - Optional Parcel.js documentation https://parceljs.org/ for more information on what this is
 
 This should create a local server running the Charts demo. Open a web browser and navigate to `http://localhost:3000` in the url bar to see the sample. Use Incognito mode to see the full Google login flow rather then signing in with your Chrome Google account.
@@ -45,9 +45,9 @@ This sample is preconfigured to render a specific chart. You can run the sample 
 
 ### Create chart to embed
 
-1. Log onto MongoDB Charts
+1. Log onto MongoDB Charts.
 
-2. If you haven't done so already, create a chart you would like to embed on any dashboard.
+2. If you haven't done so already, create a chart on any dashboard that you would like to embed.
 
 ### Enable data source for authenticated access
 
@@ -59,11 +59,11 @@ This sample is preconfigured to render a specific chart. You can run the sample 
 
 ### Enable chart for embedded access
 
-6. Go to the Dashboards tab on the side panel, and select the dashboard that contains the chart you wish to embed.
+6. Go to the **Dashboards** tab on the side panel, and select the dashboard that contains the chart you wish to embed.
 
-7. Find the chart you want to embed, click the **...** menu and select **Embed chart**
+7. Find the chart you want to embed, click the **...** menu and select **Embed chart**.
 
-8. Ensure the **Authenticated** tab is selected and turn on '**Enable authenticated access**'
+8. Ensure the **Authenticated** tab is selected and turn on '**Enable authenticated access**'.
 
 9. Note the **Chart ID** and the **Base URL**, as you will need them for running the demo.
 
@@ -71,26 +71,23 @@ This sample is preconfigured to render a specific chart. You can run the sample 
 
 10. Go to the Embedding tab on the side panel.
 
-11. Ensure the "Authentication Settings" tab is selected and press the "Add" button in the Authentication providers section.
+11. Ensure the **Authentication Settings** tab is selected and press the **Add** button in the **Authentication providers** section.
 
-12. Go to the Admin Settings tab on the left navigation column. Under 'Embedding Authentication Providers', click 'Add New Provider'.
+12. Fill in the details like so:
 
-13. Fill in the details like so:
-
-   - Name: `Google` _Note, this is only for your convenience and can be named anything you want here_
-   - Provider: `Google`
-   - Google Client ID: _See above for 
-     - This should be the entire string `<encodedData>.apps.googleusercontent.com`
+    - Name: `Google` _Note, this is only for your convenience and can be named anything you want here_
+    - Provider: `Google`
+    - Google Client ID: _See above for
+      - This should be the entire string `<encodedData>.apps.googleusercontent.com`
 
 ## Running this Sample with your data
 
-If you do not wish to use our sample data and have completed the above steps to prepare your own chart for embedding,
-
-- Open the `index.html` file
-- Replace the Charts `baseUrl` string with the base URL you copied from the MongoDB Charts Embedded Chart menu (look for "\~REPLACE\~" in the comments)
-- Replace the `chartId` string with the chart ID you copied from the MongoDB Charts Embedded Chart menu (look for "\~REPLACE\~" in the comments)
-- **Optional**
-  - Replace the `<meta content="YourClientIDHere">` with your own Google Client ID. (look for "\~REPLACE\~" in the comments)
+1. If you do not wish to use our sample data and have completed the above steps to prepare your own chart for embedding,
+    - Open the `index.html` file
+    - Replace the Charts `baseUrl` string with the base URL you copied from the MongoDB Charts Embedded Chart menu (look for "\~REPLACE\~" in the comments)
+    - Replace the `chartId` string with the chart ID you copied from the MongoDB Charts Embedded Chart menu (look for "\~REPLACE\~" in the comments)
+    - **Optional**
+      - Replace the `<meta content="YourClientIDHere">` with your own Google Client ID. (look for "\~REPLACE\~" in the comments)
 
 ## Next Steps
 

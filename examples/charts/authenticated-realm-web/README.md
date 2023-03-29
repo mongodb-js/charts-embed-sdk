@@ -19,7 +19,7 @@ This sample also demonstrates data filtering by role, thanks to the App Services
 - 📈 Render an embedded chart on a web page
 - 🔒 Only render charts to valid users
 - 🔑 App Services authentication
-- 🙋‍♂️ Data filtering by App Services User Role.
+- 🙋‍♂️ Data filtering by App Services User Role
 
 ## Quickstart
 
@@ -31,7 +31,7 @@ _The following steps presume the use of npm, though yarn works as well._
 
 3. Run `npm install` to install the package dependencies.
 
-4. Run `npm start` to start the application. This will utilise parcel.js
+4. Run `npm start` to start the application. This will utilise parcel.js.
    - Optional Parcel.js documentation https://parceljs.org/ for more information on what this is
 
 This should create a local server running the Charts demo. Open a web browser and navigate to `http://localhost:1234` in the url bar to see the sample.
@@ -85,15 +85,15 @@ Choose or create an App which will be used to authenticate users who wish to vie
 
 If you want to use your App to filter data for each user, (Like we have done in our sample) set up an [Atlas service](https://www.mongodb.com/cloud/atlas) and corresponding [Rules](https://www.mongodb.com/docs/atlas/app-services/mongodb/define-roles-and-permissions/) that filter the data as desired. Injected Filters and [Dashboard filtering](https://www.mongodb.com/blog/post/filter-your-dashboards-with-mongodb-charts) are other Charts features one can use to attain similar functionality.
 
-## Prepare MongoDB Charts
+## Preparing your Chart for Embedding
 
 This sample is preconfigured to render a specific chart. You can run the sample as-is, or you can modify it to render your own chart by completing the following steps:
 
 ### Create chart to embed
 
-1. Log onto MongoDB Charts
+1. Log onto MongoDB Charts.
 
-2. If you haven't done so already, create a chart you would like to embed on any dashboard.
+2. If you haven't done so already, create a chart on any dashboard that you would like to embed.
 
 ### Enable data source for authenticated access
 
@@ -105,11 +105,11 @@ This sample is preconfigured to render a specific chart. You can run the sample 
 
 ### Enable chart for embedded access
 
-6. Go to the Dashboards tab on the left navigation column, and select the dashboard that contains the chart you wish to embed.
+6. Go to the **Dashboards** tab on the side panel, and select the dashboard that contains the chart you wish to embed.
 
-7. Find the chart you want to embed, click the **...** menu and select **Embed chart**
+7. Find the chart you want to embed, click the **...** menu and select **Embed chart**.
 
-8. Ensure the **Authenticated** tab is selected and turn on '**Enable Authenticated access**'
+8. Ensure the **Authenticated** tab is selected and turn on '**Enable authenticated access**'.
 
 9. Note the **Chart ID** and the **Base URL**, as you will need them for running the demo.
 
@@ -117,14 +117,14 @@ This sample is preconfigured to render a specific chart. You can run the sample 
 
 10. Go to the Embedding tab on the side panel.
 
-11. Ensure the "Authentication Settings" tab is selected and press the "Add" button in the Authentication providers section.
+11. Ensure the **Authentication Settings** tab is selected and press the **Add** button in the **Authentication providers** section.
 
 12. Fill in the details like so:
 
-       - Name: `App Services Auth Provider` _Note, this is only for your convenience and can be named anything_
-       - Provider: `Atlas App Services`
-       - Atlas Project: Select the Atlas project that contains the App Services Application you configured in the previous steps
-       - App ID: Select the ID of the App Services App you configured in the previous steps
+    - Name: `App Services Auth Provider` _Note, this is only for your convenience and can be named anything_
+    - Provider: `Atlas App Services`
+    - Atlas Project: Select the Atlas project that contains the App Services Application you configured in the previous steps
+    - App ID: Select the ID of the App Services App you configured in the previous steps
 
 13. Click "Save"
 
@@ -139,12 +139,11 @@ This sample is preconfigured to render a specific chart. You can run the sample 
 
 ## Running this Sample with your data
 
-If you do not wish to use our sample data and have completed the above steps to prepare your own chart for embedding,
-
-- Open the _index.js_ file (`src/index.js`)
-- Replace the Realm App ID string. `Realm.App({id: '<your-app-id>'})`
-- Replace the Charts `baseUrl` string with the base URL you copied from the MongoDB Charts Embedded Chart menu (look for "\~REPLACE\~" in the comments)
-- Replace the `chartId` string with the chart ID you copied from the MongoDB Charts Embedded Chart menu (look for "\~REPLACE\~" in the comments)
+1. If you do not wish to use our sample data and have completed the above steps to prepare your own chart for embedding,
+    - Open the _index.js_ file (`src/index.js`)
+    - Replace the Realm App ID string. `Realm.App({id: '<your-app-id>'})`
+    - Replace the Charts `baseUrl` string with the base URL you copied from the MongoDB Charts Embedded Chart menu (look for "\~REPLACE\~" in the comments)
+    - Replace the `chartId` string with the chart ID you copied from the MongoDB Charts Embedded Chart menu (look for "\~REPLACE\~" in the comments)
 
 ## Next Steps
 

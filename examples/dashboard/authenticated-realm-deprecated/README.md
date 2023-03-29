@@ -21,9 +21,9 @@ In this example, you should be able to:
 - Render an authenticated embedded dashboard
 - Render a dashboard to valid users only
 - App Services authentication
-- Data filtering by App Services User Role.
+- Data filtering by App Services User Role
 
-## Quick Start
+## Quickstart
 
 _The following steps presume the use of npm, though yarn works as well._
 
@@ -33,11 +33,10 @@ _The following steps presume the use of npm, though yarn works as well._
 
 3. Run `npm install` to install the package dependencies.
 
-4. Run `npm start` to start the application. This will utilise parcel.js
+4. Run `npm start` to start the application. This will utilise parcel.js.
    - Optional Parcel.js documentation https://parceljs.org/ for more information on what this is
 
 This should create a local server running the Charts demo. Open a web browser and navigate to `http://localhost:1234` in the url bar to see the sample.
-
 
 The two hard coded credentials used in this demo are:
 
@@ -52,3 +51,6 @@ password: password
 ```
 
 And they will display localised data thanks to the configured App Services User Roles.
+
+Happy Charting! 🚀 📈
+
