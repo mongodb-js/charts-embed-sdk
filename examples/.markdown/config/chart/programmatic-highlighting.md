@@ -1,10 +1,10 @@
 # MongoDB Charts Embedding Example - Programmatic Highlighting
 
-#include "examples/docs/chart/background/start-block.md"
+#include "examples/.markdown/docs/chart/background/start-block.md"
 
 🎮 _[Play with a live demo of this sample here](https://codesandbox.io/s/github/mongodb-js/charts-embed-sdk/tree/master/examples/charts/programmatic-highlighting)_
 
-#include "examples/docs/chart/background/desc-simple.md"
+#include "examples/.markdown/docs/chart/background/desc-simple.md"
 
 When you embed charts using the Embedding SDK, you are able to customise the embedded charts by setting attributes. One of these is `setHighlight()`, which lets you emphasise part of your charts to attract attention. This feature adds a layer of richness to interactive charts, and can be used to show relationships between charts. To learn the basics of interactive charts, see the [click events](https://github.com/mongodb-js/charts-embed-sdk/tree/master/examples/charts/click-events-basic) sample. To learn about other properties you can use to customise your charts, please refer to the [API documentation](https://www.npmjs.com/package/@mongodb-js/charts-embed-dom).
 
@@ -22,15 +22,15 @@ chart.setHighlight({ field: { $expr }});
 - Showing more complicated MQL filters with the drop down
 - Allow custom filtering expressions by editing the textarea
 
-#include "examples/docs/quickstart.md"
+#include "examples/.markdown/docs/quickstart.md"
 
-#include "examples/docs/chart/preparing-chart-for-embedding/create-chart-to-embed.md"
+#include "examples/.markdown/docs/chart/preparing-chart-for-embedding/create-chart-to-embed.md"
 
-#include "examples/docs/chart/preparing-chart-for-embedding/enable-unauthenticated-access.md"
+#include "examples/.markdown/docs/chart/preparing-chart-for-embedding/enable-unauthenticated-access.md"
 
-#include "examples/docs/chart/using-own-data/start-block.md"
+#include "examples/.markdown/docs/chart/using-own-data/start-block.md"
     - Open the _index.js_ file (`src/index.js`)
-#include "examples/docs/chart/using-own-data/replace-block.md"
-#include "examples/docs/chart/using-own-data/end-block.md"
+#include "examples/.markdown/docs/chart/using-own-data/replace-block.md"
+#include "examples/.markdown/docs/chart/using-own-data/end-block.md"
 
-#include "examples/docs/footer.md"
+#include "examples/.markdown/docs/footer.md"

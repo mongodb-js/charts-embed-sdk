@@ -1,4 +1,4 @@
 {
 	"build" : "examples/charts/unauthenticated/README.md",
-	"files" : ["examples/.md-config/chart/unauthenticated.md"]
+	"files" : ["examples/.markdown/config/chart/unauthenticated.md"]
 }

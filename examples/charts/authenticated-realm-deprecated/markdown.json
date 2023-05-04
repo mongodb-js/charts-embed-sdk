@@ -1,4 +1,4 @@
 {
 	"build" : "examples/charts/authenticated-realm-deprecated/README.md",
-	"files" : ["examples/.md-config/chart/authenticated-realm-deprecated.md"]
+	"files" : ["examples/.markdown/config/chart/authenticated-realm-deprecated.md"]
 }

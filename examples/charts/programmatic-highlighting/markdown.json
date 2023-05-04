@@ -1,4 +1,4 @@
 {
 	"build" : "examples/charts/programmatic-highlighting/README.md",
-	"files" : ["examples/.md-config/chart/programmatic-highlighting.md"]
+	"files" : ["examples/.markdown/config/chart/programmatic-highlighting.md"]
 }

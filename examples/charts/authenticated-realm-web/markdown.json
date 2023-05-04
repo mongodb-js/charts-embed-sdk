@@ -1,4 +1,4 @@
 {
 	"build" : "examples/charts/authenticated-realm-web/README.md",
-	"files" : ["examples/.md-config/chart/authenticated-realm-web.md"]
+	"files" : ["examples/.markdown/config/chart/authenticated-realm-web.md"]
 }

@@ -1,4 +1,4 @@
 {
 	"build" : "examples/charts/click-events-filtering/README.md",
-	"files" : ["examples/.md-config/chart/click-events-filtering.md"]
+	"files" : ["examples/.markdown/config/chart/click-events-filtering.md"]
 }

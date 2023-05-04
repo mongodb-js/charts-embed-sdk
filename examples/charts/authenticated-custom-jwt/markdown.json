@@ -1,4 +1,4 @@
 {
 	"build" : "examples/charts/authenticated-custom-jwt/README.md",
-	"files" : ["examples/.md-config/chart/authenticated-custom-jwt.md"]
+	"files" : ["examples/.markdown/config/chart/authenticated-custom-jwt.md"]
 }

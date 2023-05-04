@@ -1,6 +1,6 @@
 # MongoDB Charts Embedding Example - Timeline Chart
 
-#include "examples/docs/chart/background/start-block.md"
+#include "examples/.markdown/docs/chart/background/start-block.md"
 
 🎮 _[Play with a live demo of this sample here](https://codesandbox.io/s/github/mongodb-js/charts-embed-sdk/tree/master/examples/charts/timeline-charts-example)_
 
@@ -37,13 +37,13 @@ _The following steps presume the use of npm, though yarn works as well._
 
 4. Run `npm start` to start the application. It will open directly in the browser at this address `http://localhost:3000`.
 
-#include "examples/docs/chart/preparing-chart-for-embedding/create-chart-to-embed.md"
+#include "examples/.markdown/docs/chart/preparing-chart-for-embedding/create-chart-to-embed.md"
 
-#include "examples/docs/chart/preparing-chart-for-embedding/enable-unauthenticated-access.md" Ensure you have whitelisted all the fields you want to use filters for.
+#include "examples/.markdown/docs/chart/preparing-chart-for-embedding/enable-unauthenticated-access.md" Ensure you have whitelisted all the fields you want to use filters for.
 
-#include "examples/docs/chart/using-own-data/start-block.md"
+#include "examples/.markdown/docs/chart/using-own-data/start-block.md"
     - Open the _Dashboard.jsx_ file (`src/Dashboard.jsx`)
-#include "examples/docs/chart/using-own-data/replace-block.md"
+#include "examples/.markdown/docs/chart/using-own-data/replace-block.md"
     - Change the filter to whatever makes sense for your project. Currently the filter gets the data between two years and is using the "Year" field for filtering.
 
-#include "examples/docs/footer.md"
+#include "examples/.markdown/docs/footer.md"
