@@ -51,4 +51,3 @@ password: password
 And they will display localised data thanks to the configured App Services User Roles.
 
 Happy Charting! 🚀 📈
-

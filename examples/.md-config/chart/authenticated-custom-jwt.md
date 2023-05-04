@@ -37,4 +37,4 @@ The hard coded credentials used in this demo are:
 - Change the login logic to adapt to your project's security workflow.
 - Think whether an authenticated chart is the feature you're after. If you're simply looking for a way to show off your data, [unauthenticated embedding](https://github.com/mongodb-js/charts-embed-sdk/tree/master/examples/charts/unauthenticated) simplifies the workflow even further.
 
-#include "examples/docs/happy-charting.md"
+#include "examples/docs/footer.md"

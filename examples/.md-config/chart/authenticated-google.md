@@ -53,4 +53,4 @@ Steps on how to configure a Project with Google and attain a Google Client ID ca
 
 - Think whether an authenticated chart is the feature you're after. If you're simply looking for a way to show off your data, [unauthenticated embedding](https://github.com/mongodb-js/charts-embed-sdk/tree/master/examples/charts/unauthenticated) simplifies the workflow even further.
 
-#include "examples/docs/happy-charting.md"
+#include "examples/docs/footer.md"

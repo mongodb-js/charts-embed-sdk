@@ -39,4 +39,3 @@ _The following steps presume the use of npm, though yarn works as well._
 This should create a local server running the Charts demo. Open a web browser and navigate to `http://localhost:1234` in the url bar to see the sample.
 
 Happy Charting! 🚀 📈
-

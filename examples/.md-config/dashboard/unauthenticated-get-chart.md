@@ -17,4 +17,4 @@ This example, demonstrates how you might render an unauthenticated dashboard emb
 
 #include "examples/docs/quickstart.md"
 
-#include "examples/docs/happy-charting.md"
+#include "examples/docs/footer.md"

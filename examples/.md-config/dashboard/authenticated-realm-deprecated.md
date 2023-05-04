@@ -18,4 +18,4 @@ This example, demonstrates how you might render an authenticated dashboard embed
 
 #include "examples/docs/realm-credentials.md"
 
-#include "examples/docs/happy-charting.md"
+#include "examples/docs/footer.md"

@@ -67,7 +67,7 @@ This sample is preconfigured to render a specific chart. You can run the sample 
 
 9. Select the **Javascript SDK** option
 
-10. Note the **Chart ID** and the **Base URL**, as you will need them for running the demo. Ensure you have whitelisted all the fileds you want to use filters for.
+10. Note the **Chart ID** and the **Base URL**, as you will need them for running the demo. Ensure you have whitelisted all the fields you want to use filters for.
 
 ## Running this Sample with your data
 

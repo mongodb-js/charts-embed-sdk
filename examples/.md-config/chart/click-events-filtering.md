@@ -40,4 +40,4 @@ chart.addEventListener("click", callback, options);
     - Replace the filter in the `addEventListener` callback with a suitable filter document for your chart
 #include "examples/docs/chart/using-own-data/end-block.md"
 
-#include "examples/docs/happy-charting.md"
+#include "examples/docs/footer.md"

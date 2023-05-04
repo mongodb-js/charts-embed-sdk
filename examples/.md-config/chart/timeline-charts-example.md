@@ -39,11 +39,11 @@ _The following steps presume the use of npm, though yarn works as well._
 
 #include "examples/docs/chart/preparing-chart-for-embedding/create-chart-to-embed.md"
 
-#include "examples/docs/chart/preparing-chart-for-embedding/enable-unauthenticated-access.md" Ensure you have whitelisted all the fileds you want to use filters for.
+#include "examples/docs/chart/preparing-chart-for-embedding/enable-unauthenticated-access.md" Ensure you have whitelisted all the fields you want to use filters for.
 
 #include "examples/docs/chart/using-own-data/start-block.md"
     - Open the _Dashboard.jsx_ file (`src/Dashboard.jsx`)
 #include "examples/docs/chart/using-own-data/replace-block.md"
     - Change the filter to whatever makes sense for your project. Currently the filter gets the data between two years and is using the "Year" field for filtering.
 
-#include "examples/docs/happy-charting.md"
+#include "examples/docs/footer.md"

@@ -33,4 +33,4 @@ chart.setHighlight({ field: { $expr }});
 #include "examples/docs/chart/using-own-data/replace-block.md"
 #include "examples/docs/chart/using-own-data/end-block.md"
 
-#include "examples/docs/happy-charting.md"
+#include "examples/docs/footer.md"

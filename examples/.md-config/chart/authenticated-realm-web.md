@@ -37,4 +37,4 @@ This sample also demonstrates data filtering by role, thanks to the App Services
 - Play with App Services Rules system, and change how different accounts see your Chart.
 - Think whether an authenticated chart is the feature you're after. If you're simply looking for a way to show off your data, [unauthenticated embedding](https://github.com/mongodb-js/charts-embed-sdk/tree/master/examples/charts/unauthenticated) simplifies the workflow even further.
 
-#include "examples/docs/happy-charting.md"
+#include "examples/docs/footer.md"
