@@ -8,9 +8,9 @@ The MongoDB Charts Embedding SDK allows you to embed a Chart or a Dashboard dire
 
 This example, demonstrates how you might render an authenticated dashboard embedded onto your application using Google as the authentication provider.
 
-_Note that this is not an exhaustive list of all the features for the Dashboard Embedding SDK._
+## Highlighted features
 
-## Highlighted Features
+_Note that this is not an exhaustive list of all the features for the Dashboard Embedding SDK._
 
 In this example, you should be able to:
 
@@ -32,7 +32,7 @@ _The following steps presume the use of npm, though yarn works as well._
 4. Run `npm start` to start the application. This will utilise parcel.js.
    - Optional Parcel.js documentation https://parceljs.org/ for more information on what this is
 
-This should create a local server running the Charts demo. Open a web browser and navigate to `http://localhost:3000` in the url bar to see the sample. Use Incognito mode to see the full Google login flow rather then signing in with your Chrome Google account.
+This should create a local server running the Charts demo. Open a web browser and navigate to the server address to see the sample. This is `http://localhost:3000` for the Timeline Charts example and any using Google authentication, and `http://localhost:1234` for all others. Use Incognito mode to see the full Google login flow rather then signing in with your Chrome Google account.
 
 Logging in with any valid Google account will allow you to render the chart.
 

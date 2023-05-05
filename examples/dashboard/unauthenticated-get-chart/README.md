@@ -1,18 +1,18 @@
 # MongoDB Charts Embedding Example - Unauthenticated Embedded Dashboard with `getChart` and `getAllCharts` methods
 
+🎮 _[Play with a live demo of this sample here](https://codesandbox.io/s/github/mongodb-js/charts-embed-sdk/tree/master/examples/dashboard/unauthenticated-get-chart)_
+
 ## Background
 
 📄 _[See the MongoDB Charts Embedding Docs for more details](https://dochub.mongodb.org/core/charts-embedding-dashboards)_
-
-🎮 _[Play with a live demo of this sample here](https://codesandbox.io/s/github/mongodb-js/charts-embed-sdk/tree/master/examples/dashboard/unauthenticated-get-chart)_
 
 The MongoDB Charts Embedding SDK allows you to embed a Chart or a Dashboard directly into your application. Just like embedded charts, you can embed a dashboard via unauthenticated or an authenticated method.
 
 This example, demonstrates how you might render an unauthenticated dashboard embedded onto your application and retrieve all or just one chart on a dashboard.
 
-_Note that this is not an exhaustive list of all the features for the Dashboard Embedding SDK._
+## Highlighted features
 
-## Highlighted Features
+_Note that this is not an exhaustive list of all the features for the Dashboard Embedding SDK._
 
 In this example, you should be able to:
 
@@ -36,6 +36,6 @@ _The following steps presume the use of npm, though yarn works as well._
 4. Run `npm start` to start the application. This will utilise parcel.js.
    - Optional Parcel.js documentation https://parceljs.org/ for more information on what this is
 
-This should create a local server running the Charts demo. Open a web browser and navigate to `http://localhost:1234` in the url bar to see the sample.
+This should create a local server running the Charts demo. Open a web browser and navigate to the server address to see the sample. This is `http://localhost:3000` for the Timeline Charts example and any using Google authentication, and `http://localhost:1234` for all others.
 
 Happy Charting! 🚀 📈
