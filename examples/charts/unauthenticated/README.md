@@ -1,10 +1,10 @@
 # MongoDB Charts Embedding Example - Unauthenticated Embedded Chart
 
+🎮 _[Play with a live demo of this sample here](https://codesandbox.io/s/github/mongodb-js/charts-embed-sdk/tree/master/examples/charts/unauthenticated)_
+
 ## Background
 
 📄 _[See the MongoDB Charts Embedding Docs for more details](https://docs.mongodb.com/charts/saas/embedding-charts/)_
-
-🎮 _[Play with a live demo of this sample here](https://codesandbox.io/s/github/mongodb-js/charts-embed-sdk/tree/master/examples/charts/unauthenticated)_
 
 MongoDB Charts allows you to create visualizations of your MongoDB data using a simple web interface. You can view the visualizations within the Charts UI, or you can use the Embedding feature to render the charts in an external web application.
 
@@ -37,7 +37,7 @@ _The following steps presume the use of npm, though yarn works as well._
 4. Run `npm start` to start the application. This will utilise parcel.js.
    - Optional Parcel.js documentation https://parceljs.org/ for more information on what this is
 
-This should create a local server running the Charts demo. Open a web browser and navigate to `http://localhost:1234` in the url bar to see the sample.
+This should create a local server running the Charts demo. Open a web browser and navigate to the server address to see the sample. This is `http://localhost:3000` for the Timeline Charts example and any using Google authentication, and `http://localhost:1234` for all others.
 
 ## Preparing your Chart for Embedding
 
@@ -78,14 +78,10 @@ This sample is preconfigured to render a specific chart. You can run the sample 
 
 ## Running this Sample with your data
 
-1. If you do not wish to use our sample data and have completed the above steps to prepare your own chart for embedding,
-    - Open the _index.js_ file (`src/index.js`)
-    - Replace the Charts `baseUrl` string with the base URL you copied from the MongoDB Charts Embedded Chart menu (look for "\~REPLACE\~" in the comments)
-    - Replace the `chartId` string with the chart ID you copied from the MongoDB Charts Embedded Chart menu (look for "\~REPLACE\~" in the comments)
-2. Run `npm install` to install the package dependencies.
-3. Run `npm start` to launch the sample application.
+If you do not wish to use our sample data and have completed the above steps to prepare your own chart for embedding, make the following changes to the index file. Most examples have a `src/index.js` file which needs to be modified, except the Google authentication example (`index.html`) and for the Timeline Charts example (modify `src/Dashboard.jsx` instead). When complete, refer to steps 3 & 4 of the **Quickstart** section to run the application.
 
-This should create a local server running the Charts demo. Open a web browser and navigate to `http://localhost:1234` in the url bar to see the sample.
+- Replace the Charts `baseUrl` string with the base URL you copied from the MongoDB Charts Embedded Chart menu (look for `\~REPLACE\~` in the comments)
+- Replace the `chartId` string with the chart ID you copied from the MongoDB Charts Embedded Chart menu (look for `\~REPLACE\~` in the comments)
 
 ## Next Steps
 

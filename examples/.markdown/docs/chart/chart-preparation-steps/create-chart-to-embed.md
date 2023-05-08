@@ -1,5 +1,3 @@
-## Preparing your Chart for Embedding
-
 This sample is preconfigured to render a specific chart. You can run the sample as-is, or you can modify it to render your own chart by completing the following steps:
 
 ### Create chart to embed

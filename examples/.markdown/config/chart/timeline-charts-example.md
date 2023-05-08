@@ -1,8 +1,10 @@
 # MongoDB Charts Embedding Example - Timeline Chart
 
-#include "examples/.markdown/docs/chart/background/start-block.md"
-
 🎮 _[Play with a live demo of this sample here](https://codesandbox.io/s/github/mongodb-js/charts-embed-sdk/tree/master/examples/charts/timeline-charts-example)_
+
+## Background
+
+#include "examples/.markdown/docs/chart/embed-sdk-introduction.md"
 
 The example code in this directory is building a small react app, implementing a chart timeline using the Charts Embedding SDK.
 
@@ -27,23 +29,17 @@ Doing timeline charts is not really a feature of the embedding SDK but it shows 
 
 ## Quickstart
 
-_The following steps presume the use of npm, though yarn works as well._
+#include "examples/.markdown/docs/quickstart.md"
 
-1. Ensure you have Node installed. You can confirm with `node --version`.
+## Preparing your Chart for Embedding
 
-2. Clone the Git repository or download the code to your computer.
+#include "examples/.markdown/docs/chart/chart-preparation-steps/create-chart-to-embed.md"
 
-3. Run `npm install` to install the package dependencies.
+#include "examples/.markdown/docs/chart/chart-preparation-steps/enable-unauthenticated-access.md" Ensure you have whitelisted all the fields you want to use filters for.
 
-4. Run `npm start` to start the application. It will open directly in the browser at this address `http://localhost:3000`.
+## Running this Sample with your data
 
-#include "examples/.markdown/docs/chart/preparing-chart-for-embedding/create-chart-to-embed.md"
-
-#include "examples/.markdown/docs/chart/preparing-chart-for-embedding/enable-unauthenticated-access.md" Ensure you have whitelisted all the fields you want to use filters for.
-
-#include "examples/.markdown/docs/chart/using-own-data/start-block.md"
-    - Open the _Dashboard.jsx_ file (`src/Dashboard.jsx`)
-#include "examples/.markdown/docs/chart/using-own-data/replace-block.md"
-    - Change the filter to whatever makes sense for your project. Currently the filter gets the data between two years and is using the "Year" field for filtering.
+#include "examples/.markdown/docs/chart/using-own-data-general-steps.md"
+- Change the filter to whatever makes sense for your project. Currently the filter gets the data between two years and is using the "Year" field for filtering.
 
 #include "examples/.markdown/docs/footer.md"

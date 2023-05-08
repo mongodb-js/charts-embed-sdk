@@ -1,5 +1,3 @@
-## Authenticate with your App Services App
-
 This sample is preconfigured to render, and more specifically, **authenticate** users who are verified to view a specific chart. You can run the sample as-is, or you can modify it to render and authenticate your own chart by completing the following steps:
 
 ### Prepare your App Services App

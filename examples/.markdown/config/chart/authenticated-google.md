@@ -1,17 +1,19 @@
 # MongoDB Charts Embedding Example - Google Authentication
 
-#include "examples/.markdown/docs/chart/background/start-block.md"
+## Background
 
-#include "examples/.markdown/docs/chart/background/desc-simple.md"
-
-#include "examples/.markdown/docs/chart/background/desc-extended.md"
+#include "examples/.markdown/docs/chart/embed-sdk-introduction.md"
 
 This sample shows how to use the JavaScript Embedding SDK to render **authenticated** embedded charts, specifically via configuring **Google** as an authentication provider. The sample app is already set up to authenticate with a Google Client ID hosted by the Charts Development team.
 
-#include "examples/.markdown/docs/chart/background/features-authenticated.md"
+#include "examples/.markdown/docs/chart/authenticated-common-features.md"
 - 𝗚 Google authentication
 
-#include "examples/.markdown/docs/quickstart-google.md"
+## Quickstart
+
+#include "examples/.markdown/docs/quickstart.md" Use Incognito mode to see the full Google login flow rather then signing in with your Chrome Google account.
+
+Logging in with any valid Google account will allow you to render the chart.
 
 ## Getting a Google Client ID
 
@@ -19,22 +21,25 @@ This sample is pre-configured with a MongoDB-owned test Client ID. To use Google
 
 Steps on how to configure a Project with Google and attain a Google Client ID can be found [here](https://developers.google.com/identity/sign-in/web/sign-in). You'll need to set the Origin and Redirect URIs to whatever you use in your application. In our sample, that is http://localhost:3000.
 
-#include "examples/.markdown/docs/chart/preparing-chart-for-embedding/create-chart-to-embed.md"
+## Preparing your Chart for Embedding
 
-#include "examples/.markdown/docs/chart/preparing-chart-for-embedding/enable-authenticated-access.md"
+#include "examples/.markdown/docs/chart/chart-preparation-steps/create-chart-to-embed.md"
+
+#include "examples/.markdown/docs/chart/chart-preparation-steps/enable-authenticated-access.md"
 
     - Name: `Google` _Note, this is only for your convenience and can be named anything you want here_
     - Provider: `Google`
     - Google Client ID: _See above for
       - This should be the entire string `<encodedData>.apps.googleusercontent.com`
 
-#include "examples/.markdown/docs/chart/using-own-data/start-block.md"
-    - Open the `index.html` file
-#include "examples/.markdown/docs/chart/using-own-data/replace-block.md"
-    - **Optional**
-      - Replace the `<meta content="YourClientIDHere">` with your own Google Client ID. (look for "\~REPLACE\~" in the comments)
+## Running this Sample with your data
 
-#include "examples/.markdown/docs/chart/next-steps.md"
+#include "examples/.markdown/docs/chart/using-own-data-general-steps.md"
+- **Optional:** Replace the `<meta content="YourClientIDHere">` with your own Google Client ID. (look for "\~REPLACE\~" in the comments)
+
+## Next Steps
+
+#include "examples/.markdown/docs/chart/next-steps-common-text.md"
 - Use Incognito Mode to see a pure login experience
 - Consider how you want to secure your data with the Google Embedding Provider. Anybody can create a Google account. Consider using Charts Injected Filters to make your application more secure.
 

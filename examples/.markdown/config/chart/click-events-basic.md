@@ -1,12 +1,13 @@
 # MongoDB Charts Embedding Example - Click Events
 
-#include "examples/.markdown/docs/chart/background/start-block.md"
-
 🎮 _[Play with a live demo of this sample here](https://codesandbox.io/s/github/mongodb-js/charts-embed-sdk/tree/master/examples/charts/click-events-basic)_
 
-#include "examples/.markdown/docs/chart/background/desc-simple.md"
+## Background
 
-#include "examples/.markdown/docs/chart/background/desc-click-events.md"
+#include "examples/.markdown/docs/chart/embed-sdk-introduction.md"
+
+#include "examples/.markdown/docs/chart/click-events-description.md"
+
 This sample shows the basics of how to subscribe to and handle click events, including extracting relevant details about the chart elmement that was clicked. You can also see a more advanced demo that demonstrates [interactive filtering](https://github.com/mongodb-js/charts-embed-sdk/tree/master/examples/charts/click-events-filtering).
 
 #### The features included in this demo are as follows:
@@ -70,18 +71,23 @@ chart.setHighlight(payload.selectionFilter)
 
 More information regarding how to handle click events can be found in the [Charts documentation](https://docs.mongodb.com/charts/saas/handle-click-events/).
 
+## Quickstart
+
 #include "examples/.markdown/docs/quickstart.md"
 
-#include "examples/.markdown/docs/chart/preparing-chart-for-embedding/create-chart-to-embed.md"
+## Preparing your Chart for Embedding
 
-#include "examples/.markdown/docs/chart/preparing-chart-for-embedding/enable-unauthenticated-access.md"
+#include "examples/.markdown/docs/chart/chart-preparation-steps/create-chart-to-embed.md"
 
-#include "examples/.markdown/docs/chart/using-own-data/start-block.md"
-    - Open the _index.js_ file (`src/index.js`)
-#include "examples/.markdown/docs/chart/using-own-data/replace-block.md"
-#include "examples/.markdown/docs/chart/using-own-data/end-block.md"
+#include "examples/.markdown/docs/chart/chart-preparation-steps/enable-unauthenticated-access.md"
 
-#include "examples/.markdown/docs/chart/next-steps.md"
+## Running this Sample with your data
+
+#include "examples/.markdown/docs/chart/using-own-data-general-steps.md"
+
+## Next Steps
+
+#include "examples/.markdown/docs/chart/next-steps-common-text.md"
 - Embed multiple charts, and use the click events to filter one chart based on the click events detected on the other. This is demonstrated in our
   [interactive filtering](https://github.com/mongodb-js/charts-embed-sdk/tree/master/examples/charts/click-events-filtering) example.
 

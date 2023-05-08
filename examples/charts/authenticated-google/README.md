@@ -29,7 +29,7 @@ _The following steps presume the use of npm, though yarn works as well._
 4. Run `npm start` to start the application. This will utilise parcel.js.
    - Optional Parcel.js documentation https://parceljs.org/ for more information on what this is
 
-This should create a local server running the Charts demo. Open a web browser and navigate to `http://localhost:3000` in the url bar to see the sample. Use Incognito mode to see the full Google login flow rather then signing in with your Chrome Google account.
+This should create a local server running the Charts demo. Open a web browser and navigate to the server address to see the sample. This is `http://localhost:3000` for the Timeline Charts example and any using Google authentication, and `http://localhost:1234` for all others. Use Incognito mode to see the full Google login flow rather then signing in with your Chrome Google account.
 
 Logging in with any valid Google account will allow you to render the chart.
 
@@ -82,12 +82,11 @@ This sample is preconfigured to render a specific chart. You can run the sample 
 
 ## Running this Sample with your data
 
-1. If you do not wish to use our sample data and have completed the above steps to prepare your own chart for embedding,
-    - Open the `index.html` file
-    - Replace the Charts `baseUrl` string with the base URL you copied from the MongoDB Charts Embedded Chart menu (look for "\~REPLACE\~" in the comments)
-    - Replace the `chartId` string with the chart ID you copied from the MongoDB Charts Embedded Chart menu (look for "\~REPLACE\~" in the comments)
-    - **Optional**
-      - Replace the `<meta content="YourClientIDHere">` with your own Google Client ID. (look for "\~REPLACE\~" in the comments)
+If you do not wish to use our sample data and have completed the above steps to prepare your own chart for embedding, make the following changes to the index file. Most examples have a `src/index.js` file which needs to be modified, except the Google authentication example (`index.html`) and for the Timeline Charts example (modify `src/Dashboard.jsx` instead). When complete, refer to steps 3 & 4 of the **Quickstart** section to run the application.
+
+- Replace the Charts `baseUrl` string with the base URL you copied from the MongoDB Charts Embedded Chart menu (look for `\~REPLACE\~` in the comments)
+- Replace the `chartId` string with the chart ID you copied from the MongoDB Charts Embedded Chart menu (look for `\~REPLACE\~` in the comments)
+- **Optional:** Replace the `<meta content="YourClientIDHere">` with your own Google Client ID. (look for "\~REPLACE\~" in the comments)
 
 ## Next Steps
 
