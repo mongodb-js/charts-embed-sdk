@@ -45,13 +45,18 @@ main {
 
 .details {
   color: #89989b;
-  margin-bottom: 15px;
 }
 
-#applyRenderingSpec {
-  margin-top: 1em;
+#applyRenderingSpec,
+#chartAxesButton,
+#chartChannelsButton {
   padding: 0.5rem 1rem;
+  margin: 10px 0;
   width: 100%;
+}
+
+#chartAxesButton {
+  margin-bottom: 20px;
 }
 
 form#rendering-spec {
@@ -68,4 +73,17 @@ label,
 input {
   width: 100%;
   margin-bottom: 20px;
+}
+
+/* JSON Viewer */
+#jsonViewerChannels,
+#jsonViewerAxes {
+  visibility: hidden;
+  transition: background-color 0.5s ease;
+  --background-color: var(--bg-light-mode-color);
+  --string-color: #00a35c;
+  --preview-color: #ffc010;
+  --property-color: #0498ec;
+  --number-color: #b45af2;
+  --boolean-color: #ef5752;
 }
