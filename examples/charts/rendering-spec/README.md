@@ -4,7 +4,7 @@
 
 📄 _[See the MongoDB Charts Embedding Docs for more details](https://docs.mongodb.com/charts/saas/embedding-charts/)_
 
-🎮 _[Play with a live demo of this sample here](https://codesandbox.io/s/github/mongodb-js/charts-embed-sdk/tree/feat/CHARTS-8817-rendering-spec-sdk-example-app/examples/charts/rendering-spec)_
+🎮 _[Play with a live demo of this sample here](https://codesandbox.io/s/github/mongodb-js/charts-embed-sdk/tree/master/examples/charts/rendering-spec)_
 
 MongoDB Charts allows you to create visualizations of your MongoDB data using a simple web interface. You can view the visualizations within the Charts UI, or you can use the Embedding feature to render the charts in an external web application.
 
@@ -15,7 +15,7 @@ This sample shows how to use the JavaScript Embedding SDK to render an unauthent
 #### The features included in this demo are as follows:
 
 - Render an embedded chart on a web page
-- Change the name of the embedded chart
+- Change the title of the embedded chart
 - Change the description of the embedded chart
 - Override the name of the field on the X axis
 - Override the name of the field on the Y axis
