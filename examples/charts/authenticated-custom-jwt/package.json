@@ -8,7 +8,7 @@
     "build": "parcel build index.html"
   },
   "dependencies": {
-    "@mongodb-js/charts-embed-dom": "^3.0.0",
+    "@mongodb-js/charts-embed-dom": "^3.2.0",
     "cors": "^2.8.5",
     "express": "^4.16.3",
     "jsonwebtoken": "^8.3.0",

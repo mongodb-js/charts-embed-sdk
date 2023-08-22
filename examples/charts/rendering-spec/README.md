@@ -4,13 +4,13 @@
 
 📄 _[See the MongoDB Charts Embedding Docs for more details](https://docs.mongodb.com/charts/saas/embedding-charts/)_
 
-🎮 _[Play with a live demo of this sample here](https://codesandbox.io/s/github/mongodb-js/charts-embed-sdk/tree/feat/CHARTS-8817-rendering-spec-sdk-example-app/examples/charts/rendering-spec)_
+🎮 _[Play with a live demo of this sample here](https://codesandbox.io/s/github/mongodb-js/charts-embed-sdk/tree/master/examples/charts/rendering-spec)_
 
 MongoDB Charts allows you to create visualizations of your MongoDB data using a simple web interface. You can view the visualizations within the Charts UI, or you can use the Embedding feature to render the charts in an external web application.
 
 Charts can be embedded either using a simple IFRAME snippet, or by using the Charts Embedding SDK from your JavaScript code. When using the SDK, embedded charts can be either unauthenticated (meaning anyone who has access to the page where the chart is embedded can view the chart), or authenticated (whereby the user can only view the chart if they have an active authentication session linked to a Charts authentication provider).
 
-This sample shows how to use the JavaScript Embedding SDK to render an unauthenticated embedded chart, along with showing off how you can customize the embedded chart and change different aspects of it. Many more customizations are supported other than those in the demo, so make sure to check our documentation that also contains various other examples.
+This sample shows how to use the JavaScript Embedding SDK to render an unauthenticated embedded chart, along with showing off how you can customize the embedded chart and change different aspects of it. Many more customizations are supported other than those in the demo, so make sure to check our [documentation](https://github.com/mongodb-js/charts-embed-sdk/blob/master/docs/rendering-spec.md) that also contains various other examples.
 
 #### The features included in this demo are as follows:
 
