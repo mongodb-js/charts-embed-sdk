@@ -70,7 +70,7 @@ All option customizations are optional. For a more detailed description of the c
 
 ### Color palette customizations
 
-For chart with continuous colors:
+For charts with continuous colors:
 
 ```javascript
 await chart.setRenderingSpecOverride({
@@ -85,7 +85,7 @@ await chart.setRenderingSpecOverride({
 });
 ```
 
-For chart with single series:
+For charts with single series:
 
 ```javascript
 await chart.setRenderingSpecOverride({
@@ -129,7 +129,7 @@ await chart.setRenderingSpecOverride({
 });
 ```
 
-For Candlestick chart:
+For Candlestick charts:
 
 ```javascript
 await chart.setRenderingSpecOverride({
@@ -428,7 +428,7 @@ You can get the rendering spec customizations that you have set through the SDK 
 const customizations = chart.getRenderingSpecOverride();
 ```
 
-If you are wondering what channels or axes does you embedding chart have, you can call the following methods:
+If you are wondering what channels or axes your embedded chart has, you can call the following methods:
 
 ```javascript
 const channels = await chart.getChannels();
@@ -500,7 +500,7 @@ const channels = await chart.getCustomizableAxes();
 | Geo Scatter         | **Channels**: <br/>- geopoint, size, color, detail<br/><br/>**Axes**:<br/>N/A                  | **Channel customizations**:<br/>- labelOverride, numberMultiplier, numberDecimals, numberSuffix, numberThousandsSeparators, numberPrefix<br/><br/>**Option customizations**:<br/>- labelSize, legendPosition, colorPalette                                                                                                                                                           |
 | Table               | **Channels**: <br/>- group, value, dynamicColumns<br/><br/>**Axes**:<br/>N/A                   | **Channel customizations**:<br/>- labelOverride, numberMultiplier, numberDecimals, numberSuffix, numberThousandsSeparators, numberPrefix, wrapText<br/><br/>**Option customizations**:<br/>- textSize, totalsColumn, totalsRow<br/><br/>**ConditionalFormatting**                                                                                                                    |
 
-Note that the channels for multi-series with multiple fields in the same channel are dynamic and will look like the following: x_series_0, x_series_1, x_series_2, etc. The following channels can have mutliseries: “x”, “y”, “y_lines”, “group”, “value”.
+Note that the channels for multi-series with multiple fields in the same channel are dynamic and will look like the following: x_series_0, x_series_1, x_series_2, etc. The following channels can have mutli-series: “x”, “y”, “y_lines”, “group”, “value”.
 
 ## Limitations
 
@@ -520,4 +520,4 @@ await chart.setRenderingSpecOverride({
 });
 ```
 
-If you have applied a customization but do not see the result applied in the embedded chart, nor there is any error in the browser console - this means that the rendering spec has been parsed successfully but is incorrect. In such cases, we recommend that you check all single keys you are setting in the docs one by one and also check their applicability per the chart type.
+If you have applied a customization but do not see the result applied in the embedded chart, nor is there any error in the browser console, this means that the rendering spec has been parsed successfully but is incorrect. In such cases, we recommend that you check all single keys you are setting in the docs one by one and also check their applicability per the chart type.
