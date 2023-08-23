@@ -21,6 +21,8 @@ Our **authenticated** examples are great references if you need help getting sta
 - [Atlas App Services](https://github.com/mongodb-js/charts-embed-sdk/tree/master/examples/charts/authenticated-realm-web)
 - [Google](https://github.com/mongodb-js/charts-embed-sdk/tree/master/examples/charts/authenticated-google)
 
+The [rendering spec](https://github.com/mongodb-js/charts-embed-sdk/tree/master/examples/charts/rendering-spec) example demonstrates how you can apply customizations to embedded charts. This example only shows you a few cutomisations you can apply to embedded charts, see [rendering specification](https://github.com/mongodb-js/charts-embed-sdk/tree/master/docs/rendering-spec.md) for the complete documentation.
+
 If you'd like to build **interactive** charts, we have two examples showing this capability:
 
 - [Getting started with click events](https://github.com/mongodb-js/charts-embed-sdk/tree/master/examples/charts/click-events-basic)
@@ -32,17 +34,15 @@ There is also an [example](https://github.com/mongodb-js/charts-embed-sdk/tree/m
 
 The embedded dashboards are very similar to the embedded charts examples, but with a few differences that are highlighted in each example.
 
-The easiest method of embedding a dashboard is by following the [unauthenticated example](https://github.com/mongodb-js/charts-embed-sdk/tree/master/examples/dashboard/unauthenticated). 
+The easiest method of embedding a dashboard is by following the [unauthenticated example](https://github.com/mongodb-js/charts-embed-sdk/tree/master/examples/dashboard/unauthenticated).
 
 For interactive purposes, you can also look at the [unauthenticated get chart example](https://github.com/mongodb-js/charts-embed-sdk/tree/master/examples/dashboard/unauthenticated-get-chart) where you can attach a click event listener to individual charts on an embedded dashboard.
 
 If your dashboard needs some privacy, you can look at our authenticated examples which uses the same authentication providers as the embedded chart examples too.
 
-
 - [Custom JWT](https://github.com/mongodb-js/charts-embed-sdk/tree/master/examples/dashboard/authenticated-custom-jwt)
 - [Atlas App Services](https://github.com/mongodb-js/charts-embed-sdk/tree/master/examples/dashboard/authenticated-realm-web)
 - [Google](https://github.com/mongodb-js/charts-embed-sdk/tree/master/examples/dashboard/authenticated-google)
-
 
 ---
 
