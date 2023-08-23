@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Charts Embedded SDK Demo</title>
+    <meta charset="UTF-8" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Heebo&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" href="assets/styles.css" />
+  </head>
+
+  <body>
+    <main>
+      <div class="body-content">
+        <div id="chart"></div>
+        <div class="chartInfo">
+          <h3 class="chart-title">CHART RENDERING SPEC OPTIONS</h3>
+
+          <button id="chartChannelsButton">
+            <span id="chartChannelsButtonText">Get</span> Chart Channels
+          </button>
+          <json-viewer id="jsonViewerChannels">{}</json-viewer>
+
+          <button id="chartAxesButton">
+            <span id="chartAxesButtonText">Get</span> Chart Axes
+          </button>
+          <json-viewer id="jsonViewerAxes">{}</json-viewer>
+
+          <span class="details"
+            >Fill the following details to override the embedded chart
+            settings.</span
+          >
+
+          <form action="" method="get" name="form" id="rendering-spec">
+            <div>
+              <label for="title">Chart Title: </label>
+              <input type="text" name="title" id="title" />
+            </div>
+            <div>
+              <label for="description">Chart Description: </label>
+              <input type="text" name="description" id="description" />
+            </div>
+            <div>
+              <label for="labelX">Label for X axis field: </label>
+              <input type="text" name="labelX" id="labelX" />
+            </div>
+            <div>
+              <label for="labelY">Label for Y axis field: </label>
+              <input type="text" name="labelY" id="labelY" />
+            </div>
+            <div>
+              <label for="textSize">Text size: </label>
+              <input
+                type="number"
+                min="50"
+                max="200"
+                name="labelSize"
+                id="textSize"
+              />
+            </div>
+            <label
+              ><span>Bar Colours </span>
+              <select id="colorPalette" name="colorPalette">
+                <option value="blue">Blue</option>
+                <option value="pink">Pink</option>
+                <option value="orange">Orange</option>
+                <option value="purple">Purple</option>
+                <option value="green">Green</option>
+              </select>
+            </label>
+            <div>
+              <input
+                type="submit"
+                value="Apply Rendering Spec"
+                id="applyRenderingSpec"
+              />
+            </div>
+          </form>
+        </div>
+      </div>
+    </main>
+    <script src="src/index.js"></script>
+  </body>
+</html>

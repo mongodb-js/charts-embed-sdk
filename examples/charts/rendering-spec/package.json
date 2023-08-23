@@ -1,5 +1,5 @@
 {
-  "name": "charts-sdk-example-click-events-basic",
+  "name": "charts-sdk-example-rendering-spec",
   "version": "1.0.0",
   "description": "",
   "main": "index.html",
@@ -8,6 +8,7 @@
     "build": "parcel build index.html"
   },
   "dependencies": {
+    "@alenaksu/json-viewer": "^2.0.1",
     "@mongodb-js/charts-embed-dom": "^3.2.0",
     "parcel": "^1.12.4"
   },
