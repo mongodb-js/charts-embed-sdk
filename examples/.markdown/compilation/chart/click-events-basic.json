@@ -1,0 +1,4 @@
+{
+	"build" : "examples/charts/click-events-basic/README.md",
+	"files" : ["examples/.markdown/config/chart/click-events-basic.md"]
+}

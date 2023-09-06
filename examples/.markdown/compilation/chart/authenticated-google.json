@@ -1,0 +1,4 @@
+{
+	"build" : "examples/charts/authenticated-google/README.md",
+	"files" : ["examples/.markdown/config/chart/authenticated-google.md"]
+}

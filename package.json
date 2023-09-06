@@ -1,0 +1,24 @@
+{
+  "name": "charts-embed-sdk",
+  "version": "1.0.0",
+  "description": "<h1 align=\"center\">MongoDB Charts Embedding SDK</h1>",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:md": "for i in examples/.markdown/compilation/chart/* examples/.markdown/compilation/dashboard/*; do ./node_modules/markdown-include/bin/cli.js ${i}; done;"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mongodb-js/charts-embed-sdk.git"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mongodb-js/charts-embed-sdk/issues"
+  },
+  "homepage": "https://github.com/mongodb-js/charts-embed-sdk#readme",
+  "dependencies": {
+    "markdown-include": "^0.4.3"
+  },
+  "devDependencies": {
+    "husky": "^8.0.3"
+  }
+}
