@@ -4,7 +4,7 @@
   "private": true,
   "dependencies": {
     "@material-ui/core": "^4.9.12",
-    "@mongodb-js/charts-embed-dom": "^3.2.0",
+    "@mongodb-js/charts-embed-dom": "3.2.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-scripts": "3.4.1"
