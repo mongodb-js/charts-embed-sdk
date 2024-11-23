@@ -1,0 +1,4 @@
+{
+	"build" : "examples/charts/timeline-charts-example/README.md",
+	"files" : ["examples/.markdown/config/chart/timeline-charts-example.md"]
+}

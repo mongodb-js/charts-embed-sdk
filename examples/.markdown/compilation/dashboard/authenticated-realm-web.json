@@ -1,0 +1,4 @@
+{
+	"build" : "examples/dashboard/authenticated-realm-web/README.md",
+	"files" : ["examples/.markdown/config/dashboard/authenticated-realm-web.md"]
+}

@@ -1,0 +1,4 @@
+{
+	"build" : "examples/dashboard/authenticated-realm-deprecated/README.md",
+	"files" : ["examples/.markdown/config/dashboard/authenticated-realm-deprecated.md"]
+}
