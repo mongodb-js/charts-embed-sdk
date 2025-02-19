@@ -5,9 +5,12 @@
   "dependencies": {
     "@material-ui/core": "^4.9.12",
     "@mongodb-js/charts-embed-dom": "3.2.1",
+    "crypto": "npm:crypto-browserify",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-scripts": "4.0.0"
+    "react-scripts": "5.0.1",
+    "stream": "npm:stream-browserify",
+    "vm": "npm:vm-browserify"
   },
   "scripts": {
     "start": "NODE_OPTIONS=--openssl-legacy-provider react-scripts start"
