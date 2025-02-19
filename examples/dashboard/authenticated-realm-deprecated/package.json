@@ -10,7 +10,7 @@
     "@mongodb-js/charts-embed-dom": "3.2.1",
     "jsonwebtoken": "^8.3.0",
     "mongodb-stitch-browser-sdk": "^4.8.0",
-    "parcel": "^2.0.0",
+    "parcel": "^2.13.3",
     "request": "^2.88.2"
   },
   "devDependencies": {

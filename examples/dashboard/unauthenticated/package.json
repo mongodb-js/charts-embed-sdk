@@ -8,7 +8,7 @@
   },
   "dependencies": {
     "@mongodb-js/charts-embed-dom": "3.2.1",
-    "parcel": "^2.0.0"
+    "parcel": "^2.13.3"
   },
   "browserslist": [
     "since 2022"
