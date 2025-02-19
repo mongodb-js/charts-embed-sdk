@@ -2,7 +2,6 @@
   "name": "charts-sdk-example-unauthenticated",
   "version": "1.0.0",
   "description": "",
-  "main": "index.html",
   "scripts": {
     "start": "parcel index.html --open",
     "build": "parcel build index.html"
@@ -10,12 +9,17 @@
   "dependencies": {
     "@alenaksu/json-viewer": "^0.3.4",
     "@mongodb-js/charts-embed-dom": "3.2.1",
-    "parcel": "^1.12.4"
+    "parcel": "^2.0.0"
   },
   "devDependencies": {
     "@babel/core": "^7.8.4",
     "@babel/preset-env": "^7.8.4",
-    "parcel-bundler": "^1.6.1"
+    "crypto-browserify": "^3.12.1",
+    "events": "^3.3.0",
+    "process": "^0.11.10",
+    "stream-browserify": "^3.0.0",
+    "string_decoder": "^1.3.0",
+    "vm-browserify": "^1.1.2"
   },
   "keywords": [],
   "browserslist": [
