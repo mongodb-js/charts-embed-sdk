@@ -41,11 +41,11 @@ button {
 }
 
 .play-button {
-  background-image: url("/play.png");
+  background-image: url("./images/play.png");
 }
 
 .pause-button {
-  background-image: url("/pause.png");
+  background-image: url("./images/pause.png");
 }
 
 .show {
