@@ -12,3 +12,4 @@ dist
 *.iml
 .nvmrc
 .cache
+.parcel-cache
