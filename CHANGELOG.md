@@ -2,7 +2,13 @@
 
 This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## v3.2.0 (`latest`)
+## v3.2.1 (`latest`)
+
+## Fixed
+
+- Fixed a bug for embedded chart `render()` function in which a timeout error is thrown when a chart takes longer than 30 seconds to load.
+
+## v3.2.0
 
 ## New
 
