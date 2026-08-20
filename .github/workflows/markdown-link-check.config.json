@@ -1,7 +1,18 @@
 {
   "ignorePatterns": [
+    { "pattern": "^https?://localhost" },
+    { "pattern": "^https?://(www\\.)?npmjs\\.com" },
+    { "pattern": "^https?://codesandbox\\.io" }
+  ],
+  "httpHeaders": [
     {
-      "pattern": "^https?://localhost.*"
+      "urls": ["https://", "http://"],
+      "headers": {
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+      }
     }
-  ]
+  ],
+  "retryOn429": true,
+  "retryCount": 3,
+  "aliveStatusCodes": [200, 206]
 }
