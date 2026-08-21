@@ -1,0 +1,1 @@
+When you embed charts using the Embedding SDK, you are able to subscribe to events that show when a user clicked on a chart, and the details of the element on which they clicked. This feature can be used to build interactive charts.
